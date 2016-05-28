@@ -33,80 +33,10 @@
     </script>
     <link href="main.css" rel="stylesheet"/>
     <style>
-        /* code for animated blinking cursor */
-        #typed-cursor{
-            opacity: 0;
-            font-weight: 100;
-            -webkit-animation: blink 0.7s 20;
-            -moz-animation: blink 0.7s 20;
-            -ms-animation: blink 0.7s 20;
-            -o-animation: blink 0.7s 20;
-            animation: blink 0.7s 20;
-        }
-        @-keyframes blink{
-            0% { opacity:0; }
-            50% { opacity:1; }
-            100% { opacity:0; }
-        }
-        @-webkit-keyframes blink{
-            0% { opacity:0; }
-            50% { opacity:1; }
-            100% { opacity:0; }
-        }
-        @-moz-keyframes blink{
-            0% { opacity:0; }
-            50% { opacity:1; }
-            100% { opacity:0; }
-        }
-        @-ms-keyframes blink{
-            0% { opacity:0; }
-            50% { opacity:1; }
-            100% { opacity:0; }
-        }
-        @-o-keyframes blink{
-            0% { opacity:0; }
-            50% { opacity:1; }
-            100% { opacity:0; }
-        } 
         body {
             margin: 0;
             padding: 0;
             background-color: #c6cfdb;
-            }
-        #top-back {
-            background-color: rgba(118, 174, 222, 1.0);
-            position: fixed;
-            z-index: -5;
-            top: 0;
-            width: 100%;
-            height: 800px;
-            }
-        #Top {
-            height: 400px;
-            width: 100%;
-            background: -webkit-linear-gradient(top, rgba(118, 174, 222, 1.0) , #5387b4);
-            padding: 0;
-            margin: 0;
-            position: relative;
-            top: 75px;
-            }
-        #greetingDiv {
-            width: 85%;
-            height: 40%;
-            left: 10%;
-            top: 15%;
-            margin: 0 auto; 
-            }
-        #greeting {
-            width: 60%;
-            height: 10%;
-            left: 0;
-            padding-top: 3%;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 40px;
-            color: #e8e8e8;
-            animation-name: change;
-            animation-duration: 3.5s;
             }
         #navbar {
             top: 0;
@@ -174,7 +104,39 @@
             }
     </style>
 </head>
-<body>   
+<body>
+    <div id="top-back"></div>
+    <div id="Top">
+        <div id="greetingDiv">
+            <div id="greeting">
+            <div id="typed-strings">
+                <p>^2000Hello,^350 I'm John-Michael, ^500a front-end <br>developer and artist.^1000</p>
+                <p>^500Welcome to my website</p>
+            </div>
+            <span id="typed" style="white-space:pre;"></span><span id="typed-cursor">|</span>
+            </div>
+        </div>
+    </div>
+    <div id="navbar">
+        <ul id="navigation">
+            <li><a href="#about" class="down link" id="space">About</a>
+
+            </li>
+            <li><a href="#moreC" class="down link" id="space">Work</a>
+
+            </li>
+            <li><a href="#resume" class="down link" id="space">Résumé</a>
+
+            </li>
+        </ul>
+    </div>
+<div style=" position: absolute; top: 300px; height: 302px; width: 302px; -webkit-transform: rotate(45deg); left:0; right:0; margin-left:auto; margin-right:auto; outline: solid 25px #dedede;"><div style="background-color: #d0d0d0; height: 302px; width: 302px; 
+    "></div></div>
+    <div id="about">
+    </div>
+    <div id="separator1" style="position: relative; height: 50px; top:-25px; z-index: 10;"><div style="height: 50px; width: 50px;  margin: 0 auto; background-color: #dedede; -webkit-transform: rotate(45deg);"></div></div>
+    <div id="moreC">
+    </div>
 </body>
 </html>">
     </body>
