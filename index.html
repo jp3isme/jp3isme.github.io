@@ -167,7 +167,18 @@
     <div id="separator1" style="position: relative; height: 50px; top:-25px; z-index: 10;"><div style="height: 50px; width: 50px;  margin: 0 auto; background-color: #dedede; -webkit-transform: rotate(45deg);"></div></div>
     <div id="moreC">
     </div>
-</body>
-</html>">
+<script>
+//------------------ Smooth Scroll on click ------------------------------
+        $(function() {
+            $('.link').click(function() {
+                var id = $(this).attr('href');
+                $('html,body').animate({
+                    scrollTop: $(id).offset().top
+                }, 'slow');
+                // Prevent default behavior of link
+                return false;
+            });
+        });
+    </script>
     </body>
 </html>
