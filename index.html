@@ -44,8 +44,10 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            position: absolute;
+            position: fixed;
             background-color: rgb(51, 58, 86);
+            text-align: center;
+            
             }
         #top-back {
             background-color: rgba(82, 101, 143, 1);
@@ -153,8 +155,10 @@
 </head>
 <body>
     <div id="splashscreen">
-    <a href="#" class="enter_link">Enter on the website</a>
-</div>
+        <div style="position:fixed; top:50%; width: 100%; text-align:center;">
+            <a href="#" class="enter_link">ENTER MY SITE</a>
+        </div>
+    </div>
     <div id="top-back"></div>
     <div id="Top">
         <div id="greetingDiv">
@@ -185,7 +189,7 @@
 <script>
 //------------------ Smooth Scroll on click ------------------------------
     $('.enter_link').click(function() { 
-        $(this).parent().fadeOut(500);
+        $("#splashscreen").fadeOut(500);
  });    
     
     $(function() {
