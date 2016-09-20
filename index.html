@@ -34,192 +34,8 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <link href="main.css" rel="stylesheet"/>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: rgba(82, 101, 143, 1);
-            font-family: 'Open Sans', sans-serif;
-            height: 100%;
-            width: 100%;
-
-            }
-        #splashscreen{
-            z-index: 100;
-            margin: 0;
-            padding: 0;
-            width: 94%;
-            height: 90%;
-            top: 5%;
-            left: 3%;
-            position: fixed;
-            background-color: rgb(51, 58, 86);
-            text-align: center;
-            color: #e8e8e8;
-            border-radius: 15px;
-            }
-        #splashscreen a {
-            color: #e8e8e8;
-            text-decoration: inherit;   
-            }
-    
-        input[type="text"] {
-            padding: 10px;
-            border: none;
-            font-family: inherit;
-            font-size: 1rem;
-            color: rgb(100, 100, 100);
-            border-bottom: solid 2px #c9c9c9;
-            transition: border 0.3s;
-        }
-        input[type="text"]:focus,
-        input[type="text"].focus {
-            border-bottom: solid 2px #969696;
-
-        }
-        button {
-              display: inline-block;
-              margin: 0 10px 0 0;
-              padding: 11.5px 20px;
-              font-size: 1rem;
-              font-family: inherit;
-              line-height: 1.0;
-              appearance: none;
-              box-shadow: none;
-              border-radius: 0;
-              color: #fff;
-              background-color: #6496c8;
-              text-shadow: -1px 1px #417cb8;
-              border: none;
-              border-bottom: solid 2px #346392;
-        }
-        button:focus {
-            outline: none
-        }
-        button:hover {
-            background-color: #346392;
-            text-shadow: -1px 1px #27496d;
-            border-bottom: solid 2px #27496d;
-        }
-        .Blur {
-            filter: blur(3px);
-            -webkit-filter: blur(3px);
-            -moz-filter: blur(3px);
-            -o-filter: blur(3px);
-            -ms-filter: blur(3px);
-            filter: url(#blur);
-            filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='3');
-            overflow: hidden;
-        }
-        #top-back {
-            background-color: rgba(82, 101, 143, 1);
-            position: fixed;
-            z-index: -5;
-            top: 0;
-            width: 100%;
-            height: 800px;
-            }
-        #Top {
-            height: 400px;
-            width: 100%;
-            background: -webkit-linear-gradient(top, rgba(82, 101, 143, 1) , rgb(51, 58, 86));
-            padding: 0;
-            margin: 0;
-            position: relative;
-            top: 75px;
-            }
-        #greetingDiv {
-            width: 85%;
-            height: 40%;
-            left: 10%;
-            top: 15%;
-            margin: 0 auto; 
-            }
-        #greeting {
-            width: 60%;
-            height: 10%;
-            left: 0;
-            padding-top: 3%;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 40px;
-            color: #e8e8e8;
-            animation-name: change;
-            animation-duration: 3.5s;
-            }
-        #navbar {
-            top: 0;
-            height: 75px;
-            width: 100%;
-            background-color: rgba(82, 101, 143, 1.75);
-            position: fixed;
-            z-index: 15;
-            }
-        #navigation {
-            list-style: none;
-            padding: .5%;
-            margin: 18px 0px;
-            color: white;
-            text-align: right;
-            font-family: 'Open Sans', sans-serif;
-            }
-        #navigation li {
-            display: inline;
-            margin-right:10%;
-            animation-name: change;
-            animation-duration: 5.5s;
-            }
-        #navigation a {
-            color: inherit;
-            text-decoration: inherit;
-            }
-        #navigation a:hover {
-            text-decoration: underline;   
-            }
-        #div1{
-            height: 250px;
-            background-color: #e8e8e8;
-            z-index: 10;
-            padding-top: 0;
-            }
-        #about {
-            height: 800px;
-            background-color: #dddddd;
-            z-index: 10;
-            padding-top: 5;
-            margin-top: -5;
-            }
-         #moreC {
-            position: relative;
-            height: 1000px;
-            background-color: #f7f5e6;
-            z-index: 8;
-            top: -50px;
-            padding-top: 0px;
-            }
-        .sexy_line{ 
-            display:block;
-            border:none;
-            color:white;
-            height:1px;
-            top: -76px;
-            background:black;
-            background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#476a89),                   to(rgba(118, 174, 222, 0)));
-            z-index: 6;
-            }
-        
-            /* Chrome, Safari, Opera */
-            @-webkit-keyframes change {
-                from {background-color: rgb(255, 255, 255);}
-                to {background-color: rgb(255, 146, 89);}
-            }
-            /* Standard syntax */
-            @keyframes change {
-               from {color: rgba(255, 255, 255, 0);}
-                to {color: #e8e8e8;}
-            }
-            span {
-                display: inline;
-            }
     </style>
+    <link rel="stylesheet" type="text/css" href="css.css">  
 </head>
 <body>
     <div id="splashscreen">
@@ -233,14 +49,14 @@
             <a href="#" class="enter_link" id="enter" style="border-style: solid; border-width: 1px; border-radius: 2px; padding: 20px; display:none;">KNOCK KNOCK</a>
         </div>-->
         <div id="hideme1" style="display:none; position: fixed; top: 250px; width: 100%; text-align:center; right: 0%;">
-            
+
             <form name="login">
                 <input type="text" id="inputbox" name="userid" value =" " onfocus="if(this.value == ' ') { this.value = ''; }" onblur="if(this.value == '') { this.value = ' '; }"/>
                 <button type="button" id="button" onclick="check(this.form)" value="enter anyway"/>enter anyway</button>
             </form>
         </div>
     </div>
-    <!--<div id="splashBlur">  -->  
+    <!--<div id="splashBlur">  -->
     </div>
 <div id="overall" class="Blur">
     <div id="top-back"></div>
@@ -263,7 +79,7 @@
             </li> -->
         </ul>
     </div>
-    <div style=" position: absolute; top: 300px; height: 302px; width: 302px; -webkit-transform: rotate(-45deg); left:0; right:0; margin-left:auto; margin-right:auto; outline: solid 25px #e8e8e8;"><div style="background-color: #f7f5e6; height: 302px; width: 302px; 
+    <div style=" position: absolute; top: 300px; height: 302px; width: 302px; -webkit-transform: rotate(-45deg); left:0; right:0; margin-left:auto; margin-right:auto; outline: solid 25px #e8e8e8;"><div style="background-color: #f7f5e6; height: 302px; width: 302px;
     "><img src="/me3.png" alt="me" style="height: 302; width: 302;"></div></div>
     <div id="div1">
     </div>
@@ -285,14 +101,14 @@
        $('#enter').delay(2000).fadeIn(500);
        $("#overall").addClass("Blur");
 });
-    
-    $('.enter_link').click(function() { 
+
+    $('.enter_link').click(function() {
         $("#splashscreen").fadeOut(500);
         $("#navigation").fadeOut(0);
         $("#navigation").delay(500).fadeIn(1000);
         $("#overall").removeClass("Blur");
- });    
-    
+ });
+
     $(function() {
             $('.link').click(function() {
                 var id = $(this).attr('href');
