@@ -31,6 +31,7 @@
     function foo(){ console.log("Callback"); }
 
     </script> -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <link href="main.css" rel="stylesheet"/>
     <style>
         body {
@@ -73,6 +74,7 @@
         input[type="text"]:focus,
         input[type="text"].focus {
             border-bottom: solid 2px #969696;
+
         }
         button {
               display: inline-block;
@@ -233,14 +235,14 @@
         <div id="hideme1" style="display:none; position: fixed; top: 250px; width: 100%; text-align:center; right: 0%;">
             
             <form name="login">
-                <input type="text" id="inputbox" name="userid"/>
+                <input type="text" id="inputbox" name="userid" value =" " onfocus="if(this.value == ' ') { this.value = ''; }" onblur="if(this.value == '') { this.value = ' '; }"/>
                 <button type="button" id="button" onclick="check(this.form)" value="enter anyway"/>enter anyway</button>
             </form>
         </div>
     </div>
     <!--<div id="splashBlur">  -->  
     </div>
-<div id="overall" class="noBlur">
+<div id="overall" class="Blur">
     <div id="top-back"></div>
     <div id="Top">
         <div id="greetingDiv">
