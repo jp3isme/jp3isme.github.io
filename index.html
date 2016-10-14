@@ -5,10 +5,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!--<script src="js/typed.js" type="text/javascript"></script> -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <link href="main.css" rel="stylesheet" />
-    <style>
-
-    </style>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.2.0/scrollreveal.min.js"></script>
+    <script>
+      window.sr = ScrollReveal({ reset: true });
+    </script>
     <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 
@@ -36,22 +36,15 @@
     <div id="overall" class="Blur">
         <div id="top-back"></div>
         <div id="Top">
-            <div id="greetingDiv">
-                <div id="greeting">
-                </div>
-            </div>
         </div>
         <div id="navbar">
             <ul id="navigation">
-                <li><a href="#about" class="down link" id="space">About</a>
-
+                <li><a href="#div1" class="down link" id="space">About</a>
                 </li>
-                <li><a href="#moreC" class="down link" id="space">Experience</a>
-
+                <li><a href="#separator1" class="down link" id="space">Experience</a>
                 </li>
-                <!--<li><a href="#resume" class="down link" id="space">Résumé</a>
-
-            </li> -->
+                <li><a href="#contact" class="down link" id="space">Contact</a>
+                </li>
             </ul>
         </div>
         <!--<div style=" position: absolute; top: 300px; height: 302px; width: 302px; -webkit-transform: rotate(-45deg);
@@ -60,7 +53,7 @@
         <div id="div1">
         </div>
         <div id="about">
-            <div id="container1">
+            <div id="container1" class="boom">
                 <img src="img/me5.jpg" alt="me" style="width: 90%; margin: 5% 5%;">
                 <h2 style="margin-top: 1%;">John-Michael Smith</h2>
                 <hr>
@@ -73,16 +66,16 @@
                     <li><a target="_blank" href="mailto:jp3isme@gmail.com"><b class="entypo-mail"></b></a></li>
                 </ul>
             </div>
-            <div id="container2">
+            <div id="container2" class="boom">
                 <h1>Who I Am</h1>
                 <hr>
                 <p>
-                    Lorem ipsum dolor sit amet, sea ea omnis graeco dignissim, his ad tritani molestie euripidis. Ne mei sonet dolorem perfecto, est in habeo omittantur. Ei nostrum voluptua eam. An movet euripidis posidonium vim, ex habemus platonem duo, cu has modus erant
+                    Lorem ipsum hi dolor sit amet, sea ea omnis graeco dignissim, his ad tritani molestie euripidis. Ne mei sonet dolorem perfecto, est in habeo omittantur. Ei nostrum voluptua eam. An movet euripidis posidonium vim, ex habemus platonem duo, cu has modus erant
                     detracto. Eos et dicunt delicata voluptatibus, qui dolore alienum percipitur te. Vis et corpora convenire cotidieque, vix te utroque facilisi. Nulla albucius atomorum at usu, eam no stet partem honestatis, in eam verterem vituperata.
                     Vel at ludus ponderum repudiare, no his minimum blandit, solum habemus splendide vis in. Id sed doctus atomorum, movet torquatos mea in. Sed tollit dicant intellegebat at.
                 </p>
             </div>
-            <div id="container1">
+            <div id="container1" class="boom">
                 <h2>Current Reads</h2>
                 <hr>
                 <ul>
@@ -97,15 +90,113 @@
             </div>
         </div>
         <div id="separator1" style="position: relative; height: 50px; top:-25px; z-index: 10;">
-            <div style="height: 50px; width: 50px;
-      margin: 0 auto; background-color: #dddddd; -webkit-transform: rotate(45deg);"></div>
+            <div style="height: 50px; width: 50px; margin: 0 auto; background-color: #dddddd; -webkit-transform: rotate(45deg);"></div>
         </div>
         <div id="moreC">
+          <div class="large-container1">
+            <div id="container3" class="boom">
+              <div style="text-align: center;">
+                <h2>Education</h2>
+                <hr>
+              </div>
+              <div>
+                <h3>2015 - 2019</h3>
+                <p>Kennesaw State Univeristy: B.S. in Computer Science, minor in Software Engineering, minor in Mathematics</p>
+                <h3>Planned</h3>
+                <p>M.S. in Computer Science</p>
+              </div>
+            </div>
+            <div id="container4" class="boom">
+              <div style="text-align: center;">
+                <h2>Skills</h2>
+                <hr>
+              </div>
+              <div>
+                <ul>
+                  <li>Java</li>
+                  <li>HTML5</li>
+                </ul>
+                <ul>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                </ul>
+                <ul>
+                  <li>Python</li>
+                  <li>Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="large-container2">
+            <div id="container5" class="boom">
+              <div style="text-align: center;">
+                <h2>Projects</h2>
+                <hr>
+              </div>
+              <div>
+                <img src="img/capture-nesphotography.png" alt="me" style="width: 80%; margin: 3% 10%;">
+                <h3 style="margin-top: 1%;">NES Photography</h2>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="separator1" style="position: relative; height: 50px; top:-25px; z-index: 10;">
+            <div style="height: 50px; width: 50px; margin: 0 auto; background-color: #e8e8e8; -webkit-transform: rotate(45deg);"></div>
+        </div>
+        <div id="contact">
+          <div>
+            <form action="">
+              <!--  General -->
+              <div class="form-group">
+                <h2 class="heading">General</h2>
+                <div class="controls">
+                  <input type="text" id="name" class="floatLabel" name="name">
+                  <label for="name">Name</label>
+                </div>
+                <div class="controls">
+                  <input type="email" id="email" class="floatLabel" name="email">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <!--  Details -->
+              <div class="form-group">
+                <h2 class="heading">Details</h2>
+                <div class="controls">
+                  <input type="tel" id="cell" class="floatLabel" name="cell">
+                  <label for="cell">Celly</label>
+                </div>
+                <div class="controls">
+                  <i class="fa fa-sort"></i>
+                  <select class="floatLabel">
+                    <option value="blank"></option>
+                    <option value="Apple">Apple</option>
+                    <option value="Banana">Banana</option>
+                    <option value="Kiwi">Kiwi</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Watermelon">Watermelon</option>
+                  </select>
+                  <label for="fruit">Favotire Fruit</label>
+                </div>
+              </div>
+              <!--  More -->
+              <div class="form-group">
+                <h2 class="heading">More!</h2>
+                <div class="controls">
+                  <textarea name="comments" class="floatLabel" id="comments"></textarea>
+                  <label for="comments">Comments</label>
+                  <button>Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
         <footer>
-
+            <div id="footer-main">
+              <p><b class="entypo-heart"></b> made with love in Atlanta<br><a target="_blank" href="docs/resume">resume</a>  |  <a target="_blank" href="http://www.entypo.com/">entypo</a></p>
+            </div>
         </footer>
-    </div>
+    </>
     <script>
         //------------------ Smooth Scroll on click ------------------------------
         $(document).ready(function() {
@@ -118,13 +209,13 @@
             $("#overall").addClass("Blur");
         });
 
-    /*
+
         $('.enter_link').click(function() {
             $("#splashscreen").fadeOut(500);
             $("#navigation").fadeOut(0);
             $("#navigation").delay(500).fadeIn(1000);
             $("#overall").removeClass("Blur");
-        }); */
+        });
 
      $(function() {
             $('.link').click(function() {
@@ -148,6 +239,39 @@
                 alert("incorrect passcode")
             }
         }
+
+        sr.reveal('.boom', {viewFaactor: 0.5}, {reset: false});
+
+
+
+
+
+
+
+
+        (function($){
+  	function floatLabel(inputType){
+  		$(inputType).each(function(){
+  			var $this = $(this);
+  			// on focus add class active to label
+  			$this.focus(function(){
+  				$this.next().addClass("active");
+  			});
+  			//on blur check field and remove class if needed
+  			$this.blur(function(){
+  				if($this.val() === '' || $this.val() === 'blank'){
+  					$this.next().removeClass();
+  				}
+  			});
+  		});
+  	}
+  	// just add a class of "floatLabel to the input field!"
+  	floatLabel(".floatLabel");
+  })(jQuery);
+
+
+
+
     </script>
 </body>
 
