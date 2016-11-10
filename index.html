@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div id="splashscreen">
+    <div id="splashscreen" style="visibility: hidden;">
         <p id="hideme" style="display:none; position:fixed; top:197px; width: 100%; text-align:center; right: 0%;">this site is currently being remodeled</p>
         <!--<div >
             <p id="hideme" style="display:none; position:fixed; top:97px; width: 100%; text-align:center;">my name is</p>
@@ -33,7 +33,7 @@
     </div>
     <!--<div id="splashBlur">  -->
     </div>
-    <div id="overall" class="Blur">
+    <div id="overall">
         <div id="top-back"></div>
         <div id="Top">
         </div>
@@ -146,49 +146,7 @@
         </div>
         <div id="contact">
           <div>
-            <form action="">
-              <!--  General -->
-              <div class="form-group">
-                <h2 class="heading">General</h2>
-                <div class="controls">
-                  <input type="text" id="name" class="floatLabel" name="name">
-                  <label for="name">Name</label>
-                </div>
-                <div class="controls">
-                  <input type="email" id="email" class="floatLabel" name="email">
-                  <label for="email">Email</label>
-                </div>
-              </div>
-              <!--  Details -->
-              <div class="form-group">
-                <h2 class="heading">Details</h2>
-                <div class="controls">
-                  <input type="tel" id="cell" class="floatLabel" name="cell">
-                  <label for="cell">Celly</label>
-                </div>
-                <div class="controls">
-                  <i class="fa fa-sort"></i>
-                  <select class="floatLabel">
-                    <option value="blank"></option>
-                    <option value="Apple">Apple</option>
-                    <option value="Banana">Banana</option>
-                    <option value="Kiwi">Kiwi</option>
-                    <option value="Orange">Orange</option>
-                    <option value="Watermelon">Watermelon</option>
-                  </select>
-                  <label for="fruit">Favotire Fruit</label>
-                </div>
-              </div>
-              <!--  More -->
-              <div class="form-group">
-                <h2 class="heading">More!</h2>
-                <div class="controls">
-                  <textarea name="comments" class="floatLabel" id="comments"></textarea>
-                  <label for="comments">Comments</label>
-                  <button>Submit</button>
-                </div>
-              </div>
-            </form>
+            
           </div>
         </div>
         <footer>
@@ -206,7 +164,7 @@
             $('#hideme').delay(2000).fadeIn(500);
             $('#hideme1').delay(2000).fadeIn(500);
             $('#enter').delay(2000).fadeIn(500);
-            $("#overall").addClass("Blur");
+            //$("#overall").addClass("Blur");
         });
 
 
