@@ -19,6 +19,10 @@
   animation-duration: 5.5s;
 }
 
+#div1 {
+  height: 200px;
+}
+
 #about, #moreC, #contact {
   height: auto;
   overflow: auto;
