@@ -417,10 +417,20 @@ button:hover {
 
 }
 
+#contact #container1 {
+    width: 25%;
+}
+
 #contact #container2 {
-    width: 20%;
+    width: 40%;
+    max-width: 480px;
     height: auto;
     min-height: 40%;
+}
+
+#contact-wrapper {
+  width: 70%;
+  margin: 0 auto;
 }
 
 #contact #social li {
