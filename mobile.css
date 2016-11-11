@@ -1,0 +1,34 @@
+#about{
+  height: auto;
+  overflow: auto;
+}
+#about #container2 {
+  width: 100%;
+}
+
+#contact #social li {
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 3px;
+    padding: 3% 3% 0% 3%;
+}
+
+#contact ul {
+    margin: 0% 8% 0% 8%;
+}
+
+#contact h2 {
+  margin-bottom: 0;
+}
+
+#contact #container2 {
+  width: 100%;
+  line-height: 210%;
+}
+
+#contact-wrapper {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}

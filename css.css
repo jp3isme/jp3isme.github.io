@@ -419,11 +419,13 @@ button:hover {
 
 #contact #container1 {
     width: 25%;
+    min-width: 220px;
 }
 
 #contact #container2 {
     width: 40%;
     max-width: 480px;
+    min-width: 380px;
     height: auto;
     min-height: 40%;
 }
