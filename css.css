@@ -1,5 +1,7 @@
 @import url('master css/master.css');
 @import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
 /* entypo */
 
@@ -12,6 +14,7 @@ html, body {
 }
 
 body {
+    font-family: 'Archivo Narrow', sans-serif;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
     height: auto;
@@ -116,7 +119,6 @@ button:hover {
 /********** ********** ********** **********/
 
 #overall {
-    font-family: MuseoSans, sans-serif;
     font-size: 15px;
     color: #313131;
     line-height: 210%;
