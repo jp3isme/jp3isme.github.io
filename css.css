@@ -215,13 +215,14 @@ button:hover {
 
 #about {
     z-index: 9;
-    height: autopx;
+    height: auto;
     min-height: 800px;
     margin: 0;
     padding: 0 5%;
     text-align: center;
     background-color: #ddd;
-    font-size: 1.2em
+    font-size: 1.2em;
+    overflow: auto;
 }
 
 #about p, #moreC p, #contact p {
@@ -315,6 +316,7 @@ button:hover {
     font-size: 1.2em;
     background-color: #e8e8e8;
     margin-bottom: -50px;
+    overflow: auto;
 }
 
 .large-container1 {
@@ -390,6 +392,30 @@ button:hover {
     margin: 0 5%;
 }
 
+@media screen and (max-width: 1525px) {
+    .large-container2 {
+        width: 40% !important;
+    }
+    .large-container1 {
+        width: 35% !important;
+    }
+}
+@media screen and (max-width: 1258px) {
+    .large-container2 {
+        width: 45% !important;
+    }
+    .large-container1 {
+        width: 40% !important;
+    }
+}
+@media screen and (max-width: 1127px) {
+    .large-container2 {
+        width: 50% !important;
+    }
+    .large-container1 {
+        width: 45% !important;
+    }
+}
 
 /********** ********** ********** **********/
 
@@ -413,7 +439,7 @@ button:hover {
     text-align: center;
     font-size: 1.2em;
     background-color: #ddd;
-    overflow: hidden;
+    overflow: auto;
 
 }
 
@@ -443,6 +469,29 @@ button:hover {
 
 #contact #social a {
     padding: 10px;
+}
+
+.show1 {
+  display: inherit;
+}
+.show2 {
+  display: none;
+}
+
+@media screen and (max-width: 1525px) {
+    #contact-wrapper {
+        width: 85% !important;
+    }
+}
+@media screen and (max-width: 1258px) {
+    #contact-wrapper {
+        width: 95% !important;
+    }
+}
+@media screen and (max-width: 1127px) {
+    #contact-wrapper {
+        width: 100% !important;
+    }
 }
 
 /********** ********** ********** **********/

@@ -54,6 +54,7 @@
         <div id="div1">
         </div>
         <div id="about">
+          <div class="show1">
             <div id="container1" class="boom">
                 <img src="img/me5.jpg" alt="me" style="width: 90%; margin: 5% 5%;">
                 <h2 style="margin-top: 1%;">John-Michael Smith</h2>
@@ -89,6 +90,34 @@
                     <li><a target="_blank" href="https://www.goodreads.com/book/show/8520362-the-grand-design?">Stephen Hawking's "The Grand Design"</a></li>
                 </ul>
             </div>
+          </div>
+          <div class="show2">
+            <div id="container2" class="boom">
+                <h1>Who I Am</h1>
+                <hr>
+                <img src="img/me5.jpg" alt="me" style="width: 90%; max-width: 375px; margin: 5% 5%;">
+                <h2 style="margin-top: 1%;">John-Michael Smith</h2>
+                <hr>
+                <p style="padding-bottom: 30px;">
+                  I'm a Computer Science student at Kennesaw State University, passionate about our future and the applications of technology.
+                  I have a specific interest in artificial intelligence and autonomous technologies.
+                  I'm on track to graduate in 2019 with a BS in Computer Science and a minor in Software Engineering, then in 2021 with a MS in Computer Science.
+                </p>
+            </div>
+            <div id="container1" class="boom">
+                <h2>Current Reads</h2>
+                <hr>
+                <ul>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/149267.The_Stand?">Stephin King's "The Stand"</a></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things?">Don Norman's "The Design of Everyday Things"</atarget></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/144960.The_Conscious_Mind?">David J. Chalmers' "The Conscious Mind: In Search of a Fundamental Theory"</a></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/8520362-the-grand-design?">Stephen Hawking's "The Grand Design"</a></li>
+                </ul>
+            </div>
+          </div>
         </div>
         <div id="separator1" style="position: relative; height: 50px; top:-25px; z-index: 10;">
             <div style="height: 50px; width: 50px; margin: 0 auto; background-color: #dddddd; -webkit-transform: rotate(45deg);"></div>
@@ -166,7 +195,7 @@
             <div style="height: 50px; width: 50px; margin: 0 auto; background-color: #e8e8e8; -webkit-transform: rotate(45deg);"></div>
         </div>
         <div id="contact">
-          <div id="contact-wrapper">
+          <div id="contact-wrapper" class="show1">
             <div id="container1" class="boom">
                 <img src="img/me5.jpg" alt="me" style="width: 90%; margin: 5% 5%;">
                 <h2 style="margin-top: 1%;">John-Michael Smith</h2>
@@ -185,6 +214,24 @@
                   <!--<li><a target="_blank" href="https://www.facebook.com/jp3isme"><b class="entypo-facebook"></b></a></li>-->
                   <li><a target="_blank" href="spotify:user:jp3isme:playlist:5sNiYuJg7ePavu0y5ZXVMM"><b class="entypo-spotify"></b> Spotify</a></li>
                 </ul>
+            </div>
+          </div>
+          <div id="contact-wrapper" class="show2">
+            <div id="container1" class="boom">
+                <img src="img/me5.jpg" alt="me" style="width: 90%; margin: 5% 5%;">
+                <h2 style="margin-top: 1%;">John-Michael Smith</h2>
+                <hr>
+                <ul id="social" style="text-align: justify; padding-left: 10%;">
+                  <li><a target="_blank" href="https://github.com/jp3isme"><b class="entypo-github"></b> Github</a></li>
+                  <li><a target="_blank" href="https://www.linkedin.com/in/john-michael-smith"><b class="entypo-linkedin"></b> LinkedIn</a></li>
+                  <li><a target="_blank" href="mailto:jp3isme@gmail.com"><b class="entypo-mail"></b> Email</a></li>
+                  <li><a target="_blank" href="https://twitter.com/Jp3isme"><b class="entypo-twitter"></b> Twitter</a></li>
+                  <!--<li><a target="_blank" href="https://www.facebook.com/jp3isme"><b class="entypo-facebook"></b></a></li>-->
+                  <li><a target="_blank" href="spotify:user:jp3isme:playlist:5sNiYuJg7ePavu0y5ZXVMM"><b class="entypo-spotify"></b> Spotify</a></li>
+                </ul>
+            </div>
+            <div id="container2" class="boom" style="">
+              <script type="text/javascript" src="https://form.jotform.com/jsform/63149497673167"></script>
             </div>
           </div>
         </div>
@@ -209,6 +256,20 @@
         // || $(window).width() < 950
             if ( isMobile == true){
               document.location = "mobile.html";
+            }
+
+            if ($(window).width() < 1073){
+              $(".show1").css("display","none");
+              $(".show2").css("display", "inherit");
+              $("#about #container1, #contact #container1").css("width", "33%");
+              $("#about #container2, #contact #container2").css("width", "60%");
+            } else {
+              $(".show1").css("display","inherit");
+              $(".show2").css("display", "none");
+              $("#about #container1").css("width", "20%");
+              $("#contact #container1").css("width", "25%");
+              $("#about #container2").css("width", "50%");
+              $("#contact #container2").css("width", "40%");
             }
         });
 
