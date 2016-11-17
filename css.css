@@ -293,6 +293,30 @@ button:hover {
     margin: 3% 8% 5% 8%;
 }
 
+@media screen and (max-width: 1525px) {
+    #about #container1 {
+        width: 25% !important;
+    }
+    #about #container2 {
+        width: 40% !important;
+    }
+}
+@media screen and (max-width: 1258px) {
+  #about #container1 {
+      width: 27% !important;
+  }
+  #about #container2 {
+      width: 36% !important;
+  }
+}
+@media screen and (max-width: 1089px) {
+  #about #container1 {
+      width: 33% !important;
+  }
+  #about #container2 {
+      width: 60% !important;
+  }
+}
 
 /********** ********** ********** **********/
 
@@ -492,6 +516,14 @@ button:hover {
     #contact-wrapper {
         width: 100% !important;
     }
+}
+@media screen and (max-width: 1089px) {
+  #contact #container1 {
+      width: 33% !important;
+  }
+  #contact #container2 {
+      width: 60% !important;
+  }
 }
 
 /********** ********** ********** **********/
