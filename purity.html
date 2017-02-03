@@ -1212,6 +1212,8 @@
     </div>
   </body>
   <script>
+    var total = 99;
+
     function saveScore() {
         var sins = document.querySelectorAll('input[type="checkbox"]:checked').length;
         var purity = 99-sins;
@@ -1220,7 +1222,7 @@
           // Store
           localStorage.setItem("SavedScore", purity);
           // Retrieve
-          document.getElementById("score").innerHTML = localStorage.getItem("SavedScore");
+          document.getElementById("score").innerHTML = localStorage.getItem("SavedScore")  + ("/") + total;
         } else {
           document.getElementById("score").innerHTML = "Sorry, your browser does not support Web Storage...";
         }
@@ -1233,7 +1235,7 @@
     function retreiveScore() {
       if (typeof(Storage) !== "undefined") {
         // Retrieve
-        document.getElementById("score").innerHTML = localStorage.getItem("SavedScore");
+        document.getElementById("score").innerHTML = localStorage.getItem("SavedScore")  + ("/") + total;
       } else {
         document.getElementById("score").innerHTML = "Sorry, your browser does not support Web Storage...";
       }
