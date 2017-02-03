@@ -20,6 +20,14 @@ h1 {
   margin: 0 auto;
   min-height: 100px;
 }
+#score {
+
+}
+
+#score.change {
+  background-color: #30b7da;
+}
+
 #outer {
   width: 100%;
 }
