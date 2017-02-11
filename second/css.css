@@ -1,0 +1,589 @@
+@import url('master css/master.css');
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+/* entypo */
+
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(82, 101, 143, 1);
+    font-size: 19px;
+    line-height: 34px;
+    webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --main-color: rgba(60, 100, 170, 1);
+    --place-holder: rgba(70, 120, 170, 1);
+    --tile-image: img/noise.png
+}
+
+
+/********** ********** ********** **********/
+
+
+/********** **** splashscreen *** **********/
+
+
+/********** ********** ********** **********/
+
+
+input[type='text'] {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px;
+    transition: border .3s;
+    color: rgb(100, 100, 100);
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+}
+
+input[type='text']:focus, input[type='text'].focus {
+    border-bottom: solid 2px #969696;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.0;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: 11.5px 20px;
+    color: #fff;
+    border: none;
+    border-bottom: solid 2px #346392;
+    border-radius: 0;
+    background-color: #6496c8;
+    box-shadow: none;
+    text-shadow: -1px 1px #417cb8;
+    appearance: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    border-bottom: solid 2px #27496d;
+    background-color: #346392;
+    text-shadow: -1px 1px #27496d;
+}
+
+.Blur {
+    overflow: hidden;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='3');
+}
+
+
+/********** ********** ********** **********/
+
+
+/********** ****** overall ****** **********/
+
+
+/********** ********** ********** **********/
+
+#overall {
+    font-size: 15px;
+    color: #313131;
+    height: auto;
+}
+
+
+/********** ********** ********** **********/
+
+
+/********** ***** navigation **** **********/
+
+
+/********** ********** ********** **********/
+
+#navbar {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+#nav-left, #nav-right {
+  height: 100px;
+  float: left;
+  width: 40%;
+  margin: 0;
+  padding: 0;
+}
+#nav-center {
+  height: 100px;
+  float: left;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+
+#nav-center h1 {
+  margin: 35px 0;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#navigation {
+    margin: 32px 0;
+    padding: .5%;
+    list-style: none;
+    text-align: right;
+    color: inherit;
+}
+
+#navigation li {
+    display: inline;
+    margin-right: 10%;
+    animation-name: change;
+    animation-duration: 5.5s;
+}
+
+#navigation a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+#navigation a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bolder;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.inner {
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.inner h1 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 30px 0;
+  letter-spacing: 0.3em;
+  font-size: 11;
+  font-weight: 700;
+}
+
+.inner a {
+  color: rgb(56, 94, 182);
+  text-decoration: none;
+}
+
+#sec-name {
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #CEC8C8;
+  text-align: left;
+}
+
+img.icon {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  webkit-filter: grayscale(100%);
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: .5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+div.icon {
+  height: auto;
+  width: auto;
+  float: left;
+  display: block;
+  margin-left: -90px;
+  margin-top: -0px;
+}
+
+div.icon a {
+  border: none !IMPORTANT;
+}
+
+img.icon:hover {
+  -webkit-filter: grayscale(0%);
+   -webkit-transition: .5s ease-in-out;
+   -moz-filter: grayscale(0%);
+   -moz-transition: .5s ease-in-out;
+   -o-filter: grayscale(0%);
+   -o-transition: .5s ease-in-out;
+   filter: grayscale(0%);
+}
+
+.right-side {
+  float: right;
+}
+/********** ********** ********** **********/
+
+
+/********** ****** content ****** **********/
+
+
+/********** ********** ********** **********/
+
+
+/********** ********** ********** **********/
+
+
+/********** ******* about ******* **********/
+
+
+/********** ********** ********** **********/
+
+#div1 {
+    z-index: 10;
+    height: 130px;
+    padding-top: 0;
+    margin: 0;
+    background-color: #4C5364;
+}
+
+#about {
+    z-index: 9;
+    height: auto;
+    min-height: 500px;
+    margin: 0;
+    padding: 0 5%;
+    background-color: #eee;
+    font-size: 19px;
+    line-height: 34px;
+    overflow: auto;
+}
+
+#profile {
+  display: block;
+  height: auto;
+  width: 100%;
+  height: 200px;
+  padding-bottom: 30px;
+}
+
+#profile img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+}
+
+#about p, #moreC p, #contact p {
+    margin: 3% 5% 5% 5%;
+}
+
+#about hr, #moreC hr, #contact hr {
+    width: 80%
+}
+
+#about #container1, #contact #container1 {
+    width: 20%;
+    height: auto;
+    margin: 90px 2%;
+    float: left;
+    background-color: #e8e8e8;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    visibility: hidden;
+}
+
+#about h2, #moreC h2, #contact h2 {
+    font-size: 1.5em;
+    margin: 4% 7%;
+}
+
+#about ul, #social, #contact ul {
+    padding: 0;
+    margin: 3% 8% 8% 8%;
+    list-style-type: none;
+}
+
+#social li {
+    display: inline-block;
+    margin: 5px;
+    list-style: none;
+    font-size: 1.3em;
+}
+
+#about #container2, #contact #container2 {
+    width: 50%;
+    height: auto;
+    min-height: 60%;
+    margin: 60px 1%;
+    float: left;
+    background-color: #e8e8e8;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    line-height: 300%;
+    visibility: hidden;
+}
+#about #container2 p {
+    margin: 3% 8% 5% 8%;
+}
+
+
+/********** ********** ********** **********/
+
+
+/********** **** experience ***** **********/
+
+
+/********** ********** ********** **********/
+
+#experience {
+  height: 100px;
+  background-color: #eee;
+}
+
+#moreC {
+    position: relative;
+    z-index: 8;
+    height: auto;
+    min-height: 600px;
+    padding-bottom: 50px;
+    margin: 0;
+    font-size: 1.2em;
+    background-color: #ddd;
+    overflow: auto;
+}
+
+#moreC ul {
+  line-height: double;
+}
+
+#moreC ul {
+}
+
+#moreC h3 {
+    font-size: 1.25em;
+    margin: 0 5%;
+}
+
+
+/********** ********** ********** **********/
+
+
+/********** ****** contact ****** **********/
+
+
+/********** ********** ********** **********/
+
+#contact {
+    position: relative;
+    z-index: 8;
+    bottom: 0px;
+    height: auto;
+    min-height: 700px;
+    margin: 0;
+    padding: 0 5%;
+    padding-top: 50;
+    font-size: 1.2em;
+    background-color: #eee;
+    overflow: auto;
+
+}
+
+#contact #container1 {
+    width: 25%;
+    min-width: 220px;
+}
+
+#contact #container2 {
+    width: 40%;
+    max-width: 480px;
+    min-width: 380px;
+    height: auto;
+    min-height: 40%;
+}
+
+#contact-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#contact #social li {
+    display: block;
+    font-size: 1.1em;
+    margin: 3px;
+}
+
+#contact #social a {
+    padding: 10px;
+}
+
+.show1 {
+  display: inherit;
+}
+.show2 {
+  display: none;
+}
+
+/********** ********** ********** **********/
+
+
+/********** ******* footer ****** **********/
+
+
+/********** ********** ********** **********/
+
+footer {
+    width: 100%;
+    height: 110px;
+    padding-top: 20px;
+    margin: 0;
+    background: #4C5364;
+}
+
+#footer-main {
+    color: #d4d4d4;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#footer-main a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--main-color);
+    padding-bottom: 2px;
+}
+
+#footer-main a:hover {
+    color: var(--main-color);
+}
+
+span {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Colors */
+/* ---------------------------------------- */
+$border: 		#c6c6c6;
+$border-focus: 	#9FB1C1;
+$blue: 			#077ABC;
+$aqua: 			#07B3A1;
+$asphalt: 		#506982;
+
+*{
+	@include box-sizing(border-box);
+}
+
+.form-group{
+	margin-bottom: 20px;
+}
+.controls{
+	text-align: left;
+	position: relative;
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	textarea,
+	button,
+	select{
+		padding: 12px;
+		font-size: 14px;
+		border: 1px solid $border;
+		width: 100%;
+		margin-bottom: 18px;
+		color: #888;
+		font-family: 'Lato', 'sans-serif';
+		font-size: 16px;
+		font-weight: 300;
+     background-color: #fff;
+		@include border-radius(2px);
+		@include transition(all .3s);
+
+		&:focus, &:hover{
+			outline: none;
+			border-color: $border-focus;
+			+ label{
+				color: $blue;
+          cursor: text;
+			}
+		}
+	}
+	.fa-sort{
+		position:absolute;
+		right: 10px;
+		top: 17px;
+		color: #999;
+	}
+	select{
+		@include appearance(none);
+		cursor: pointer;
+	}
+	label{
+		position: absolute;
+		left: 8px;
+		top: 12px;
+		color: #999;
+		font-size: 16px;
+		display: inline-block;
+		padding: 4px 10px;
+		font-weight: 400;
+		background-color: rgba(255,255,255,0);
+    pointer-events: none;
+		@include transition(color .3s, top .3s, background-color .8s);
+		&.active{
+			top: -11px;
+			color: #555;
+       background-color: rgba(255,255,255,1);
+		}
+	}
+	textarea{
+		resize: none;
+		height: 200px;
+	}
+}
