@@ -238,17 +238,70 @@ div.icon {
 }
 
 div.icon#KSU {
-  margin-left: -90px;
+  margin-left: -140px;
   margin-top: 20px;
 }
 
 div.icon#CHS, div.icon#Ud {
-  margin-left: -90px;
+  margin-left: -140px;
   margin-top: 0px;
+}
+
+div.icon#Con-email, div.icon#Con-linkedin, div.icon#Con-github, div.icon#Con-twitter, div.icon#Con-spotify {
+  margin-left: -140px;
+  margin-top: 15px;
+  display: inline-block;
+  webkit-filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: .3s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: .3s ease-in-out;
+  filter: grayscale(100%);
+}
+
+div.icon#Con-email:hover, div.icon#Con-linkedin:hover, div.icon#Con-github:hover, div.icon#Con-twitter:hover, div.icon#Con-spotify:hover {
+   -webkit-filter: grayscale(0%);
+   -webkit-transition: .3s ease-in-out;
+   -moz-filter: grayscale(0%);
+   -moz-transition: .3s ease-in-out;
+   -o-filter: grayscale(0%);
+   -o-transition: .3s ease-in-out;
+   filter: grayscale(0%);
 }
 
 div.icon a {
   border: none !IMPORTANT;
+  font-size: 65px;
+}
+
+div.icon#Con-linkedin a {
+  color: rgb(0, 119, 181);
+}
+div.icon#Con-github a {
+  color: #6e5494;
+}
+div.icon#Con-twitter a {
+  color: rgb(0, 172, 237);
+}
+div.icon#Con-spotify a {
+  color: #24CF5F;
+}
+
+div.icon#Con-email {
+  height: 50px;
+  width: 65px;
+  margin-left: -140px;
+  margin-top: -0px;
+  padding-top: 15px;
+  border-radius: 50%;
+  background-color: rgb(0, 132, 150);
+  text-align: center;
+}
+
+div.icon#Con-email {
+  font-size: 40px;
+  color: #eee;
 }
 
 img.icon:hover {
@@ -267,24 +320,43 @@ img.icon:hover {
 
 .skill p {
   padding: 5;
+}
+
+.skill {
+  display: inline-block;
+  float: left;
+  margin: 7.5px 0px 7px 10px;
+  padding: 3px 10px;
+  line-height: normal;
   border-radius: 8px;
   border: solid 1px rgb(7, 174, 196);
   color: #333;
-  font-size: 0.8em !IMPORTANT;
+  font-size: 0.7em !IMPORTANT;
   text-align: center;
   text-transform: uppercase;
 }
 
-.skill td {
-  align: center;
+.skill#book {
+  border-color: rgb(111, 37, 231);
 }
 
 .course {
-  font-size: 1.1em !IMPORTANT;
+  font-size: 1em !IMPORTANT;
+  width: auto;
+  line-height: normal;
+  padding: 7px 0;
+  display: inline-block;
+  float: left;
+  margin: 0 auto;
 }
 
 .course b {
   color: rgb(7, 174, 196);
+  font-weight: 500;
+}
+
+.course b#book {
+  color: rgb(111, 37, 231);
   font-weight: 500;
 }
 /********** ********** ********** **********/
@@ -339,7 +411,7 @@ img.icon:hover {
   height: 100%;
 }
 
-#about p, #moreC p, #contact p {
+#about p {
     margin: 3% 5% 5% 5%;
 }
 
@@ -426,6 +498,10 @@ img.icon:hover {
     empty-cells: hide;
 }
 
+#moreC li, #contact li {
+  margin: 10px 0;
+}
+
 #moreC h3 {
     font-size: 1.25em;
     margin: 0 5%;
@@ -440,6 +516,11 @@ img.icon:hover {
 
 /********** ********** ********** **********/
 
+#connect {
+  height: 100px;
+  background-color: #ddd;
+}
+
 #contact {
     position: relative;
     z-index: 8;
@@ -448,11 +529,15 @@ img.icon:hover {
     min-height: 700px;
     margin: 0;
     padding: 0 5%;
-    padding-top: 50;
+    padding-bottom: 100px;
     font-size: 1.2em;
     background-color: #eee;
     overflow: auto;
+}
 
+#contact .inner p#special {
+  padding: 0;
+  margin: 0;
 }
 
 #contact #container1 {
