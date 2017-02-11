@@ -247,7 +247,7 @@ div.icon#CHS, div.icon#Ud {
   margin-top: 0px;
 }
 
-div.icon#Con-email, div.icon#Con-linkedin, div.icon#Con-github, div.icon#Con-twitter, div.icon#Con-spotify {
+div.icon#Con-book, div.icon#Con-email, div.icon#Con-linkedin, div.icon#Con-github, div.icon#Con-twitter, div.icon#Con-spotify {
   margin-left: -140px;
   margin-top: 15px;
   display: inline-block;
@@ -260,7 +260,7 @@ div.icon#Con-email, div.icon#Con-linkedin, div.icon#Con-github, div.icon#Con-twi
   filter: grayscale(100%);
 }
 
-div.icon#Con-email:hover, div.icon#Con-linkedin:hover, div.icon#Con-github:hover, div.icon#Con-twitter:hover, div.icon#Con-spotify:hover {
+div.icon#Con-book:hover, div.icon#Con-email:hover, div.icon#Con-linkedin:hover, div.icon#Con-github:hover, div.icon#Con-twitter:hover, div.icon#Con-spotify:hover {
    -webkit-filter: grayscale(0%);
    -webkit-transition: .3s ease-in-out;
    -moz-filter: grayscale(0%);
@@ -288,9 +288,11 @@ div.icon#Con-spotify a {
   color: #24CF5F;
 }
 
-div.icon#Con-email {
+div.icon#Con-email, div.icon#Con-book {
   height: 50px;
   width: 65px;
+  font-size: 40px;
+  color: #eee;
   margin-left: -140px;
   margin-top: -0px;
   padding-top: 15px;
@@ -299,9 +301,9 @@ div.icon#Con-email {
   text-align: center;
 }
 
-div.icon#Con-email {
-  font-size: 40px;
-  color: #eee;
+div.icon#Con-book {
+  margin-top: -16px;
+  background-color: rgb(233, 141, 56);
 }
 
 img.icon:hover {
