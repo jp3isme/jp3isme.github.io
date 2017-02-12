@@ -287,6 +287,9 @@ div.icon#Con-twitter a {
 div.icon#Con-spotify a {
   color: #24CF5F;
 }
+div.icon#Con-spotify {
+  margin-top: -0px;
+}
 
 div.icon#Con-email, div.icon#Con-book {
   height: 50px;
@@ -338,8 +341,22 @@ img.icon:hover {
   text-transform: uppercase;
 }
 
-.skill#book {
+#book .skill {
   border-color: rgb(111, 37, 231);
+}
+
+#music .skill {
+  border-color: rgb(199, 0, 0);
+}
+
+#book b {
+  color: rgb(111, 37, 231);
+  font-weight: 500;
+}
+
+#music b {
+  color: rgb(199, 0, 0);
+  font-weight: 500;
 }
 
 .course {
@@ -357,10 +374,6 @@ img.icon:hover {
   font-weight: 500;
 }
 
-.course b#book {
-  color: rgb(111, 37, 231);
-  font-weight: 500;
-}
 /********** ********** ********** **********/
 
 
