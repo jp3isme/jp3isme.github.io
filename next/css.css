@@ -535,6 +535,7 @@ img.icon:hover {
 #experience {
   height: 100px;
   background-color: #eee;
+  margin-top: -2px;
 }
 
 #moreC {
