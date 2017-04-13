@@ -499,6 +499,18 @@
         <tr>
           <td id="number"></td>
           <td id="question">
+            <p>Given or received roadhead?</p>
+          </td>
+          <td id="answer" >
+            <label class="control control--checkbox">
+              <input type="checkbox"/>
+              <div class="control__indicator"></div>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td id="number"></td>
+          <td id="question">
             <p>Used a sex toy with a partner?</p>
           </td>
           <td id="answer" >
@@ -1212,11 +1224,11 @@
     </div>
   </body>
   <script>
-    var total = 99;
+    var total = 100;
 
     function saveScore() {
         var sins = document.querySelectorAll('input[type="checkbox"]:checked').length;
-        var purity = 99-sins;
+        var purity = total-sins;
         //alert(purity);
         if (typeof(Storage) !== "undefined") {
           // Store
