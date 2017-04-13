@@ -3,7 +3,6 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Karla');
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
 
 /*  V 2.1 */
 
@@ -21,7 +20,7 @@ body {
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: #4C5364;
+    background-color: rgba(82, 101, 143, 1);
     font-size: 19px;
     line-height: 34px;
     webkit-font-smoothing: antialiased;
@@ -30,11 +29,8 @@ body {
 :root {
     --main-color: rgba(60, 100, 170, 1);
     --place-holder: rgba(70, 120, 170, 1);
-    --tile-image: img/noise.png;
-    --main-ac-color: #222b40;
-    --second-ac-color: #4C5364;
+    --tile-image: img/noise.png
 }
-
 
 
 /********** ********** ********** **********/
@@ -400,7 +396,7 @@ img.icon:hover {
     height: 105px;
     padding-top: 0;
     margin: 0;
-    background-color: var(--main-ac-color);
+    background-color: #4C5364;
 }
 
 #about {
@@ -415,65 +411,23 @@ img.icon:hover {
     overflow: auto;
 }
 
-#about .inner {
-  display: block;
-  width: 80%;
-  max-width: 800px;
-  min-width: 662px;
-  margin: 0 auto;
-}
-
 #profile {
   display: block;
   height: auto;
   width: 100%;
-  height: auto;
-}
-
-#dots {
-    list-style: none;
-    margin: 0;
-    margin-left: -30px;
-    padding-top: 10px;
-}
-
-#dots li {
-    float: left;
-    display: inline;
-    margin-right: 8px;
-}
-
-#circle {
-  height: 12px;
-  width: 12px;
-  border-radius: 50px 50px 50px 50px;
+  height: 200px;
+  padding-bottom: 30px;
 }
 
 #profile img {
   display: block;
   margin: 0 auto;
-  width: 100%;
-  height: auto;
-}
-
-#about-text {
-  background-color: var(--main-ac-color);
-  border-radius: 0 0 10px 10px;
-  font-family: 'Cutive Mono', sans-serif;
-  font-size: 14;
-  line-height: 22px;
-}
-
-#about-text a {
-  color: #539ae4;
+  width: auto;
+  height: 100%;
 }
 
 #about p {
-    margin: 0% 7% 5% 7%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: left;
-    color: white;
+    margin: 3% 5% 5% 5%;
 }
 
 #about hr, #moreC hr, #contact hr {
@@ -495,7 +449,7 @@ img.icon:hover {
     margin: 4% 7%;
 }
 
-#social, #contact ul {
+#about ul, #social, #contact ul {
     padding: 0;
     margin: 3% 8% 8% 8%;
     list-style-type: none;
@@ -535,7 +489,6 @@ img.icon:hover {
 #experience {
   height: 100px;
   background-color: #eee;
-  margin-top: -2px;
 }
 
 #moreC {
@@ -650,7 +603,7 @@ footer {
     height: 110px;
     padding-top: 20px;
     margin: 0;
-    background: var(--main-ac-color);
+    background: #4C5364;
 }
 
 #footer-main {
