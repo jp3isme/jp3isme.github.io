@@ -43,7 +43,7 @@
               <div style="height: 30px; width: 100%; background-color: #e0dee1; border-radius: 10px 10px 0 0;">
                 <ul id="dots">
                   <li>
-                    <div id="circle" style="background-color: #fd605b"></div>
+                    <div id="circle" class="close" style="background-color: #fd605b"></div>
                   </li>
                   <li>
                     <div id="circle" style="background-color: #fdbb40"></div>
@@ -377,6 +377,16 @@
   	floatLabel(".floatLabel");
   })(jQuery);
 
+
+    $('div.close').click(function(){
+      if (confirm("You're about to delete the internet. Continue?")) {
+        if (confirm("Are you sure?")) {
+            document.location = "404.html";
+        } else { }
+      } else {
+          // Do nothing!
+      }
+    });
     </script>
 </body>
 
