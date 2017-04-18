@@ -600,10 +600,14 @@ img.icon:hover {
 
 footer {
     width: 100%;
-    height: 110px;
+    height: 160px;
     padding-top: 20px;
     margin: 0;
-    background: #4C5364;
+    background: #222b40; /* Old browsers */
+    background: -moz-linear-gradient(left, #222b40 0%, #31395b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #222b40 0%,#31395b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #222b40 0%,#31395b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222b40', endColorstr='#31395b',GradientType=1 ); /* IE6-9 */
 }
 
 #footer-main {
@@ -616,20 +620,57 @@ footer {
     font-family: 'Montserrat', sans-serif;
 }
 
-#footer-main a {
+.soci {
+  height: 50px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  border-bottom: none;
+
+}
+
+.soci li {
+  display: inline-block;
+  margin: 5px;
+  list-style: none;
+  top:5px;
+  transform:translatey(5px);
+  transition-duration:.2s;
+  transition-property:top,transform;
+}
+
+.soc {
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+.soci a {
+
+}
+
+.soci li:hover{
+  top:0;
+  transform:translatey(0);
+}
+
+#footer-p a {
     color: inherit;
     text-decoration: none;
     border-bottom: 1px dashed var(--main-color);
     padding-bottom: 2px;
 }
 
-#footer-main a:hover {
+#footer-p a:hover {
     color: var(--main-color);
 }
 
 span {
     display: inline;
 }
+
 
 
 
