@@ -134,6 +134,8 @@ button:hover {
     /*text-transform: uppercase;*/
     letter-spacing: 0.1em;
     color: #333;
+    /*border-bottom: 1px solid #222b40;
+    */
 }
 
 #nav-left, #nav-right {
