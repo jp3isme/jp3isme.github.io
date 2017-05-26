@@ -500,7 +500,7 @@ img.icon:hover {
 
 #about-text {
   background-color: var(--main-ac-color);
-  border-radius: 0 0 0px 0px;
+  border-radius: 0 0 5px 5px;
   font-family: 'Cutive Mono', sans-serif;
   font-size: 14;
   line-height: 22px;
