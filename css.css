@@ -523,12 +523,13 @@ img.icon:hover {
 }
 
 .skills_container {
-  background-color: var(--main-ac-color);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px var(--main-ac-color) solid;
   width: 22%;
-  min-width: 250px;
   margin: 2% 2%;
-  height: auto;
-  min-height: 90px;
+  height: 90px;
   float: left;
   display: block;
   text-align: center;
@@ -536,7 +537,7 @@ img.icon:hover {
 }
 
 .skills_container h2 {
-  color: #fff;
+  /*color: #fff;*/
   padding: 10px 0 0px 0;
   margin: 0;
   display: block;
