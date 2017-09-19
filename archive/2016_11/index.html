@@ -1,0 +1,341 @@
+<html>
+
+<head>
+    <title>John-Michael Smith</title>
+    <link rel="icon" href="img/icon2.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--<script src="js/typed.js" type="text/javascript"></script> -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.2.0/scrollreveal.min.js"></script>
+    <script>
+      window.sr = ScrollReveal({ reset: false });
+    </script>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+    <div id="splashscreen" style="visibility: hidden;">
+        <p id="hideme" style="display:none; position:fixed; top:197px; width: 100%; text-align:center; right: 0%;">this site is currently being remodeled</p>
+        <!--<div >
+            <p id="hideme" style="display:none; position:fixed; top:97px; width: 100%; text-align:center;">my name is</p>
+            <p id="splashname" style="position:fixed; top:40%; width: 100%; text-align:center; font-size: 3rem;">JOHN-MICHAEL SMITH</p>
+            <p id="hideme1" style="display:none; position:fixed; top:235px; width: 100%; text-align:center;">welcome to my website</p>
+        </div>
+        <div style="position:fixed; top:60%; width: 100%; text-align:center;">
+            <a href="#" class="enter_link" id="enter" style="border-style: solid; border-width: 1px; border-radius: 2px; padding: 20px; display:none;">KNOCK KNOCK</a>
+        </div>-->
+        <div id="hideme1" style="display:none; position: fixed; top: 250px; width: 100%; text-align:center; right: 0%;">
+
+            <form name="login">
+                <input type="text" id="inputbox" name="userid" value=" " onfocus="if(this.value == ' ') { this.value = ''; }" onblur="if(this.value == '') { this.value = ' '; }" />
+                <button type="button" class="enter_link" id="button" onclick="check(this.form)" value="enter anyway" />enter anyway</button>
+            </form>
+        </div>
+    </div>
+    <!--<div id="splashBlur">  -->
+    </div>
+    <div id="overall">
+        <div id="top-back"></div>
+        <div id="Top">
+        </div>
+        <div id="navbar">
+            <ul id="navigation">
+                <li><a href="#div1" class="down link" id="space">About</a>
+                </li>
+                <li><a href="#separator1" class="down link" id="space">Experience</a>
+                </li>
+                <li><a href="#contact" class="down link" id="space">Connect</a>
+                </li>
+            </ul>
+        </div>
+        <!--<div style=" position: absolute; top: 300px; height: 302px; width: 302px; -webkit-transform: rotate(-45deg);
+     left:0; right:0; margin-left:auto; margin-right:auto; outline: solid 25px #e8e8e8;"><div style="background-color: #f7f5e6; height: 302px; width: 302px;
+    "><img src="/me3.png" alt="me" style="height: 302; width: 302;"></div></div>-->
+        <div id="div1">
+        </div>
+        <div id="about">
+          <div class="show1">
+            <div id="container1" class="boom">
+                <img src="img/me5.jpg" alt="me" style="width: 90%; margin: 5% 5%;">
+                <h2 style="margin-top: 1%;">John-Michael Smith</h2>
+                <hr>
+                <ul id="social">
+                    <li><a target="_blank" href="https://twitter.com/Jp3isme"><b class="entypo-twitter"></b></a></li>
+                    <!--<li><a target="_blank" href="https://www.facebook.com/jp3isme"><b class="entypo-facebook"></b></a></li>-->
+                    <li><a target="_blank" href="spotify:user:jp3isme:playlist:5sNiYuJg7ePavu0y5ZXVMM"><b class="entypo-spotify"></b></a></li>
+                    <li><a target="_blank" href="https://github.com/jp3isme"><b class="entypo-github"></b></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/john-michael-smith"><b class="entypo-linkedin"></b></a></li>
+                    <li><a target="_blank" href="mailto:jp3isme@gmail.com"><b class="entypo-mail"></b></a></li>
+                </ul>
+            </div>
+            <div id="container2" class="boom">
+                <h1>Who I Am</h1>
+                <hr>
+                <p>
+                  I'm a Computer Science student at Kennesaw State University, passionate about our future and the applications of technology.
+                  I have a specific interest in artificial intelligence and autonomous technologies.
+                  I'm on track to graduate in 2019 with a BS in Computer Science and a minor in Software Engineering, then in 2021 with a MS in Computer Science.
+                </p>
+            </div>
+            <div id="container1" class="boom">
+                <h2>Current Reads</h2>
+                <hr>
+                <ul>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/149267.The_Stand?">Stephin King's "The Stand"</a></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things?">Don Norman's "The Design of Everyday Things"</atarget></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/144960.The_Conscious_Mind?">David J. Chalmers' "The Conscious Mind: In Search of a Fundamental Theory"</a></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/8520362-the-grand-design?">Stephen Hawking's "The Grand Design"</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="show2">
+            <div id="container2" class="boom">
+                <h1>Who I Am</h1>
+                <hr>
+                <img src="img/me5.jpg" alt="me" style="width: 90%; max-width: 375px; margin: 5% 5%;">
+                <h2 style="margin-top: 1%;">John-Michael Smith</h2>
+                <hr>
+                <p style="padding-bottom: 30px;">
+                  I'm a Computer Science student at Kennesaw State University, passionate about our future and the applications of technology.
+                  I have a specific interest in artificial intelligence and autonomous technologies.
+                  I'm on track to graduate in 2019 with a BS in Computer Science and a minor in Software Engineering, then in 2021 with a MS in Computer Science.
+                </p>
+            </div>
+            <div id="container1" class="boom">
+                <h2>Current Reads</h2>
+                <hr>
+                <ul>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/149267.The_Stand?">Stephin King's "The Stand"</a></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things?">Don Norman's "The Design of Everyday Things"</atarget></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/144960.The_Conscious_Mind?">David J. Chalmers' "The Conscious Mind: In Search of a Fundamental Theory"</a></li>
+                    <br>
+                    <li><a target="_blank" href="https://www.goodreads.com/book/show/8520362-the-grand-design?">Stephen Hawking's "The Grand Design"</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div id="separator1" style="position: relative; height: 50px; top:-25px; z-index: 10;">
+            <div style="height: 50px; width: 50px; margin: 0 auto; background-color: #dddddd; -webkit-transform: rotate(45deg);"></div>
+        </div>
+        <div id="moreC">
+          <div class="large-container1">
+            <div id="container3" class="boom">
+              <div style="text-align: center;">
+                <h2>Education</h2>
+                <hr>
+              </div>
+              <div>
+                <h3>2015 - 2019</h3>
+                <p>Kennesaw State Univeristy: B.S. in Computer Science, minor in Software Engineering</p>
+                <h3>Planned</h3>
+                <p>M.S. in Computer Science</p>
+              </div>
+            </div>
+          </div>
+          <div class="large-container2">
+            <div id="container4" class="boom">
+              <div style="text-align: center;">
+                <h2>Skills</h2>
+                <hr>
+              </div>
+              <div>
+                <ul>
+                  <li>Java</li>
+                  <li>HTML5</li>
+                </ul>
+                <ul>
+                  <li>JavaScript</li>
+                  <li>Photoshop</li>
+                </ul>
+                <ul>
+                  <li>CSS3</li>
+                  <li>Design</li>
+                </ul>
+              </div>
+              <div style="text-align: center;">
+                <h3>Lesser Skills</h3>
+                <hr>
+              </div>
+              <div>
+                <ul>
+                  <li>Python</li>
+                  <li>C#</li>
+                </ul>
+                <ul>
+                  <li>Objective-C</li>
+                  <li>Illustrator</li>
+                </ul>
+                <ul>
+                  <li>C++</li>
+                  <li>Office</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--<div class="large-container2">
+            <div id="container5" class="boom" >
+              <div style="text-align: center;">
+                <h2>Projects</h2>
+                <hr>
+              </div>
+              <div>
+                <img src="img/capture-nesphotography.png" alt="me" style="width: 80%; margin: 3% 10%;">
+                <h3 style="margin-top: 1%;">NES Photography</h2>
+                <hr>
+              </div>
+            </div>
+          </div>-->
+        </div>
+        <div id="separator1" style="position: relative; height: 50px; top:-25px; z-index: 10;">
+            <div style="height: 50px; width: 50px; margin: 0 auto; background-color: #e8e8e8; -webkit-transform: rotate(45deg);"></div>
+        </div>
+        <div id="contact">
+          <div id="contact-wrapper" class="show1">
+            <div id="container1" class="boom">
+                <img src="img/me5.jpg" alt="me" style="width: 90%; margin: 5% 5%;">
+                <h2 style="margin-top: 1%;">John-Michael Smith</h2>
+            </div>
+            <div id="container2" class="boom" style="">
+              <script type="text/javascript" src="https://form.jotform.com/jsform/63149497673167"></script>
+            </div>
+            <div id="container1" class="boom">
+                <h1>Connect</h1>
+                <hr>
+                <ul id="social" style="text-align: justify; padding-left: 10%;">
+                  <li><a target="_blank" href="https://github.com/jp3isme"><b class="entypo-github"></b> Github</a></li>
+                  <li><a target="_blank" href="https://www.linkedin.com/in/john-michael-smith"><b class="entypo-linkedin"></b> LinkedIn</a></li>
+                  <li><a target="_blank" href="mailto:jp3isme@gmail.com"><b class="entypo-mail"></b> Email</a></li>
+                  <li><a target="_blank" href="https://twitter.com/Jp3isme"><b class="entypo-twitter"></b> Twitter</a></li>
+                  <!--<li><a target="_blank" href="https://www.facebook.com/jp3isme"><b class="entypo-facebook"></b></a></li>-->
+                  <li><a target="_blank" href="spotify:user:jp3isme:playlist:5sNiYuJg7ePavu0y5ZXVMM"><b class="entypo-spotify"></b> Spotify</a></li>
+                </ul>
+            </div>
+          </div>
+          <div id="contact-wrapper" class="show2">
+            <div id="container1" class="boom">
+                <img src="img/me5.jpg" alt="me" style="width: 90%; margin: 5% 5%;">
+                <h2 style="margin-top: 1%;">John-Michael Smith</h2>
+                <hr>
+                <ul id="social" style="text-align: justify; padding-left: 10%;">
+                  <li><a target="_blank" href="https://github.com/jp3isme"><b class="entypo-github"></b> Github</a></li>
+                  <li><a target="_blank" href="https://www.linkedin.com/in/john-michael-smith"><b class="entypo-linkedin"></b> LinkedIn</a></li>
+                  <li><a target="_blank" href="mailto:jp3isme@gmail.com"><b class="entypo-mail"></b> Email</a></li>
+                  <li><a target="_blank" href="https://twitter.com/Jp3isme"><b class="entypo-twitter"></b> Twitter</a></li>
+                  <!--<li><a target="_blank" href="https://www.facebook.com/jp3isme"><b class="entypo-facebook"></b></a></li>-->
+                  <li><a target="_blank" href="spotify:user:jp3isme:playlist:5sNiYuJg7ePavu0y5ZXVMM"><b class="entypo-spotify"></b> Spotify</a></li>
+                </ul>
+            </div>
+            <div id="container2" class="boom" style="">
+              <script type="text/javascript" src="https://form.jotform.com/jsform/63209496541157"></script>
+            </div>
+          </div>
+        </div>
+        <footer>
+            <div id="footer-main">
+              <p><b class="entypo-heart"></b> made with love in Atlanta<br>
+                <!--<a target="_blank" href="docs/resume">resume</a>  |  -->
+                <a target="_blank" href="/resume.pdf">Resume</a>  |  <a target="_blank" href="http://www.entypo.com/">entypo</a>  |  <a target="_blank" href="https://scrollrevealjs.org/">ScrollReveal</p>
+            </div>
+        </footer>
+    </>
+    <script>
+        //------------------- is mobile ? ---------------------------------------------------------
+
+
+        var isMobile = false; //initiate as false
+        // device detection
+        if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
+            || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) isMobile = true;
+
+        $(window).on("load resize scroll orientationchange",function(e) {
+        // || $(window).width() < 950
+            if ( isMobile == true){
+              document.location = "mobile.html";
+            }
+
+            if ($(window).width() < 1073){
+              $(".show1").css("display","none");
+              $(".show2").css("display", "inherit");
+            } else {
+              $(".show1").css("display","inherit");
+              $(".show2").css("display", "none");
+            }
+        });
+
+        //------------------ Smooth Scroll on click ------------------------------
+        $(document).ready(function() {
+            $('#splashname').delay(1000).animate({
+                'top': "120px" //moves up
+            }, 1000);
+            $('#hideme').delay(2000).fadeIn(500);
+            $('#hideme1').delay(2000).fadeIn(500);
+            $('#enter').delay(2000).fadeIn(500);
+            //$("#overall").addClass("Blur");
+        });
+
+
+        $('.enter_link').click(function() {
+            $("#splashscreen").fadeOut(500);
+            $("#navigation").fadeOut(0);
+            $("#navigation").delay(500).fadeIn(1000);
+            $("#overall").removeClass("Blur");
+        });
+
+     $(function() {
+            $('.link').click(function() {
+                var id = $(this).attr('href');
+                $('html,body').animate({
+                    scrollTop: $(id).offset().top
+                }, 'slow');
+                // Prevent default behavior of link
+                return false;
+            });
+        });
+
+        function check(form) { /*function to check userid & password*/
+            /*the following code checkes whether the entered userid and password are matching*/
+            if (form.userid.value == "Open, Sesame!") {
+                $("#splashscreen").fadeOut(500);
+                $("#navigation").fadeOut(0);
+                $("#navigation").delay(500).fadeIn(1000);
+                $("#overall").removeClass("Blur");
+            } else {
+                alert("incorrect passcode")
+            }
+        }
+
+        sr.reveal('.boom', {viewFaactor: 0.5}, {reset: false});
+
+
+        (function($){
+  	function floatLabel(inputType){
+  		$(inputType).each(function(){
+  			var $this = $(this);
+  			// on focus add class active to label
+  			$this.focus(function(){
+  				$this.next().addClass("active");
+  			});
+  			//on blur check field and remove class if needed
+  			$this.blur(function(){
+  				if($this.val() === '' || $this.val() === 'blank'){
+  					$this.next().removeClass();
+  				}
+  			});
+  		});
+  	}
+  	// just add a class of "floatLabel to the input field!"
+  	floatLabel(".floatLabel");
+  })(jQuery);
+
+
+
+
+    </script>
+</body>
+
+</html>
