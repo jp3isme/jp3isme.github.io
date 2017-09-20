@@ -519,6 +519,7 @@ img.icon:hover {
   margin-left: 20px;
   height: 74px;
   width: 100px !IMPORTANT;
+  overflow: visible;
 }
 /* The switch - the box around the slider */
 .switch {
