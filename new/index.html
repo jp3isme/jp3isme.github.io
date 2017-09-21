@@ -27,10 +27,10 @@
 
   <div id="profile" class="roundMe transform" style="border-radius: 45px 45px 0 0; margin-bottom: 0;">
     <img src="img/profile.jpg" alt="John-Michael Smith">
-    <div id="profile-body">
-      <p id="profile-h1">John-Michael Smith</p>
-      <p id="profile-h2">University of Georgia Computer Science student</p>
-      <p id="profile-h3">jsmith@cs.uga.edu</p>
+    <div id="profile-body" class="transform">
+      <p id="profile-h1" class="transform-text">John-Michael Smith</p>
+      <p id="profile-h2" class="transform-text">University of Georgia Computer Science student</p>
+      <p id="profile-h3" class="transform-text">jsmith@cs.uga.edu</p>
     </div>
   </div>
   <div id="switch" class="roundMe transform">
@@ -57,9 +57,9 @@
   <div id="buffer"></div>
   <div id="bio" class="roundMe transform2">
     <div class="inner">
-      <h1 id="sec-name">Bio</h1>
+      <h1 class="sec-name" class="transform-text">Bio</h1>
       <div class="nboom">
-        <p>I'm a Computer Science student at the University of Georgia, passionate about our future and the applications of technology. I began programming over 6 years ago with small websites and then moved on to iOS application development. Since then,
+        <p class="transform-text">I'm a Computer Science student at the University of Georgia, passionate about our future and the applications of technology. I began programming over 6 years ago with small websites and then moved on to iOS application development. Since then,
           I've developed a specific interest in the applications of artificial intelligence (AI) and autonomous technologies. I believe these are going to change the world in the coming years to a greater extent than most people realize. For this reason,
           I'm enormously interested in their development and safety. I started college at Kennesaw State University in 2015, then transferred to the University of Georgia in the fall of 2017 to focus on AI. I'm on track to graduate with my B.S. in Computer
           Science in 2019, then I plan to further my education by getting my M.S. in Artificial Intelligence.</p>
@@ -73,7 +73,7 @@
 
   <div id="education" class="roundMe transform2">
     <div class="inner">
-      <h1 id="sec-name">Education</h1>
+      <h1 class="sec-name">Education</h1>
       <div class="nboom">
         <div class="icon" id="UGA"><a href="http://cs.uga.edu/" target="_blank"><img class="icon" src="img/uga_crest.jpg" alt="University of Georgia"></a></div>
         <h2><a href="http://cs.uga.edu/" target="_blank">University of Georgia</a></h2>
@@ -199,7 +199,7 @@
 
   <div id="skills_div" class="roundMe transform2">
     <div class="inner" style="width: 80%; display: block;  min-height: 300px; margin: 0 auto;">
-      <h1 id="sec-name">Skills</h1>
+      <h1 class="sec-name">Skills</h1>
       <div class="skills_container boom" style="min-width: 25px; margin-left: 0;">
         <h2>Java</h2>
         <h3>Proficient</h3>
@@ -243,7 +243,7 @@
   <div id="connect" class="roundMe transform2">
     <div class="inner">
 
-      <h1 id="sec-name">Social Extensions</h1>
+      <h1 class="sec-name">Social Extensions</h1>
       <div class="nboom">
         <a href="mailto:jp3isme@gmail.com" target="_blank">
           <div class="icon" id="Con-email"><b class="entypo-mail"></b></div>
@@ -283,7 +283,7 @@
       <br>
       <br>
 
-      <h1 id="sec-name">Activity</h1>
+      <h1 class="sec-name">Activity</h1>
       <div class="nboom">
         <a href="https://www.goodreads.com/review/list/64860063-john-michael-smith?per_page=40&shelf=currently-reading&utf8=%E2%9C%93" target="_blank">
           <div class="icon" id="Con-book"><b class="entypo-book"></b></div>
@@ -446,6 +446,14 @@
       $('.transform').toggleClass('transform-active');
       $('.transform2').toggleClass('transform-active2');
       $('.transform3').toggleClass('transform-active3');
+      $('.transform-text').toggleClass('transform-text-active');
+      $('.course').toggleClass('transform-text-active');
+      $('.skill').toggleClass('transform-text-active');
+      $('.sec-name').toggleClass('transform-text-active');
+      $('.skills_container').toggleClass('transform-active');
+      $('h4').toggleClass('transform-text-active');
+
+
     });
   </script>
   <script>
