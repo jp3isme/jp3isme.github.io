@@ -38,7 +38,7 @@
         <span class="slider round">
         </span>
       </label>
-      <div style="width:50px; height: 20px; background-color: #ececec; color: #aa8bd6; margin: 38px 0 0 25px; text-align: center; font-size: 1rem; line-height: 100%;">beta</div>
+    <div style="width:50px; height: 20px; background-color: #ececec; color: #aa8bd6; margin: 38px 0 0 25px; text-align: center; font-size: 1rem; line-height: 100%;">beta</div>
   </div>
   <div id="nav" class="roundMe transform" style="border-radius: 0 0 45px 45px; margin: 0 auto 10px auto;">
     <ul>
@@ -107,14 +107,14 @@
       .test(navigator.userAgent.substr(0, 4))) isMobile = true;
 
     $(window).on("load resize orientationchange", function(e) {
-        if (isMobile == true) {
-          document.location = "mobile.html"
-        }
-        resizePage();
+      if (isMobile == true) {
+        document.location = "mobile.html"
+      }
+      resizePage();
+      loadArt();
+    });
 
-      });
-
-    function resizePage(){
+    function resizePage() {
       //fixmeTop = $('#nav').offset().top;
       if ($(window).width() < 1445 && $(window).width() > 1239) {
         $('.roundMe').css('width', '70%');
@@ -135,18 +135,20 @@
         $('#switch').css('left', '80%');
         $('#switch').css('visibility', 'visbible');
       }
-      var GET = {};
-var query = window.location.search.substring(1).split("&");
-for (var i = 0, max = query.length; i < max; i++)
-{
-    if (query[i] === "") // check for trailing & with no param
-        continue;
+    }
 
-    var param = query[i].split("=");
-    GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
-}
-    alert(GET.Use_id);
-    $('.inner').load(GET.Use_id + ".html");
+    function loadArt(){
+      var GET = {};
+      var query = window.location.search.substring(1).split("&");
+      for (var i = 0, max = query.length; i < max; i++) {
+        if (query[i] === "") // check for trailing & with no param
+          continue;
+
+        var param = query[i].split("=");
+        GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
+      }
+      //alert(GET.Use_id);
+      $('.inner').load(GET.Use_id + ".html");
     }
 
     var fixmeTop = $('#nav').offset().top; // get initial position of the element
