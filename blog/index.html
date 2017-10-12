@@ -135,7 +135,18 @@
         $('#switch').css('left', '80%');
         $('#switch').css('visibility', 'visbible');
       }
-      $(".inner").load("test.html");
+      var GET = {};
+var query = window.location.search.substring(1).split("&");
+for (var i = 0, max = query.length; i < max; i++)
+{
+    if (query[i] === "") // check for trailing & with no param
+        continue;
+
+    var param = query[i].split("=");
+    GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
+}
+    alert(GET.Use_id);
+    $('.inner').load(GET.Use_id + ".html");
     }
 
     var fixmeTop = $('#nav').offset().top; // get initial position of the element
@@ -198,7 +209,7 @@
       });
     });
   </script>
-  <script type="text/javascript">
+  <script type="application/javascript">
     $(document).ready() {
       resizePage();
     }
