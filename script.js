@@ -118,7 +118,7 @@ $("#switch-colors").change(function() {
       $this.attr("href", _href + '?dm=y');
     } else {
       $this.attr("href", _href);
-      alert("ran");
+      //alert("ran");
     }
   });
 });
