@@ -1,0 +1,30 @@
+.inner {
+  width: 90%;
+  max-width: 1000px;
+
+}
+
+.dates {
+  text-align: center;
+  width: 30%;
+  background-color: #dfdfdf;
+  float: left;
+  border-radius: 45px;
+  margin: 30px 1.65%;
+}
+
+.dates img {
+  border-radius: 45px 45px 0 0;
+}
+
+.dates h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.dates h2 {
+  font-size: 1.1rem;
+  text-align: center;
+}
