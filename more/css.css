@@ -6,11 +6,11 @@
 
 .dates {
   text-align: center;
-  width: 30%;
+  width: 23%;
   background-color: #dfdfdf;
   float: left;
   border-radius: 45px;
-  margin: 30px 1.65%;
+  margin: 30px 1%;
 }
 
 .dates img {
@@ -27,4 +27,11 @@
 .dates h2 {
   font-size: 1.1rem;
   text-align: center;
+  line-height: 3;
+}
+
+.spacer {
+  width: 100%;
+  height: 2px;
+  float: left;
 }
