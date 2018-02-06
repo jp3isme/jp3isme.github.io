@@ -9,12 +9,12 @@
   width: 23%;
   background-color: #dfdfdf;
   float: left;
-  border-radius: 45px;
+  border-radius: 5px;
   margin: 30px 1%;
 }
 
 .dates img {
-  border-radius: 45px 45px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .dates h1 {
@@ -34,4 +34,8 @@
   width: 100%;
   height: 2px;
   float: left;
+}
+
+.roundMe {
+  border-radius: 5px;
 }
