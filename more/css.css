@@ -28,6 +28,11 @@
   font-size: 1.1rem;
   text-align: center;
   line-height: 3;
+
+}
+
+.dates h3 {
+
 }
 
 .spacer {
@@ -38,4 +43,16 @@
 
 .roundMe {
   border-radius: 5px;
+}
+
+/****************************************************************************
+*****************************************************************************
+****************************************************************************/
+
+.transform, .transform2, .transform3, .transform-text {
+  -webkit-transition: all 0s ease;
+  -moz-transition: all 0s ease;
+  -o-transition: all 0s ease;
+  -ms-transition: all 0s ease;
+  transition: all 0s ease;
 }
