@@ -112,7 +112,7 @@ movies.forEach(function(el, index) {
   input.type = 'checkbox';
   input.id = el[0];
   input.className = 'checkbox';
-  input.setAttribute("onchange", 'toggleCheckbox(this)');
+  //input.setAttribute("onchange", 'toggleCheckbox(this)');
   input_div.className = 'control__indicator';
   h4.appendChild(t4);
 
