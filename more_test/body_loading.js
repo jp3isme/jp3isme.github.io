@@ -54,15 +54,15 @@ function toggleCheckbox(element) {
   console.log(myList);
 }
 */
-$('#checkbox').click(function() {
-  var val_index = $(this).className;
+function checkk(elem) {
+  var val_index = elem.id;
   console.log(val_index);
-  if ($(this).is(':unchecked')) {
+  if (elem.is(':unchecked')) {
     if (contains.call(myList, val_index)) {
       var index = array.indexOf(val_index);
       if (index !== -1) array.splice(index, 1);
     }
-  } else if ($(this).is(':checked')) {
+  } else if (elem.is(':checked')) {
     if (!contains.call(myList, val_index)) {
       myList.push(val_index);
     }
@@ -110,9 +110,9 @@ movies.forEach(function(el, index) {
   label.className = 'control control--checkbox';
   label.id = el[0];
   input.type = 'checkbox';
-  input.className = el[0];
-  input.id = 'checkbox';
-  //input.setAttribute("onchange", 'toggleCheckbox(this)');
+  input.id = el[0];
+  input.className = 'checkbox';
+  input.setAttribute("onchange", 'checkk(this)');
   input_div.className = 'control__indicator';
   h4.appendChild(t4);
 
