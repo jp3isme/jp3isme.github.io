@@ -11,11 +11,27 @@
 
 
 var myList = [];
+var current = 'a';
+
+
+function first(){
+  window.csv_content;
+  window.movies;
+  csv_content = document.getElementById("val_data").innerHTML;
+  movies = $.csv.toArrays(csv_content);
+  console.log(movies);
+  movies.forEach(function(el, index) {
+    el.unshift(index);
+  });
+  setup();
+}
+
 function setup() {
+  $('.inner').html("");
   if (typeof(Storage) !== "undefined") {
     // Retrieve
     var retreive = [];
-    if((retreive = JSON.parse(localStorage.getItem("myList"))) != null){
+    if ((retreive = JSON.parse(localStorage.getItem("myList"))) != null) {
       myList = retreive;
     };
   } else {
@@ -24,15 +40,14 @@ function setup() {
   console.log(typeof myList);
   console.log(myList);
 
-  var csv_content;
-  var movies;
-  csv_content = document.getElementById("val_data").innerHTML;
-  movies = $.csv.toArrays(csv_content);
-  console.log(movies);
-
   var toAdd = document.createDocumentFragment();
-
+  var count = 0;
   movies.forEach(function(el, index) {
+    if(current == 'b'){
+      if (!contains.call(myList, el[0])) {
+        return;
+      }
+    }
     var newDiv = document.createElement('div');
     var link = document.createElement('a');
     var img = document.createElement('img');
@@ -67,7 +82,7 @@ function setup() {
     input.className = 'checkbox';
     input.setAttribute("onchange", 'checkk(this)');
     input_div.className = 'control__indicator';
-    if (contains.call(myList, el[0])){
+    if (contains.call(myList, el[0])) {
       //input.setAttribute("checked", true);
       input.checked = true;
       console.log("found" + el[0]);
@@ -94,17 +109,48 @@ function setup() {
     newDiv.appendChild(br3);
 
 
-    if (index % 4 == 0) {
+    if (count % 4 == 0) {
       var spacer = document.createElement('div');
       spacer.className = 'spacer';
       toAdd.appendChild(spacer);
       console.log("Spacer added\n");
     }
-
+    count++;
     toAdd.appendChild(newDiv);
   });
 
   $('.inner').append(toAdd);
+
+  $('.dates').each(function() {
+    console.log("run");
+    var dateInBox = $(this).children("h2").text();
+    // Set the date we're counting down to
+    var countDownDate = new Date(dateInBox).getTime();
+
+    var changeMe = $(this).children('h1');
+
+    setInterval(function() {
+      // Get todays date and time
+      var now = new Date().getTime();
+      //alert(countDownDate + "\n" + now);
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      changeMe.text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        changeMe.text("It's Time!");
+      }
+    }, 1000);
+  });
 
 };
 
@@ -158,4 +204,19 @@ function checkk(elem) {
   console.log(myList);
 };
 
-window.onload = setup;
+$('#myList_button').click(function() {
+  $('#all_button').attr('style', 'background-color: #adadad');
+  $('#myList_button').attr('style', 'background-color: #eeeeee');
+  console.log("myList");
+  current = 'b';
+  setup();
+});
+$('#all_button').click(function() {
+  $('#myList_button').attr('style', 'background-color: #adadad');
+  $('#all_button').attr('style', 'background-color: #eeeeee');
+  console.log("all");
+  current = 'a';
+  setup();
+});
+
+window.onload = first;

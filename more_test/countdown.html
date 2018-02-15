@@ -56,12 +56,12 @@
   <div id="buffer"></div>
   <div id="bio" class="roundMe transform2">
     <div class="inner1">
-      <div class="filter_button" id="all_button"><a href="">
+      <div class="filter_button" id="all_button">
         <h1>All</h1>
-      </a></div>
-      <div class="filter_button" id="myList_button"><a href="">
+      </div>
+      <div class="filter_button" id="myList_button">
         <h1>My List</h1>
-      </a></div>
+      </div>
     </div>
     <div class="inner">
 
@@ -87,11 +87,12 @@
     </div>
   </footer>
   <div class="hideme" style="width: 0; height: 0; visibility: hidden;">
-    <p id="val_data" style="width: 0; height: 0; visibility: hidden; font-size: 0;">0,Black Panther,"Feb 16, 2018",./img/black_panther.jpg,https://www.youtube.com/watch?v=xjDjIWPwcPU
-1,Tomb Raider,"March 16, 2018",./img/tomb_raider.jpg,https://www.youtube.com/watch?v=8ndhidEmUbI
-2,Ready Player One,"March 30, 2018",./img/ready_player_one.jpg,https://www.youtube.com/watch?v=cSp1dM2Vj48
-3,The Avengers: Infinity War,"May 4, 2018",./img/infinity_war.jpg,https://www.youtube.com/watch?v=6ZfuNTqbHE8
-4,Deadpool 2,"May 18, 2018",./img/dead_pool_2.jpg,https://www.youtube.com/watch?v=xZNBFcwd7zc
+    <p id="val_data" style="width: 0; height: 0; visibility: hidden; font-size: 0;">Black Panther,"Feb 16, 2018",./img/black_panther.jpg,https://www.youtube.com/watch?v=xjDjIWPwcPU
+Tomb Raider,"March 16, 2018",./img/tomb_raider.jpg,https://www.youtube.com/watch?v=8ndhidEmUbI
+Ready Player One,"March 30, 2018",./img/ready_player_one.jpg,https://www.youtube.com/watch?v=cSp1dM2Vj48
+The Avengers: Infinity War,"May 4, 2018",./img/infinity_war.jpg,https://www.youtube.com/watch?v=6ZfuNTqbHE8
+Deadpool 2,"May 18, 2018",./img/dead_pool_2.jpg,https://www.youtube.com/watch?v=xZNBFcwd7zc
+
     </p>
   </div>
 
@@ -116,38 +117,9 @@
   <!--<script src="../script.js"></script>
   -->
   <script src="./jquery-csv.js"></script>
-  <script src="./body_loading.js?version=4.7"></script>
+  <script src="./body_loading.js?version=4.8"></script>
   <script>
-    $('.dates').each(function() {
 
-      var dateInBox = $(this).children("h2").text();
-      // Set the date we're counting down to
-      var countDownDate = new Date(dateInBox).getTime();
-
-      var changeMe = $(this).children('h1');
-
-      setInterval(function() {
-        // Get todays date and time
-        var now = new Date().getTime();
-        //alert(countDownDate + "\n" + now);
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result in an element with id="demo"
-        changeMe.text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
-
-        // If the count down is over, write some text
-        if (distance < 0) {
-          changeMe.text("It's Time!");
-        }
-      }, 1000);
-    });
 
   </script>
   <script src="./script.js"></script>
