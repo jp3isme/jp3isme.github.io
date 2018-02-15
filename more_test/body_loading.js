@@ -121,6 +121,7 @@ movies.forEach(function(el, index) {
   input_div.className = 'control__indicator';
   if (contains.call(myList, el[0])){
     input.setAttribute("checked", true);
+    console.log("found" + el[0]);
   } else {
     input.setAttribute("checked", false);
   }
