@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <title>Movie Countdown</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A coundown to movie releases (mostly just the ones I'm interested in&mdash;sorry people with bad taste)">
+  <meta name="keywords" content="John-Michael Smith, Programmer, Computer Science, movies, 2018, 2019, releases, countdown">
+  <meta name="author" content="John-Michael Smith">
+  <link rel="icon" href="../img/icon2.png">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+    window.sr = ScrollReveal({
+      reset: false
+    });
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="../css.css">
+  <link rel="stylesheet" type="text/css" href="./css.css">
+  <style>
+    /* Ensure elements load hidden before ScrollReveal runs */
+
+    .sr .boom {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body class="transform3">
+
+  <div id="profile" class="roundMe transform" style="border-radius: 5px; margin-bottom: 0;">
+    <div style="text-align: center;">
+      <h1>Countdown</h1>
+    </div>
+  </div>
+  <!--
+  <div id="switch" class="roundMe transform">
+    <label class="switch">
+        <input type="checkbox" id="switch-colors">
+        <span class="slider round">
+        </span>
+      </label>
+    <div style="width:50px; height: 20px; background-color: #ececec; color: #aa8bd6; margin: 38px 0 0 25px; text-align: center; font-size: 1rem; line-height: 100%;">beta</div>
+  -->
+  </div>
+  <!--<div id="nav" class="roundMe transform" style="border-radius: 0 0 45px 45px; margin: 0 auto 10px auto;">
+    <ul>
+      <li><a href="../index.html" class="down link local">Home</a></li>
+      <li><a href="../blog/" class="down link local">Blogs</a></li>
+    </ul>
+  </div>-->
+
+  <div id="" class="roundMe">
+
+  </div>
+
+  <div id="buffer"></div>
+  <div id="bio" class="roundMe transform2">
+    <div class="inner">
+
+    </div>
+  </div>
+
+  <footer class="roundMe" style="margin-bottom: 20px;">
+    <div id="footer-main">
+      <ul class="soci">
+        <li><a class="soc" href="mailto:jp3isme@gmail.com" target="_blank"><img src="../img/email.svg" alt="email" style="height: 30px; width: 30px; padding-bottom: 0px;"></a></li>
+        <li><a class="soc" href="https://www.linkedin.com/in/john-michael-smith" target="_blank"><img src="../img/linkedin.svg" alt="linkedin" style="height: 29px; width: 29px; padding-bottom: 0px;"></a></li>
+        <li><a class="soc" href="https://twitter.com/Jp3isme" target="_blank"><img src="../img/twitter.svg" alt="twitter" style="height: 30px; width: 30px; padding-bottom: 0px;"></a></li>
+        <li><a class="soc" href="https://www.instagram.com/Jp3isme" target="_blank"><img src="../img/instagram.svg" alt="instagram" style="height: 28px; width: 28px; padding-bottom: 0px;"></a></li>
+        <li><a class="soc" href="https://github.com/jp3isme" target="_blank"><img src="../img/github.svg" alt="github" style="height: 30px; width: 30px; padding-bottom: 0px;"></a></li>
+        <li><a class="soc" href="spotify:user:jp3isme:playlist:5sNiYuJg7ePavu0y5ZXVMM"><img src="../img/spotify.svg" alt="spotify" style="height: 30px; width: 30px; padding-bottom: 0px;"></a></li>
+      </ul>
+      <p id="footer-p">
+        <!--<b class="entypo-heart"></b> made with love in Atlanta<br/>-->
+        © John-Michael Smith 2017<br/>
+        <a target="_blank" href="resume/resume_current.pdf">Resume</a> | <a target="_blank" href="http://www.entypo.com/">Entypo</a>
+
+      </p>
+    </div>
+  </footer>
+  <div class="hideme" style="width: 0; height: 0; visibility: hidden;">
+    <p id="val_data" style="width: 0; height: 0; visibility: hidden; font-size: 0;">
+    title,date,image,url
+    Black Panther,"Feb 16, 2018",./img/black_panther.jpg,https://www.youtube.com/watch?v=xjDjIWPwcPU
+    Tomb Raider,"March 16, 2018",./img/tomb_raider.jpg,https://www.youtube.com/watch?v=8ndhidEmUbI</p>
+  </div>
+
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-84583479-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!--<script src="../script.js"></script>
+  -->
+  <script>
+    $('.dates').each(function() {
+
+      var dateInBox = $(this).children("h2").text();
+      // Set the date we're counting down to
+      var countDownDate = new Date(dateInBox).getTime();
+
+      var changeMe = $(this).children('h1');
+
+      setInterval(function() {
+        // Get todays date and time
+        var now = new Date().getTime();
+        //alert(countDownDate + "\n" + now);
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        changeMe.text(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          changeMe.text("It's Time!");
+        }
+      }, 1000);
+    });
+  </script>
+  <script src="./script.js"></script>
+  <script src="./jquery-csv.js"></script>
+  <script src="./body_loading.js?version=4"></script>
+</body>
+
+</html>
