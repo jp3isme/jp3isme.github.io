@@ -55,6 +55,7 @@ movies.forEach(function(el, index) {
   newDiv.appendChild(h3);
   newDiv.appendChild(br);
   newDiv.appendChild(h2);
+  newDiv.appendChild(label);
 
   if(index % 4 == 0){
       var spacer = document.createElement('div');
