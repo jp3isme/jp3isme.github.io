@@ -1,13 +1,13 @@
 /*
-**
-** Body Loading js for "Movie Countdown"
-**
-** Copyrighted 2018 by John-Michael Smith
-**
-** This code uses Evan Plaice's jquery.csv.js
-** https://github.com/evanplaice/jquery-csv/
-**
-*/
+ **
+ ** Body Loading js for "Movie Countdown"
+ **
+ ** Copyrighted 2018 by John-Michael Smith
+ **
+ ** This code uses Evan Plaice's jquery.csv.js
+ ** https://github.com/evanplaice/jquery-csv/
+ **
+ */
 
 
 var myList = [];
@@ -41,18 +41,34 @@ var contains = function(needle) {
 };
 
 function toggleCheckbox(element) {
-  var val_index = this.id;
+  var val_index = $(this).id;
   console.log(val_index);
-  if(!this.checked && (contains.call(myList, val_index))) {
+  if (!4(this).checked && (contains.call(myList, val_index))) {
     var index = array.indexOf(val_index);
     if (index !== -1) array.splice(index, 1);
-  } else if(this.checked){
-    if(!contains.call(myList, val_index)){
+  } else if ($(this).checked) {
+    if (!contains.call(myList, val_index)) {
       myList.push(val_index);
     }
   }
   console.log(myList);
 }
+/*
+$('.checkbox').click(function() {
+  var val_index = $(this).id;
+  console.log(val_index);
+  if ($(this).is(':unchecked')) {
+    if (contains.call(myList, val_index)) {
+      var index = array.indexOf(val_index);
+      if (index !== -1) array.splice(index, 1);
+    }
+  } else if ($(this).is(':checked')) {
+    if (!contains.call(myList, val_index)) {
+      myList.push(val_index);
+    }
+  }
+  console.log(myList);
+});*/
 
 
 var csv_content;
@@ -95,6 +111,7 @@ movies.forEach(function(el, index) {
   label.id = el[0];
   input.type = 'checkbox';
   input.id = el[0];
+  input.className = 'checkbox';
   input.setAttribute("onchange", 'toggleCheckbox(this)');
   input_div.className = 'control__indicator';
   h4.appendChild(t4);
@@ -114,11 +131,11 @@ movies.forEach(function(el, index) {
   newDiv.appendChild(br3);
 
 
-  if(index % 4 == 0){
-      var spacer = document.createElement('div');
-      spacer.className = 'spacer';
-      toAdd.appendChild(spacer);
-      console.log("Spacer added\n");
+  if (index % 4 == 0) {
+    var spacer = document.createElement('div');
+    spacer.className = 'spacer';
+    toAdd.appendChild(spacer);
+    console.log("Spacer added\n");
   }
 
   toAdd.appendChild(newDiv);
