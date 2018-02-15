@@ -15,7 +15,7 @@ function retreiveScore() {
   if (typeof(Storage) !== "undefined") {
     // Retrieve
     var retreive = [];
-    if((retreive = localStorage.getItem("myList")) != NULL){
+    if((retreive = localStorage.getItem("myList")) != null){
       myList = retreive;
     };
   } else {
