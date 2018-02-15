@@ -68,7 +68,7 @@ function checkk(elem) {
     }
   }
   console.log(myList);
-});
+};
 
 
 var csv_content;
