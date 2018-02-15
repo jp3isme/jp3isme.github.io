@@ -31,11 +31,12 @@ movies.forEach(function(el, index) {
   var input = document.createElement('input');
   var input_div = document.createElement('div');
   var h4 = document.createElement('h4');
+  var br3 = document.createElement('br');
 
   var t1 = document.createTextNode(". . .");
   var t3 = document.createTextNode(el[1]);
   var t2 = document.createTextNode(el[2]);
-  var t4 = document.createTextNode("Add to my movies");
+  var t4 = document.createTextNode("My List");
 
   h1.appendChild(t1);
   h3.appendChild(t3);
@@ -62,6 +63,7 @@ movies.forEach(function(el, index) {
   newDiv.appendChild(br2);
   newDiv.appendChild(label);
   newDiv.appendChild(h4);
+  newDiv.appendChild(br3);
 
 
   if(index % 4 == 0){
