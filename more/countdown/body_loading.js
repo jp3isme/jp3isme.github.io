@@ -12,16 +12,15 @@
 
 var myList = [];
 var current = 'a';
-
+var csv_content;
+var movies;
 
 function first(){
-  window.csv_content;
-  window.movies;
   csv_content = document.getElementById("val_data").innerHTML;
   movies = $.csv.toArrays(csv_content);
   console.log(movies);
   movies.forEach(function(el, index) {
-    el.unshift(index);
+    el.unshift(index.toString());
   });
   setup();
 }
@@ -82,6 +81,7 @@ function setup() {
     input.className = 'checkbox';
     input.setAttribute("onchange", 'checkk(this)');
     input_div.className = 'control__indicator';
+    console.log("THIS IS EL ZERO " + el[0]);
     if (contains.call(myList, el[0])) {
       //input.setAttribute("checked", true);
       input.checked = true;
@@ -118,7 +118,26 @@ function setup() {
     count++;
     toAdd.appendChild(newDiv);
   });
+  if (!toAdd.hasChildNodes()) {
+    var newDiv = document.createElement('div');
+    var div2 = document.createElement('div');
+    var div3 = document.createElement('div');
+    var h2 = document.createElement('h2');
+    div2.style.height = "105px";
+    div2.style.width = "100%";
+    div3.style.height = "20px";
+    div3.style.width = "100%";
 
+    h2.style.textAlign = "center";
+    h2.style.margin = '20px';
+    newDiv.style.textAlign = "center";
+    var t1 = document.createTextNode("Add movies to My List to see them here");
+    h2.appendChild(t1);
+    newDiv.appendChild(div2);
+    newDiv.appendChild(h2);
+    newDiv.appendChild(div3);
+    toAdd.appendChild(newDiv);
+  }
   $('.inner').append(toAdd);
 
   $('.dates').each(function() {
