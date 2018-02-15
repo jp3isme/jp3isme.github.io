@@ -35,6 +35,7 @@ movies.forEach(function(el, index) {
   h2.appendChild(t2);
   newDiv.className = 'dates';
   img.src = el[2];
+  img.className = 'movie_posters'
   link.href = el[3];
 
   link.appendChild(img);
