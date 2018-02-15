@@ -57,16 +57,14 @@ function toggleCheckbox(element) {
 function checkk(elem) {
   var val_index = elem.id;
   console.log(val_index);
-  if $(this).is(':unchecked')) {
-    if (contains.call(myList, val_index)) {
-      var index = array.indexOf(val_index);
-      if (index !== -1) array.splice(index, 1);
-    }
-  } else if ($(this).is(':checked')) {
-    if (!contains.call(myList, val_index)) {
-      myList.push(val_index);
-    }
+
+  if (contains.call(myList, val_index)) {
+    var index = array.indexOf(val_index);
+    if (index !== -1) array.splice(index, 1);
+  } else if (!contains.call(myList, val_index)) {
+    myList.push(val_index);
   }
+
   console.log(myList);
 };
 
