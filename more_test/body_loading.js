@@ -124,6 +124,7 @@ movies.forEach(function(el, index) {
     console.log("found" + el[0]);
   } else {
     input.setAttribute("checked", false);
+    console.log("not found" + el[0]);
   }
 
   h4.appendChild(t4);
