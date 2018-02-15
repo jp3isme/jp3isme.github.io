@@ -15,7 +15,7 @@ function retreiveScore() {
   if (typeof(Storage) !== "undefined") {
     // Retrieve
     var retreive = [];
-    if((retreive = localStorage.getItem("myList")) != null){
+    if((retreive = JSON.parse(localStorage.getItem("myList"))) != null){
       myList = retreive;
     };
   } else {
@@ -67,7 +67,7 @@ function checkk(elem) {
 
   if (typeof(Storage) !== "undefined") {
     // Store
-    localStorage.setItem("myList", myList);
+    localStorage.setItem("myList", JSON.stringify(myList));
   } else {
     alert("Unfortunately, your browser does not support Web Storage, so the My List feature is unavailable");
   }
