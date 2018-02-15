@@ -131,7 +131,7 @@ function setup() {
     h2.style.textAlign = "center";
     h2.style.margin = '20px';
     newDiv.style.textAlign = "center";
-    var t1 = document.createTextNode("Add movies to My List to see them here");
+    var t1 = document.createTextNode("Add movies to <q>My List</q> to see them here");
     h2.appendChild(t1);
     newDiv.appendChild(div2);
     newDiv.appendChild(h2);
