@@ -10,7 +10,8 @@
 */
 
 //document.getElementById("loadCSV").innerHTML='<object type="text/html" data="./movies.html" ></object>';
-$('#loadCSV').load("./movies.html", function() {
+var mystring = "movies"
+$('#loadCSV').load(mystring + ".html", function() {
 
 });
 var csv_content = document.getElementById("val_data").innerHTML;
