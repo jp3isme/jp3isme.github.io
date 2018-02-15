@@ -9,7 +9,51 @@
 **
 */
 
-//document.getElementById("loadCSV").innerHTML='<object type="text/html" data="./movies.html" ></object>';
+
+var myList = [];
+
+var contains = function(needle) {
+  // Per spec, the way to identify NaN is that it is not equal to itself
+  var findNaN = needle !== needle;
+  var indexOf;
+
+  if (!findNaN && typeof Array.prototype.indexOf === 'function') {
+    indexOf = Array.prototype.indexOf;
+  } else {
+    indexOf = function(needle) {
+      var i = -1,
+        index = -1;
+
+      for (i = 0; i < this.length; i++) {
+        var item = this[i];
+
+        if ((findNaN && item !== item) || item === needle) {
+          index = i;
+          break;
+        }
+      }
+
+      return index;
+    };
+  }
+
+  return indexOf.call(this, needle) > -1;
+};
+
+function toggleCheckbox(element) {
+  var val_index = this.id
+  if(!this.checked && (contains.call(myList, val_index))) {
+    var index = array.indexOf(val_index);
+    if (index !== -1) array.splice(index, 1);
+  } else if(this.checked){
+    if(!contains.call(myList, val_index)){
+      myList.push(val_index);
+    }
+  }
+  console.log(myList);
+}
+
+
 var csv_content;
 var movies;
 csv_content = document.getElementById("val_data").innerHTML;
@@ -80,47 +124,3 @@ movies.forEach(function(el, index) {
 });
 
 $('.inner').append(toAdd);
-
-
-var myList = [];
-
-var contains = function(needle) {
-  // Per spec, the way to identify NaN is that it is not equal to itself
-  var findNaN = needle !== needle;
-  var indexOf;
-
-  if (!findNaN && typeof Array.prototype.indexOf === 'function') {
-    indexOf = Array.prototype.indexOf;
-  } else {
-    indexOf = function(needle) {
-      var i = -1,
-        index = -1;
-
-      for (i = 0; i < this.length; i++) {
-        var item = this[i];
-
-        if ((findNaN && item !== item) || item === needle) {
-          index = i;
-          break;
-        }
-      }
-
-      return index;
-    };
-  }
-
-  return indexOf.call(this, needle) > -1;
-};
-
-function toggleCheckbox(element) {
-  var val_index = this.id
-  if(!this.checked && (contains.call(myList, val_index))) {
-    var index = array.indexOf(val_index);
-    if (index !== -1) array.splice(index, 1);
-  } else if(this.checked){
-    if(!contains.call(myList, val_index)){
-      myList.push(val_index);
-    }
-  }
-  console.log(myList);
-}
