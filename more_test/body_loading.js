@@ -39,7 +39,7 @@ var contains = function(needle) {
 
   return indexOf.call(this, needle) > -1;
 };
-
+/*
 function toggleCheckbox(element) {
   var val_index = $(this).id;
   console.log(val_index);
@@ -53,7 +53,7 @@ function toggleCheckbox(element) {
   }
   console.log(myList);
 }
-/*
+*/
 $('.checkbox').click(function() {
   var val_index = $(this).id;
   console.log(val_index);
@@ -68,7 +68,7 @@ $('.checkbox').click(function() {
     }
   }
   console.log(myList);
-});*/
+});
 
 
 var csv_content;
