@@ -12,9 +12,9 @@
 //document.getElementById("loadCSV").innerHTML='<object type="text/html" data="./movies.html" ></object>';
 var mystring = "movies"
 $('#loadCSV').load(mystring + ".html", function() {
-
+  var csv_content = document.getElementById("val_data").innerHTML;
 });
-var csv_content = document.getElementById("val_data").innerHTML;
+
 console.log(csv_content);
 var movies = $.csv.toArrays(csv_content);
 console.log(movies);
