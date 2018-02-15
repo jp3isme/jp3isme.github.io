@@ -29,10 +29,12 @@ movies.forEach(function(el, index) {
   var label = document.createElement('label');
   var input = document.createElement('input');
   var input_div = document.createElement('div');
+  var h4 = document.createElement('h4');
 
   var t1 = document.createTextNode(". . .");
   var t3 = document.createTextNode(el[1]);
   var t2 = document.createTextNode(el[2]);
+  var t4 = document.createTextNode("Add to my movies");
 
   h1.appendChild(t1);
   h3.appendChild(t3);
@@ -45,6 +47,7 @@ movies.forEach(function(el, index) {
   label.className = 'control control--checkbox';
   input.type = 'checkbox';
   input_div.className = 'control__indicator';
+  h4.appendChild(t4);
 
   link.appendChild(img);
   label.appendChild(input);
@@ -55,7 +58,10 @@ movies.forEach(function(el, index) {
   newDiv.appendChild(h3);
   newDiv.appendChild(br);
   newDiv.appendChild(h2);
+  newDiv.appendChild(br);
   newDiv.appendChild(label);
+  newDiv.appendChild(h4);
+
 
   if(index % 4 == 0){
       var spacer = document.createElement('div');
