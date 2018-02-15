@@ -43,7 +43,7 @@ var contains = function(needle) {
 function toggleCheckbox(element) {
   var val_index = $(this).id;
   console.log(val_index);
-  if (!4(this).checked && (contains.call(myList, val_index))) {
+  if (!$(this).checked && (contains.call(myList, val_index))) {
     var index = array.indexOf(val_index);
     if (index !== -1) array.splice(index, 1);
   } else if ($(this).checked) {
