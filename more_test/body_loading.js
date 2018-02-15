@@ -21,6 +21,7 @@ function retreiveScore() {
   } else {
     alert("Unfortunately, your browser does not support Web Storage, so the My List feature is unavailable");
   }
+  console.log(typeof myList);
   console.log(myList);
 };
 window.onload = retreiveScore;
@@ -70,6 +71,7 @@ function checkk(elem) {
   } else {
     alert("Unfortunately, your browser does not support Web Storage, so the My List feature is unavailable");
   }
+  console.log(typeof myList);
   console.log(myList);
 };
 
