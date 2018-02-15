@@ -119,6 +119,12 @@ movies.forEach(function(el, index) {
   input.className = 'checkbox';
   input.setAttribute("onchange", 'checkk(this)');
   input_div.className = 'control__indicator';
+  if (contains.call(myList, el[0])){
+    input.setAttribute("checked", true);
+  } else {
+    input.setAttribute("checked", false);
+  }
+
   h4.appendChild(t4);
 
   link.appendChild(img);
