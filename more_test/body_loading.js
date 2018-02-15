@@ -59,8 +59,8 @@ function checkk(elem) {
   console.log(val_index);
 
   if (contains.call(myList, val_index)) {
-    var index = array.indexOf(val_index);
-    if (index !== -1) array.splice(index, 1);
+    var index = myList.indexOf(val_index);
+    if (index !== -1) myList.splice(index, 1);
   } else if (!contains.call(myList, val_index)) {
     myList.push(val_index);
   }
