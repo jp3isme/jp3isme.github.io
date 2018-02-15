@@ -38,6 +38,7 @@ movies.forEach(function(el, index) {
   img.src = el[2];
   img.className = 'movie_posters'
   link.href = el[3];
+  link.target = '_blank';
 
   link.appendChild(img);
   newDiv.appendChild(link);
@@ -47,6 +48,8 @@ movies.forEach(function(el, index) {
   newDiv.appendChild(h2);
 
   toAdd.appendChild(newDiv);
+
+  console.log(index);
 });
 
 $('.inner').append(toAdd);
