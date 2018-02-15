@@ -120,10 +120,12 @@ movies.forEach(function(el, index) {
   input.setAttribute("onchange", 'checkk(this)');
   input_div.className = 'control__indicator';
   if (contains.call(myList, el[0])){
-    input.setAttribute("checked", true);
+    //input.setAttribute("checked", true);
+    input.checked = true;
     console.log("found" + el[0]);
   } else {
-    input.setAttribute("checked", false);
+    //input.setAttribute("checked", false);
+    input.checked = false;
     console.log("not found" + el[0]);
   }
 
