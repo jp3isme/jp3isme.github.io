@@ -1,7 +1,25 @@
-.inner {
+
+
+.inner, .inner1 {
   width: 95%;
   max-width: 1900px;
+}
 
+.filter_button {
+  width: 50%;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  float: left;
+}
+
+#all_button {
+  background-color: #eeeeee;
+}
+
+#myList_button {
+  background-color: #9a9a9a;
 }
 
 .dates {
