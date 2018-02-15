@@ -41,7 +41,8 @@ var contains = function(needle) {
 };
 
 function toggleCheckbox(element) {
-  var val_index = this.id
+  var val_index = this.id;
+  console.log(val_index);
   if(!this.checked && (contains.call(myList, val_index))) {
     var index = array.indexOf(val_index);
     if (index !== -1) array.splice(index, 1);
