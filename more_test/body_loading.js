@@ -26,7 +26,7 @@ movies.forEach(function(el, index) {
   var h3 = document.createElement('h3');
   var h2 = document.createElement('h2');
 
-  var t1 = document.createTextNode(. . .);
+  var t1 = document.createTextNode(". . .");
   var t3 = document.createTextNode(el[0]);
   var t2 = document.createTextNode(el[1]);
 
