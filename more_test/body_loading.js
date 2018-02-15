@@ -26,6 +26,9 @@ movies.forEach(function(el, index) {
   var h3 = document.createElement('h3');
   var br = document.createElement('br');
   var h2 = document.createElement('h2');
+  var label = document.createElement('label');
+  var input = document.createElement('input');
+  var input_div = document.createElement('div');
 
   var t1 = document.createTextNode(". . .");
   var t3 = document.createTextNode(el[1]);
@@ -39,8 +42,14 @@ movies.forEach(function(el, index) {
   img.className = 'movie_posters'
   link.href = el[4];
   link.target = '_blank';
+  label.className = 'control control--checkbox';
+  input.type = 'checkbox';
+  input_div.className = 'control__indicator';
 
   link.appendChild(img);
+  label.appendChild(input);
+  label.appendChild(input_div);
+
   newDiv.appendChild(link);
   newDiv.appendChild(h1);
   newDiv.appendChild(h3);
