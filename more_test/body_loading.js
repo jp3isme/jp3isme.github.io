@@ -26,6 +26,7 @@ movies.forEach(function(el, index) {
   var h3 = document.createElement('h3');
   var br = document.createElement('br');
   var h2 = document.createElement('h2');
+  var br2 = document.createElement('br');
   var label = document.createElement('label');
   var input = document.createElement('input');
   var input_div = document.createElement('div');
@@ -58,7 +59,7 @@ movies.forEach(function(el, index) {
   newDiv.appendChild(h3);
   newDiv.appendChild(br);
   newDiv.appendChild(h2);
-  newDiv.appendChild(br);
+  newDiv.appendChild(br2);
   newDiv.appendChild(label);
   newDiv.appendChild(h4);
 
