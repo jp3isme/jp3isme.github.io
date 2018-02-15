@@ -47,7 +47,10 @@ movies.forEach(function(el, index) {
   link.href = el[4];
   link.target = '_blank';
   label.className = 'control control--checkbox';
+  label.id = el[0];
   input.type = 'checkbox';
+  input.id = el[0];
+  input.onchange = toggleCheckbox(this);
   input_div.className = 'control__indicator';
   h4.appendChild(t4);
 
