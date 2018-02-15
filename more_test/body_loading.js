@@ -11,6 +11,16 @@
 
 
 var myList = [];
+function retreiveScore() {
+  if (typeof(Storage) !== "undefined") {
+    // Retrieve
+    myList = localStorage.getItem("myList");
+  } else {
+    alert("Unfortunately, your browser does not support Web Storage, so the My List feature is unavailable");
+  }
+  console.log(myList);
+};
+window.onload = retreiveScore;
 
 var contains = function(needle) {
   // Per spec, the way to identify NaN is that it is not equal to itself
@@ -39,21 +49,7 @@ var contains = function(needle) {
 
   return indexOf.call(this, needle) > -1;
 };
-/*
-function toggleCheckbox(element) {
-  var val_index = $(this).id;
-  console.log(val_index);
-  if (!$(this).checked && (contains.call(myList, val_index))) {
-    var index = array.indexOf(val_index);
-    if (index !== -1) array.splice(index, 1);
-  } else if ($(this).checked) {
-    if (!contains.call(myList, val_index)) {
-      myList.push(val_index);
-    }
-  }
-  console.log(myList);
-}
-*/
+
 function checkk(elem) {
   var val_index = elem.id;
   console.log(val_index);
@@ -65,6 +61,12 @@ function checkk(elem) {
     myList.push(val_index);
   }
 
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("myList", myList);
+  } else {
+    alert("Unfortunately, your browser does not support Web Storage, so the My List feature is unavailable");
+  }
   console.log(myList);
 };
 
