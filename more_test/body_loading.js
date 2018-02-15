@@ -28,16 +28,16 @@ movies.forEach(function(el, index) {
   var h2 = document.createElement('h2');
 
   var t1 = document.createTextNode(". . .");
-  var t3 = document.createTextNode(el[0]);
-  var t2 = document.createTextNode(el[1]);
+  var t3 = document.createTextNode(el[1]);
+  var t2 = document.createTextNode(el[2]);
 
   h1.appendChild(t1);
   h3.appendChild(t3);
   h2.appendChild(t2);
   newDiv.className = 'dates';
-  img.src = el[2];
+  img.src = el[3];
   img.className = 'movie_posters'
-  link.href = el[3];
+  link.href = el[4];
   link.target = '_blank';
 
   link.appendChild(img);
@@ -47,9 +47,14 @@ movies.forEach(function(el, index) {
   newDiv.appendChild(br);
   newDiv.appendChild(h2);
 
-  toAdd.appendChild(newDiv);
+  if(index % 4 == 0){
+      var spacer = document.createElement('div');
+      spacer.className = 'spacer';
+      toAdd.appendChild(spacer);
+      console.log("Spacer added\n");
+  }
 
-  console.log(index);
+  toAdd.appendChild(newDiv);
 });
 
 $('.inner').append(toAdd);
