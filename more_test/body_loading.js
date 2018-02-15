@@ -13,5 +13,5 @@
 var csv_content;
 var movies;
 csv_content = document.getElementById("val_data").innerHTML;
-movies = $.csv.toObjects(csv_content);
+movies = $.csv.toArrays(csv_content);
 console.log(movies);
