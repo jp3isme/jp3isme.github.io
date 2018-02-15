@@ -14,7 +14,10 @@ var myList = [];
 function retreiveScore() {
   if (typeof(Storage) !== "undefined") {
     // Retrieve
-    myList = localStorage.getItem("myList");
+    var retreive = [];
+    if((retreive = localStorage.getItem("myList")) != NULL){
+      myList = retreive;
+    };
   } else {
     alert("Unfortunately, your browser does not support Web Storage, so the My List feature is unavailable");
   }
