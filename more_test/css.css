@@ -5,6 +5,10 @@
   max-width: 1900px;
 }
 
+.inner1 {
+  margin: 0;
+}
+
 .filter_button {
   width: 50%;
   height: 150px;
