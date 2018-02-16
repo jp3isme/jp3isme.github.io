@@ -19,9 +19,6 @@ function first(){
   csv_content = document.getElementById("val_data").innerHTML;
   movies = $.csv.toArrays(csv_content);
   console.log(movies);
-  movies.forEach(function(el, index) {
-    el.unshift(index.toString());
-  });
   setup();
 }
 
@@ -34,7 +31,7 @@ function setup() {
       myList = retreive;
     };
   } else {
-    alert("Unfortunately, your browser does not support Web Storage, so the My List feature is unavailable");
+    alert("Unfortunately, your browser does not support Web Storage, so the \"My List\" feature is unavailable");
   }
   console.log(typeof myList);
   console.log(myList);
@@ -62,17 +59,17 @@ function setup() {
     var br3 = document.createElement('br');
 
     var t1 = document.createTextNode(". . .");
-    var t3 = document.createTextNode(el[1]);
-    var t2 = document.createTextNode(el[2]);
+    var t3 = document.createTextNode(el[0]);
+    var t2 = document.createTextNode(el[1]);
     var t4 = document.createTextNode("My List");
 
     h1.appendChild(t1);
     h3.appendChild(t3);
     h2.appendChild(t2);
     newDiv.className = 'dates';
-    img.src = el[3];
+    img.src = el[2];
     img.className = 'movie_posters'
-    link.href = el[4];
+    link.href = el[3];
     link.target = '_blank';
     label.className = 'control control--checkbox';
     label.id = el[0];
