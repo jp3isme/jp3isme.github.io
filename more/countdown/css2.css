@@ -81,7 +81,7 @@
   border-radius: 5px;
 }
 
-#val_data {
+#val_data, #old_data {
   width: 0;
   height: 0;
   visibility: hidden;
