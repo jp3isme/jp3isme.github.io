@@ -1,21 +1,56 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+* {
+  -webkit-font-smoothing: antialiased;
+}
 
+.bank {
+  background: #282c34;
+  color: #abb2bf;
+}
 
-* {-webkit-font-smoothing: antialiased;}
 
 body {
-  font-family: 'Source code pro', monospace;
+  font-family: source code pro, monospace;
   background: #fff;
   color: #000;
   font-size: 14px;
   line-height: 27px;
   margin: 0;
-  padding: 60px 36px;
-  font-weight: lighter;
+  padding: 60px 0px;
+  font-weight: 300;
+  overflow: auto;
+  /*text-align: justify;*/
 }
 
 .inner {
-  max-width: 500px;
+  float: left;
+  max-width: 450px;
+  padding: 0px 36px;
+  box-sizing: content-box;
+}
+
+.links {
+  float: left;
+  max-width: 300px;
+  padding: 0px 36px 60px 36px;
+}
+
+#profile img {
+  width: auto;
+  height: 200px;
+  border-radius: 100px;
+  margin: 20px 20px -10px 0px;
+  padding: 0;
+  float: left;
+}
+
+#profile-body {
+  float: left;
+  width: 230px;
+  height: 20%;
+  min-height: 100px;
+  margin: 49px 0px 10px 0px;
+  display: table;
+  text-align: left;
 }
 
 .footer {
@@ -24,28 +59,78 @@ body {
 
 ul {
   list-style: none;
-  margin: 48px 0 0;
+  margin: 0 0 0 40px;
   padding: 0;
+}
+
+li {
+  overflow: auto;
+}
+
+.links ul {
+  margin: 46px 0 0;
 }
 
 p {
   margin: 0 0 18px;
 }
 
-a {
+.button, .button:focus {
+     border:none;
+     padding:0!important;
+     font: inherit;
+     /*border is optional*/
+     /*border-bottom:1px solid #444;*/
+     cursor: pointer;
+     line-height: 20px;
+     outline: 0;
+}
+
+a, .button {
+  background: none;
   color: #37A1D8;
   box-shadow: inset 0 -0.33333em rgba(157, 201, 255, 0.1);
   text-decoration: none;
-  border-bottom: 2px solid #fff;
+  border-bottom: 0px solid #fff;
   transition: all 0.3s;
 }
 
-a:hover {
+a:hover, .button:hover {
   background: rgba(157, 201, 255, 0.32);
   box-shadow: none;
 }
 
+.button:hover {
+  text-decoration: underline;
+}
+
 h1 {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 14px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 14px;
+}
+h4 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.course {
+  width: auto;
+  padding: 2px 0;
+  display: inline-block;
+  float: left;
+  margin: 0 auto;
+}
+
+.course b {
+  color: rgb(7, 174, 196);
+  color: #5e9516;
+  font-weight: 500;
 }
