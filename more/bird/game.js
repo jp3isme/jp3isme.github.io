@@ -51,26 +51,35 @@ function draw(){
     }
   }
 
-  if(b.y > b_height - 50){
-      noLoop();
-  }
-  g.show();
-  b.update();
-  b.show();
-  score();
+    if(b.y > b_height - 50){
+        noLoop();
+    }
+    g.show();
+    b.update();
+    b.show();
+    score();
 }
 
 function keyPressed(){
 
-  if(!start){
-    loop();
-    start = true;
-  }
+    if(!start){
+        loop();
+        start = true;
+    }
 
-  if(key === ' '){
+    if(key === ' '){
+        b.flap();
+    }
+
+}
+
+function mousePressed() {
+    if(!start){
+        loop();
+        start = true;
+    }
+    
     b.flap();
-  }
-
 }
 
 function score(){
