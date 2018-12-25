@@ -1,0 +1,38 @@
+html {
+    box-styling: border-box;
+  }
+  
+  .float {
+    float: left;
+  }
+  
+  .fifty {
+    width: 50%;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+  .right_pad {
+    margin: 12px 12px 0 0;
+    font-size: 18px;
+  }
+  
+  .hud {
+    width: 800px;
+    background-color: #969696;
+    height: 50px;
+    color: #393939;
+  }
+  
+  #score {
+    font-size: 25px;
+    padding: 0;
+    margin: 10px 0 0 20px;
+  }
+  
+  .button {
+    margin: 10px 0 0 20px;
+  }
+  

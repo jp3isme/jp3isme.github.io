@@ -29,14 +29,14 @@ function Food() {
 
     grid[gridY][gridX] = 'f';
 
-  }
+  };
 
   this.show = function() {
     strokeWeight(1);
     stroke(255);
     fill('rgba(255, 0, 0, 0.5)');
     rect(this.x + 5, this.y + 5, 10, 10);
-  }
+  };
 }
 
 function snakeNode(x, y) {
@@ -62,7 +62,7 @@ function Snake() {
     console.log(grid);
     console.log('Dead');
     noLoop();
-  }
+  };
 
   this.eat = function() {
     console.log('Eat');
@@ -71,24 +71,19 @@ function Snake() {
     this.eaten = true;
     f.update();
     score();
-  }
+  };
 
   this.update = function() {
 
     if (this.tail.length < this.total) {
       endNode = new snakeNode(this.x, this.y);
-      this.tail.unshift(new snakeNode(endNode.x, endNode.y))
+      this.tail.unshift(new snakeNode(endNode.x, endNode.y));
 
       /*for(i = this.tail.length-2; i > 1; i--){
         this.tail[i].x = this.tail[i-1].x;
         this.tail[i].y = this.tail[i-1].y;
       }*/
-    } else {
-
-
-    }
-
-    if (this.tail.length != 0) {
+    } else if (this.tail.length != 0) {
       temp = this.tail.pop();
       gridX = floor(temp.x / gridScale);
       gridY = floor(temp.y / gridScale);
@@ -155,7 +150,7 @@ function Snake() {
     }
 
     this.eaten = false;
-  }
+  };
 
   this.show = function() {
     strokeWeight(1);
@@ -167,6 +162,6 @@ function Snake() {
     for (i = 0; i < this.tail.length; i++) {
       rect(this.tail[i].x, this.tail[i].y, 20, 20);
     }
-  }
+  };
 
 }

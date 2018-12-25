@@ -2,6 +2,7 @@ var s, f;
 var grid = [];
 var gridScale = 20;
 var gridNum = 30;
+var frames_per_second = 12;
 var change = true;
 var start = false;
 var freeze = false;
@@ -21,7 +22,7 @@ function setup() {
   console.log(grid);
 
 
-  frameRate(10);
+  frameRate(frames_per_second);
   createCanvas(gridScale*gridNum, gridScale*gridNum);
 
   textSize(fontsize);
@@ -64,7 +65,7 @@ function keyPressed(){
   }
 
   if(!start){
-    loop()
+    loop();
     start = true;
   }
 
