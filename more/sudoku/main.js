@@ -1,24 +1,17 @@
 console.log("added js")
 var puzzle = []
-var anim = false
 
 document.getElementById("reset").addEventListener("click", function(){
-    resetPuzzles();
+    resetPuzzles(true);
 })
 
 document.getElementById("submit").addEventListener("click", function(){
-    if (confirm('Animate solution? (cancel still solves)')) {
-        anim = true
-    } else {
-        anim = false
-    }
     solve();
 })
 
 
 let solve = function(){
     
-    let found = 0;
     puzzle = []
 
     for(let r = 0; r < 9; r++){
@@ -31,12 +24,10 @@ let solve = function(){
 
             if(val == 0){
                 cell.push([1,1,1,1,1,1,1,1,1])
-            } else {
-                found++
             }
 
             row.push(cell)
-        }
+        } 
         puzzle.push(row)
     }
 
@@ -48,7 +39,7 @@ let solve = function(){
 
     while(true){
         if(!changed){
-            alert("No solution found")
+            //alert("No solution found")
             finishPuzzle()
             console.log(count)
             break;
@@ -66,10 +57,6 @@ let solve = function(){
                         changed = true
                     }
                 }
-                if(anim){
-                    console.log("sleeping")
-                    sleep(50)
-                }
                 if(changed){
                     updatePuzzle()
                 }
@@ -77,7 +64,7 @@ let solve = function(){
         }
 
         if(!empty){
-            alert("Puzzle Solved");
+            //alert("Puzzle Solved");
             finishPuzzle()
             console.log(puzzle)
             console.log(count)
@@ -319,6 +306,7 @@ let updatePuzzle = function(){
 }
 
 let finishPuzzle = function(){
+    resetPuzzles()
     for(let r = 0; r < 9; r++){
         for(let c = 0; c < 9; c++){
             if(puzzle[r][c][0] == 0){
@@ -328,7 +316,7 @@ let finishPuzzle = function(){
     }
 }
 
-let resetPuzzles = function(){
+let resetPuzzles = function(text){
     for(let r = 0; r < 9; r++){
         for(let c = 0; c < 9; c++){
             let s = whichSquare(r,c)
@@ -338,8 +326,10 @@ let resetPuzzles = function(){
                 color = "white"
             }
 
-            document.getElementById('in').rows[r].cells[c].children[0].value = ""
-            document.getElementById('out').rows[r].cells[c].innerHTML = ""            
+            if(text){
+                document.getElementById('in').rows[r].cells[c].children[0].value = ""
+                document.getElementById('out').rows[r].cells[c].innerHTML = ""                
+            }
             
             document.getElementById('in').rows[r].cells[c].children[0].style.backgroundColor = color
             document.getElementById('out').rows[r].cells[c].style.backgroundColor = color
@@ -347,14 +337,4 @@ let resetPuzzles = function(){
     }
 }
 
-let sleep = function(miliseconds) {
-    var currentTime = new Date().getTime();
-    var newTime = new Date().getTime();
- 
-    while (currentTime + miliseconds >= (newTime = new Date().getTime())) {
-        //console.log(currentTime + miliseconds + " pause until")
-        //console.log(newTime + " current")
-    }
- }
-
-resetPuzzles();
+resetPuzzles(true);

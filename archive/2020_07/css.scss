@@ -1,0 +1,159 @@
+
+:root {
+  --main-bg-color: #000;
+  --main-txt: rgb(245, 245, 245);
+  --main-skill: #5e9516;
+  --main-link-color: #37A1D8;
+  --main-link-shadow: rgba(157, 201, 255, 0.1);
+  --main-link-bg-hover: rgba(157, 201, 255, 0.32);
+}
+
+:root {
+  --main-bg-color: #fff;
+  --main-txt: #000;
+  --main-skill: #5e9516;
+  --main-link-color: #37A1D8;
+  --main-link-shadow: rgba(157, 201, 255, 0.1);
+  --main-link-bg-hover: rgba(157, 201, 255, 0.32);
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+.bank {
+  background: #282c34;
+  color: #abb2bf;
+}
+
+
+body {
+  font-family: source code pro, monospace;
+  background: var(--main-bg-color);
+  color: var(--main-txt, #000);
+  font-size: 14px;
+  line-height: 27px;
+  margin: 0;
+  padding: 60px 0px;
+  font-weight: 300;
+  overflow: auto;
+  /*text-align: justify;*/
+}
+
+.inner {
+  float: left;
+  max-width: 575px;
+  padding: 0px 36px;
+  box-sizing: content-box;
+}
+
+.links {
+  float: left;
+  max-width: 300px;
+  padding: 0px 36px 60px 36px;
+}
+
+#profile img {
+  width: auto;
+  height: 200px;
+  border-radius: 100px;
+  margin: 20px 20px -10px 0px;
+  padding: 0;
+  float: left;
+}
+
+#profile-body {
+  float: left;
+  width: 230px;
+  height: 20%;
+  min-height: 100px;
+  margin: 49px 0px 10px 0px;
+  display: table;
+  text-align: left;
+}
+
+.footer {
+  margin: 48px 0 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 0 40px;
+  padding: 0;
+}
+
+li {
+  overflow: auto;
+}
+
+.links ul {
+  margin: 46px 0 0;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+.button, .button:focus {
+     border:none;
+     padding:0!important;
+     font: inherit;
+     /*border is optional*/
+     /*border-bottom:1px solid #444;*/
+     cursor: pointer;
+     line-height: 20px;
+     outline: 0;
+}
+
+a, .button {
+  background: none;
+  color: var(--main-link-color, #37A1D8);
+  box-shadow: inset 0 -0.33333em var(--main-link-shadow, rgba(157, 201, 255, 0.1));
+  text-decoration: none;
+  border-bottom: 0px solid #fff;
+  transition: all 0.3s;
+}
+
+a:hover, .button:hover {
+  background: var(--main-link-bg-hover, rgba(157, 201, 255, 0.32));
+  box-shadow: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 14px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 14px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 14px;
+}
+h4 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.course {
+  width: auto;
+  padding: 2px 0 2px 1.5em;
+  text-indent:-1.5em;
+  display: inline-block;
+  margin: 0 auto;
+  b {
+    color: var(--main-skill, #5e9516);
+    font-weight: 500;
+  }
+}
+
+.project_desc {
+  padding-left: 4em;
+  text-indent: -4em;
+}
