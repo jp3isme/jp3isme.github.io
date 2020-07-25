@@ -13,33 +13,13 @@ const Div = styled.div`
     box-sizing: border-box;
     flex-basis: auto;
     flex-basis: calc(33% - 20px);
+    border: 1px solid ${(props) => props.theme.foregroundBorder};
 
     @media (max-width: 992px) {
         flex-basis: calc(50% - 20px);
     }
     @media (max-width: 767px) {
         flex-basis: 100%;
-    }
-`;
-
-const Img = styled.img`
-    height: 132px;
-    width: auto;
-    border-radius: 200px;
-    background-color: ${(props) => props.bg};
-    /*border: 4px solid ${(props) => props.theme.secondary};*/
-    padding: 0;
-`;
-
-const ImgDiv = styled.div`
-    @media (min-width: 768px) and (max-width: 992px) {
-        margin: 0 auto 1rem auto;
-    }
-    @media (max-width: 525px) {
-        display: flex;
-        justify-content: center;
-        flex-basis: 100%;
-        margin: 0 auto 1.5rem auto;
     }
 `;
 
@@ -70,8 +50,8 @@ const A = styled.a`
     width: auto;
     color: ${(props) => props.theme.buttonText};
     background-color: ${(props) => props.theme.button};
+    border: 1px solid ${(props) => props.theme.foregroundBorder};
     border-radius: 0.35rem;
-    transition: 0.2s;
 
     &:hover {
         background-color: ${(props) => props.theme.buttonHover};
@@ -81,7 +61,7 @@ const A = styled.a`
 
 export default function EduCard2(props) {
     return (
-        <Div className={'box'}>
+        <Div className={'box transition'}>
             <Description>
                 <H1>{props.data.name != null ? props.data.name : null}</H1>
                 <P>
@@ -94,7 +74,9 @@ export default function EduCard2(props) {
                     {props.data.gpa}
                     {props.data.gpb == null ? null : <br />}
                 </P>
-                <A href={props.data.link}>View Coursework</A>
+                <A href={props.data.link} className="transition">
+                    View Coursework
+                </A>
             </Description>
         </Div>
     );

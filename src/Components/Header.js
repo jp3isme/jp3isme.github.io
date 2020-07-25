@@ -10,9 +10,17 @@ const Div = styled.div`
     display: -webkit-flex;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid ${(props) => props.theme.foregroundBorder};
 `;
 
-const Flex = styled.div`
+const Flex1 = styled.div`
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+`;
+
+const Flex2 = styled.div`
     display: -webkit-flex;
     display: flex;
     align-items: center;
@@ -34,11 +42,32 @@ const Img = styled.img`
     padding: 0;
 `;
 
+const ThemeSpan = styled.span`
+    font-size: 1.8rem;
+    align-self: center;
+    margin: 0 10px;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    overflow: visible;
+    color: ${(props) => props.theme.themeToggle};
+
+    &:hover {
+        cursor: pointer;
+    }
+    @media (min-width: 767px) {
+        font-size: 1.3rem;
+        &:hover {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    }
+`;
+
 export default function Header(props) {
     return (
-        <Div>
-            <div className="container">
-                <Flex>
+        <Div className="transition">
+            <Flex1 className="container">
+                <Flex2>
                     <div
                         style={{
                             backgroundColor: props.bg,
@@ -51,8 +80,12 @@ export default function Header(props) {
                     </div>
 
                     <Span>{props.text}</Span>
-                </Flex>
-            </div>
+                </Flex2>
+                <ThemeSpan
+                    className="icon-contrast"
+                    onClick={props.toggleTheme}
+                ></ThemeSpan>
+            </Flex1>
         </Div>
     );
 }

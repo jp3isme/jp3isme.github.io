@@ -19,5 +19,5 @@ const S = styled.span`
 `;
 
 export default function SkillTag(props) {
-    return <S>{props.skill}</S>;
+    return <S className="transition">{props.skill}</S>;
 }

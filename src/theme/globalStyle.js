@@ -8,6 +8,8 @@ const GlobalStyleStyle = createGlobalStyle`
     }
 
     html, body {
+        background-color: ${(props) => props.theme.foreground};
+        overflow: visible !important;
         /*height: 100%;*/
         padding: 0;
         margin: 0;
@@ -18,6 +20,7 @@ const GlobalStyleStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-weight: 400;
+        transition: 0.2s;
     }
 
     code {
@@ -50,38 +53,11 @@ const GlobalStyleStyle = createGlobalStyle`
         line-height: 1.5;
         margin: 1.5rem 10px 0 10px;
     }
+
+    .transition {
+        transition: 0.2s;
+    }
 `;
 export default function GlobalStyle(props) {
     return <GlobalStyleStyle />;
 }
-
-export const lightTheme = {
-    background: 'rgb(21,19,32)',
-    foreground: 'rgb(34,33,45)',
-    textPrimary: 'rgb(242,242,242)',
-    textHighlight: 'rgb(148,128,255)',
-    textHighlightShadow: 'rgba(148,128,255,0.1)',
-    textSecondary: 'rgb(153,153,153)',
-    secondary: 'rgb(148,128,255)',
-    mutedSecondary: '#2b2640',
-    button: 'rgb(148,128,255)',
-    buttonHover: '#ff80bf',
-    skillTag: 'rgb(35, 46, 44)',
-    textSkillTag: 'rgb(119, 203, 185)',
-};
-
-export const darkTheme = {
-    background: 'rgb(21,19,32)',
-    foreground: 'rgb(34,33,45)',
-    textPrimary: 'rgb(242,242,242)',
-    textHighlight: 'rgb(148,128,255)',
-    textHighlightShadow: 'rgba(148,128,255,0.1)',
-    textSecondary: 'rgb(153,153,153)',
-    secondary: 'rgb(148,128,255)',
-    mutedSecondary: '#2b2640',
-    button: 'rgb(148,128,255)',
-    buttonHover: '#ff80bf',
-    buttonText: 'black',
-    skillTag: 'rgb(35, 46, 44)',
-    textSkillTag: 'rgb(119, 203, 185)',
-};

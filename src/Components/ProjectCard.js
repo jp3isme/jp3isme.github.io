@@ -10,6 +10,7 @@ const Div = styled.div`
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
     flex-basis: calc(33% - 20px);
+    border: 1px solid ${(props) => props.theme.foregroundBorder};
 
     @media (max-width: 991px) {
         flex-basis: calc(50% - 20px);
@@ -61,8 +62,8 @@ const A = styled.a`
     width: auto;
     color: ${(props) => props.theme.buttonText};
     background-color: ${(props) => props.theme.button};
+    border: 1px solid ${(props) => props.theme.foregroundBorder};
     border-radius: 0.35rem;
-    transition: 0.2s;
 
     &:hover {
         background-color: ${(props) => props.theme.buttonHover};
@@ -72,7 +73,7 @@ const A = styled.a`
 
 export default function ProjectCard(props) {
     return (
-        <Div className={'box'}>
+        <Div className={'box transition'}>
             {props.data.img == null ? null : (
                 <Img
                     src={props.data.img}
@@ -91,7 +92,11 @@ export default function ProjectCard(props) {
                     ))}
                 </P2>
                 {props.data.link ? (
-                    <A href={props.data.link} target={props.data.target}>
+                    <A
+                        className="transition"
+                        href={props.data.link}
+                        target={props.data.target}
+                    >
                         {props.data.linkText}
                     </A>
                 ) : null}

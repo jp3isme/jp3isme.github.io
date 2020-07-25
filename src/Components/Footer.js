@@ -11,6 +11,7 @@ const Div = styled.div`
     display: flex;
     align-items: center;
     box-shadow: 0 100vh 0 100vh ${(props) => props.theme.foreground};
+    border-top: 1px solid ${(props) => props.theme.foregroundBorder};
 `;
 
 const Flex = styled.div`
@@ -37,7 +38,7 @@ const Img = styled.img`
 
 export default function Footer(props) {
     return (
-        <Div>
+        <Div className="transition">
             <div className="container">
                 <Flex>
                     <Span>{props.text}</Span>

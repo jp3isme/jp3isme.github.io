@@ -12,6 +12,7 @@ const Div = styled.div`
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
     flex-basis: calc(50% - 20px);
+    border: 1px solid ${(props) => props.theme.foregroundBorder};
 
     @media (max-width: 768px) {
         flex-basis: 100%;
@@ -74,8 +75,8 @@ const A = styled.a`
     width: auto;
     color: ${(props) => props.theme.buttonText};
     background-color: ${(props) => props.theme.button};
+    border: 1px solid ${(props) => props.theme.foregroundBorder};
     border-radius: 0.375rem;
-    transition: 0.2s;
 
     &:hover {
         background-color: ${(props) => props.theme.buttonHover};
@@ -85,7 +86,7 @@ const A = styled.a`
 
 export default function EduCard(props) {
     return (
-        <Div className={'box'}>
+        <Div className={'box transition'}>
             {props.data.img == null ? null : (
                 <ImgDiv>
                     <Img src={props.data.img} alt="School Crest" />
@@ -103,7 +104,9 @@ export default function EduCard(props) {
                     {props.data.gpa}
                     {props.data.gpb == null ? null : <br />}
                 </P>
-                <A href={props.data.link}>View Coursework</A>
+                <A href={props.data.link} className="transition">
+                    View Coursework
+                </A>
             </Description>
         </Div>
     );

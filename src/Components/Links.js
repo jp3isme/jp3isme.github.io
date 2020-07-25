@@ -11,6 +11,7 @@ const Div = styled.div`
     box-sizing: border-box;
     flex-basis: calc(22% - 20px);
     min-width: 191px;
+    border: 1px solid ${(props) => props.theme.foregroundBorder};
 
     @media (max-width: 991px) {
         flex-basis: 35%;
@@ -40,11 +41,12 @@ const Hr = styled.hr`
     margin: 12px 0;
     padding: 0;
     border: 1px solid #454158;
+    border-color: ${(props) => props.theme.horizontalRuleColor};
 `;
 
 export default function Links(props) {
     return (
-        <Div className="box">
+        <Div className="box transition">
             <H1>Links</H1>
             <P>
                 {props.socials.map((social) => (

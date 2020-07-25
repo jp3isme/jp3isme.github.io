@@ -7,18 +7,17 @@ const A = styled.a`
     background-color: ${(props) => props.theme.mutedSecondary};
     border-radius: 0.375rem;
     padding: 1.5px 5px;
-    transition: 0.2s;
     white-space: nowrap;
 
     &:hover {
-        color: ${(props) => props.theme.foreground};
+        color: ${(props) => props.theme.buttonTextHover};
         background-color: ${(props) => props.theme.buttonHover};
     }
 `;
 
 export default function Tag(props) {
     return (
-        <A href={props.link} target="_blank">
+        <A className="transition" href={props.link} target="_blank">
             {props.text}
         </A>
     );
