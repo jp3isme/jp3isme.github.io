@@ -1,5 +1,5 @@
 export const lightTheme = {
-    themeToggle: 'rgb(100,100,100)',
+    themeToggle: 'rgb(75,75,75)',
     background: '#ffffff',
     foreground: '#ffffff',
     foregroundBorder: '#e1e4e8',

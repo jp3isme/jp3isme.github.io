@@ -52,6 +52,28 @@ const AncestryMap = {
     target: '',
 };
 
+const eCinemaBooking = {
+    img: null,
+    name: 'eCinemaBooking',
+    description:
+        'An online movie-ticket booking service developed as a course project',
+    skills: ['Java', 'JBoss / WildFly', 'FreeMarker', 'MySQL', 'HTML', 'CSS'],
+    link: ' ',
+    linkText: 'View Details',
+    target: '',
+};
+
+const Spoticli = {
+    img: null,
+    name: 'Spoticli (contributor)',
+    description:
+        'An open-source command line interface (CLI) for controlling Spotify. Project by Jacob Chambers',
+    skills: ['Python'],
+    link: 'https://github.com/wjacobc/spoticli',
+    linkText: 'View on GitHub',
+    target: '_blank',
+};
+
 export default function Projects(props) {
     return (
         <Div className="container">
@@ -59,8 +81,8 @@ export default function Projects(props) {
             <FlexDiv>
                 <ProjectCard data={myMDb} />
                 <ProjectCard data={AncestryMap} />
-                <ProjectCard data={myMDb} />
-                <ProjectCard data={AncestryMap} />
+                <ProjectCard data={Spoticli} />
+                <ProjectCard data={eCinemaBooking} />
             </FlexDiv>
         </Div>
     );
