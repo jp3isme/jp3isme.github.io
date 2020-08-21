@@ -19,7 +19,7 @@ const Div = styled.div`
     @media (max-width: 767px) {
         flex-basis: 45%;
     }
-    @media (max-width: 575px) {
+    @media (max-width: 576px) {
         flex-basis: 100%;
     }
 `;

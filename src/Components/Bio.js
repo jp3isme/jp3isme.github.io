@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -55,9 +56,14 @@ const P = styled.p`
     @media (max-width: 768px) {
         margin: 0 0 1.2rem 0;
     }
+    margin: 0;
+    font-size: 1rem;
+    @media (max-width: 768px) {
+        margin: 0;
+    }
 `;
 
-const A = styled.a`
+const A = styled.p`
     text-decoration: none;
     padding: 0.6rem 0.75rem;
     margin: 0 0 0 0;
@@ -77,6 +83,12 @@ const A = styled.a`
     }
 `;
 
+const Br = styled.br`
+    content: ' ';
+    display: block;
+    height: 15px;
+`
+
 export default function Bio(props) {
     return (
         <Div className={'box transition'}>
@@ -91,6 +103,7 @@ export default function Bio(props) {
                     laude in 2019, where I also received a certificate in
                     Applied Data Science.
                 </P>
+                <Br />
                 <P>
                     I enjoy programming primarily in JavaScript and Python, but
                     I have experience with Java and C/C++ as well. I like to
@@ -98,7 +111,12 @@ export default function Bio(props) {
                     movies, music, and genealogical research—as well as
                     automating away the boring stuff.
                 </P>
-                <A href="">More About Me</A>
+                { /* 
+                <Link to="/about">
+                    <A href="">More About Me</A>
+                </Link>
+                */ }
+                
             </TextDiv>
         </Div>
     );

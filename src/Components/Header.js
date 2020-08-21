@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -31,6 +32,7 @@ const Span = styled.span`
     font-size: 1.1rem;
     padding: 0;
     margin: 0;
+    text-decoration: none;
 `;
 
 const Img = styled.img`
@@ -67,20 +69,22 @@ export default function Header(props) {
     return (
         <Div className="transition">
             <Flex1 className="container">
-                <Flex2>
-                    <div
-                        style={{
-                            backgroundColor: props.bg,
-                            borderRadius: '20px',
-                            margin: '10px',
-                            height: '35px',
-                        }}
-                    >
-                        <Img src={props.img} alt="Logo" />
-                    </div>
+                <Link to="/" style={{textDecoration: 'none'}}>
+                    <Flex2>
+                        <div
+                            style={{
+                                backgroundColor: props.bg,
+                                borderRadius: '20px',
+                                margin: '10px',
+                                height: '35px',
+                            }}
+                        >
+                            <Img src={props.img} alt="Logo" />
+                        </div>
 
-                    <Span>{props.text}</Span>
-                </Flex2>
+                        <Span>{props.text}</Span>
+                    </Flex2>
+                </Link>
                 <ThemeSpan
                     className="icon-contrast"
                     onClick={props.toggleTheme}

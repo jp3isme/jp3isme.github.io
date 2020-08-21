@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -18,7 +19,7 @@ const Div = styled.div`
     @media (max-width: 992px) {
         flex-basis: calc(50% - 20px);
     }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         flex-basis: 100%;
     }
 `;
@@ -74,9 +75,11 @@ export default function EduCard2(props) {
                     {props.data.gpa}
                     {props.data.gpb == null ? null : <br />}
                 </P>
-                <A href={props.data.link} className="transition">
-                    View Coursework
-                </A>
+                <Link to={props.data.link}>
+                    <A className="transition">
+                        View Coursework
+                    </A>
+                </Link>
             </Description>
         </Div>
     );

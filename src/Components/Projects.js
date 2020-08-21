@@ -74,6 +74,17 @@ const Spoticli = {
     target: '_blank',
 };
 
+const ranked_choice_voting = {
+    img: null,
+    name: 'Ranked-choice-voting',
+    description:
+        'A python script to tally ranked-choice voting with Google Forms',
+    skills: ['Python'],
+    link: 'https://github.com/jp3isme/ranked-choice-voting',
+    linkText: 'View on GitHub',
+    target: '_blank',
+};
+
 export default function Projects(props) {
     return (
         <Div className="container">
@@ -83,6 +94,7 @@ export default function Projects(props) {
                 <ProjectCard data={AncestryMap} />
                 <ProjectCard data={Spoticli} />
                 <ProjectCard data={eCinemaBooking} />
+                <ProjectCard data={ranked_choice_voting} />
             </FlexDiv>
         </Div>
     );

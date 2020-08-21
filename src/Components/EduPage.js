@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link, useParams, useLocation } from 'react-router-dom'
+import { Schools } from '../Consts/education_consts'
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -53,6 +54,15 @@ const Description = styled.div`
         padding: 0;
     }
 `;
+const About = styled.div`
+    padding: 0 0 0 1.5rem;
+    @media (min-width: 768px) and (max-width: 992px) {
+        padding: 0;
+    }
+    @media (max-width: 525px) {
+        padding: 0;
+    }
+`;
 
 const H1 = styled.h1`
     padding: 0;
@@ -67,7 +77,7 @@ const P = styled.p`
     font-size: 1rem;
 `;
 
-const A = styled.p`
+const A = styled.a`
     padding: 0.6rem 0.75rem;
     margin: 10px 0 0 0;
     font-size: 1rem;
@@ -85,32 +95,44 @@ const A = styled.p`
     }
 `;
 
-export default function EduCard(props) {
+export default function EduPage(props) {
+    const [data, setData] = useState({})
+    let query = new URLSearchParams(useLocation().search)
+    query = query.get('s')
+
+    useEffect(() => {
+        setData(Schools[query]) 
+        console.log(Schools)
+        console.log(query)
+        console.log(Schools[query])
+        console.log(data)
+    }, [])
     return (
-        <Div className={'box transition'}>
-            {props.data.img == null ? null : (
-                <ImgDiv>
-                    <Img src={props.data.img} alt="School Crest" />
-                </ImgDiv>
-            )}
-            <Description>
-                <H1>{props.data.name != null ? props.data.name : null}</H1>
-                <P>
-                    {props.data.degree}
-                    {props.data.degree == null ? null : <br />}
-                    {props.data.cert}
-                    {props.data.cert == null ? null : <br />}
-                    {props.data.date}
-                    {props.data.date == null ? null : <br />}
-                    {props.data.gpa}
-                    {props.data.gpb == null ? null : <br />}
-                </P>
-                <Link to={props.data.link}>
-                    <A className="transition">
-                        View Coursework
-                    </A>
-                </Link>
-            </Description>
-        </Div>
+        data == undefined ? null :
+        <div className="container">
+            <Div className={'box transition'}>
+                {data.img == null ? null : (
+                    <ImgDiv>
+                        <Img src={data.img} alt="School Crest" />
+                    </ImgDiv>
+                )}
+                <Description>
+                    <H1>{data.name != null ? data.name : null}</H1>
+                    <P>
+                        {data.degree}
+                        {data.degree == null ? null : <br />}
+                        {data.cert}
+                        {data.cert == null ? null : <br />}
+                        {data.date}
+                        {data.date == null ? null : <br />}
+                        {data.gpa}
+                        {data.gpb == null ? null : <br />}
+                    </P>
+                </Description>
+                <About>
+
+                </About>
+            </Div>
+        </div>
     );
 }
