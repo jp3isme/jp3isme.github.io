@@ -41,7 +41,7 @@ const P = styled.p`
     font-size: 1rem;
 `;
 
-const A = styled.a`
+const A = styled.p`
     text-decoration: none;
     padding: 0.6rem 0.75rem;
     margin: 10px 0 0 0;

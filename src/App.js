@@ -6,7 +6,7 @@ import Header from './Components/Header';
 import Bio from './Components/Bio';
 import Links from './Components/Links';
 import Education from './Components/Education';
-import EduPage from './Components/EduPage';
+import EduPage from './Pages/EduPage';
 import Projects from './Components/Projects';
 import Footer from './Components/Footer';
 import ReactGA from 'react-ga';
@@ -14,8 +14,7 @@ import { createBrowserHistory } from 'history';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
 
 const Body = styled.div`
@@ -92,8 +91,8 @@ history.listen(location => {
 }); */
 
 function App() {
-    let [time, setTime] = useState(new Date().getHours());
-    let [theme, setTheme] = useState(
+    const time = new Date().getHours();
+    const [theme, setTheme] = useState(
         time > 7 && time < 21 ? lightTheme : darkTheme
     );
 
@@ -108,7 +107,7 @@ function App() {
 
     return (
         <div className="App">
-            <Router history={history}>
+            <Router>
             <ThemeProvider theme={theme}>
                 <GlobalStyle />
                 <Body className="transition">
@@ -129,7 +128,7 @@ function App() {
                                 />
                             </Div>
                         </Route>
-                        <Route path="/" exact="true">
+                        <Route path="/" exact={true}>
                             <Div className="container">
                                 <Bio
                                     img={process.env.PUBLIC_URL + `./me_white.png`}

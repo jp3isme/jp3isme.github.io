@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link, useParams, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Schools } from '../Consts/education_consts'
 
 const Div = styled.div`
@@ -24,6 +24,7 @@ const Div = styled.div`
 const Img = styled.img`
     height: 132px;
     width: auto;
+    min-width: 132px;
     border-radius: 200px;
     background-color: ${(props) => props.bg};
     /*border: 4px solid ${(props) => props.theme.secondary};*/
@@ -77,7 +78,7 @@ const P = styled.p`
     font-size: 1rem;
 `;
 
-const A = styled.a`
+const A = styled.p`
     padding: 0.6rem 0.75rem;
     margin: 10px 0 0 0;
     font-size: 1rem;
@@ -106,12 +107,12 @@ export default function EduPage(props) {
         console.log(query)
         console.log(Schools[query])
         console.log(data)
-    }, [])
+    }, [data, query])
     return (
-        data == undefined ? null :
+        data === undefined ? null :
         <div className="container">
             <Div className={'box transition'}>
-                {data.img == null ? null : (
+                {data.img === null ? null : (
                     <ImgDiv>
                         <Img src={data.img} alt="School Crest" />
                     </ImgDiv>
@@ -132,6 +133,11 @@ export default function EduPage(props) {
                 <About>
 
                 </About>
+                <Link to={'/'}>
+                    <A className="transition">
+                        Go Home
+                    </A>
+                </Link>
             </Div>
         </div>
     );

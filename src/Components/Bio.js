@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+/*import { Link } from 'react-router-dom'*/
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -63,6 +63,7 @@ const P = styled.p`
     }
 `;
 
+/*
 const A = styled.p`
     text-decoration: none;
     padding: 0.6rem 0.75rem;
@@ -81,7 +82,7 @@ const A = styled.p`
         background-color: ${(props) => props.theme.buttonHover};
         cursor: pointer;
     }
-`;
+`;*/
 
 const Br = styled.br`
     content: ' ';

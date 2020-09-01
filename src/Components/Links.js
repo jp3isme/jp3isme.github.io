@@ -30,6 +30,12 @@ const H1 = styled.h1`
     font-size: 0.85rem;
 `;
 
+const Div2 = styled.div`
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.75;
+`;
 const P = styled.p`
     margin: 0;
     padding: 0;
@@ -48,12 +54,12 @@ export default function Links(props) {
     return (
         <Div className="box transition">
             <H1>Links</H1>
-            <P>
-                {props.socials.map((social) => (
-                    <>
+            <Div2>
+                {props.socials.map((social, i) => (
+                    <span key={social.link + i}>
                         <Tag text={social.text} link={social.link} />
                         <span>&#32;</span>
-                    </>
+                    </span>
                 ))}
                 <JokeTag setup={'Google+'} punchline={'Kidding!'} />
                 <Hr />
@@ -69,7 +75,7 @@ export default function Links(props) {
                         link={'tel:' + props.contacts.phone}
                     />
                 </P>
-            </P>
+            </Div2>
         </Div>
     );
 }

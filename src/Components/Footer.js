@@ -26,7 +26,7 @@ const Span = styled.span`
     padding: 0;
     margin: 10px;
 `;
-
+/*
 const Img = styled.img`
     height: 35px;
     width: auto;
@@ -34,7 +34,7 @@ const Img = styled.img`
     background-color: ${(props) => props.bg};
     margin: 0;
     padding: 0;
-`;
+`;*/
 
 export default function Footer(props) {
     return (
