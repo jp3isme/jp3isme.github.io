@@ -21,11 +21,14 @@ const Div = styled.div`
 `;
 
 const Img = styled.img`
-    height: 100px;
-    width: 100%;
+    height: auto;
+    width: calc(100% + 3rem);
+    object-fit: cover;
+    object-position: top;
     border-radius: 0.5rem 0.5rem 0 0;
     background-color: ${(props) => props.bg};
     padding: 0;
+    margin: -1.5rem -1.5rem 0.75rem -1.5rem;
 `;
 
 const Description = styled.div`
@@ -85,10 +88,7 @@ export default function ProjectCard(props) {
                 <P>{props.data.description}</P>
                 <P2>
                     {props.data.skills.map((skill, i) => (
-                        <span key={skill + i}>
-                            <SkillTag skill={skill} />
-                            <span>&#32;</span>
-                        </span>
+                        <SkillTag skill={skill} key={skill + i} />
                     ))}
                 </P2>
                 {props.data.link ? (

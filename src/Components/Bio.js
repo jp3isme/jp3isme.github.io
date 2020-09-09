@@ -11,7 +11,7 @@ const Div = styled.div`
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-basis: calc(78% - 20px);
     border: 1px solid ${(props) => props.theme.foregroundBorder};
 
@@ -84,11 +84,11 @@ const A = styled.p`
     }
 `;*/
 
-const Br = styled.br`
+const Br = styled.div`
     content: ' ';
     display: block;
     height: 15px;
-`
+`;
 
 export default function Bio(props) {
     return (
@@ -110,14 +110,13 @@ export default function Bio(props) {
                     I have experience with Java and C/C++ as well. I like to
                     take on projects that cover my interests in things—such as
                     movies, music, and genealogical research—as well as
-                    automating away the boring stuff.
+                    automating tasks with python
                 </P>
-                { /* 
+                {/* 
                 <Link to="/about">
                     <A href="">More About Me</A>
                 </Link>
-                */ }
-                
+                */}
             </TextDiv>
         </Div>
     );

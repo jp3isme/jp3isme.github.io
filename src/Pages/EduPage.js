@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom'
-import { Schools } from '../Consts/education_consts'
+import { Link, useLocation } from 'react-router-dom';
+import { Schools } from '../Consts/education_consts';
+import { Projects as Projs } from '../Consts/project_consts';
+import SkillTag from '../Components/SkillTag';
+import ProjectCard from '../Components/ProjectCard';
 
 const Div = styled.div`
-    background-color: ${(props) => props.theme.foreground};
-    padding: 1.5rem;
     flex-basis: 50%;
     display: -webkit-flex;
     display: flex;
@@ -14,7 +15,6 @@ const Div = styled.div`
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
     flex-basis: calc(50% - 20px);
-    border: 1px solid ${(props) => props.theme.foregroundBorder};
 
     @media (max-width: 768px) {
         flex-basis: 100%;
@@ -55,6 +55,15 @@ const Description = styled.div`
         padding: 0;
     }
 `;
+const Courses = styled.div`
+    width: max-content;
+    @media (min-width: 768px) and (max-width: 992px) {
+        padding: 0;
+    }
+    @media (max-width: 525px) {
+        padding: 0;
+    }
+`;
 const About = styled.div`
     padding: 0 0 0 1.5rem;
     @media (min-width: 768px) and (max-width: 992px) {
@@ -66,6 +75,12 @@ const About = styled.div`
 `;
 
 const H1 = styled.h1`
+    padding: 0;
+    margin: 1.8rem 0 -0.7rem 10px;
+    font-size: 1.3rem;
+`;
+
+const H2 = styled.h1`
     padding: 0;
     margin: 0;
     font-size: 1rem;
@@ -80,7 +95,7 @@ const P = styled.p`
 
 const A = styled.p`
     padding: 0.6rem 0.75rem;
-    margin: 10px 0 0 0;
+    margin: 1.5rem 0 0 10px;
     font-size: 1rem;
     display: block;
     float: left;
@@ -96,20 +111,33 @@ const A = styled.p`
     }
 `;
 
+const Ul = styled.ul`
+    padding: 0;
+    margin: 0;
+`;
+
+const FlexDiv = styled.div`
+    padding: 0;
+    margin: 0;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+`;
+
 export default function EduPage(props) {
-    const [data, setData] = useState({})
-    let query = new URLSearchParams(useLocation().search)
-    query = query.get('s')
+    const [data, setData] = useState({});
+    let query = new URLSearchParams(useLocation().search);
+    query = query.get('s');
 
     useEffect(() => {
-        setData(Schools[query]) 
-        console.log(Schools)
-        console.log(query)
-        console.log(Schools[query])
-        console.log(data)
-    }, [data, query])
-    return (
-        data === undefined ? null :
+        setData(Schools[query]);
+        console.log(Schools);
+        console.log(query);
+        console.log(Schools[query]);
+        console.log(data);
+    }, [data, query]);
+    return data === undefined ? null : (
         <div className="container">
             <Div className={'box transition'}>
                 {data.img === null ? null : (
@@ -118,7 +146,7 @@ export default function EduPage(props) {
                     </ImgDiv>
                 )}
                 <Description>
-                    <H1>{data.name != null ? data.name : null}</H1>
+                    <H2>{data.name != null ? data.name : null}</H2>
                     <P>
                         {data.degree}
                         {data.degree == null ? null : <br />}
@@ -130,15 +158,71 @@ export default function EduPage(props) {
                         {data.gpb == null ? null : <br />}
                     </P>
                 </Description>
-                <About>
-
-                </About>
-                <Link to={'/'}>
-                    <A className="transition">
-                        Go Home
-                    </A>
-                </Link>
+                <About></About>
             </Div>
+            {data.coursework == null ? null : (
+                <span>
+                    <H1>Relevant Courses</H1>
+                    <span className={''}>
+                        {data.coursework.map((course, i) => (
+                            <CourseCard course={course} key={course.name + i} />
+                        ))}
+                    </span>
+                </span>
+            )}
+            {data.projects == null ? null : (
+                <>
+                    <H1 style={{ clear: 'both', paddingTop: '1.8rem' }}>
+                        Selected Course Projects
+                    </H1>
+                    <FlexDiv>
+                        {data.projects.map((project, i) => (
+                            <ProjectCard
+                                data={Projs[project]}
+                                key={project + i}
+                            />
+                        ))}
+                    </FlexDiv>
+                </>
+            )}
+            <span style={{ width: '100%', display: 'inline-block' }}>
+                <Link to={'/'}>
+                    <A className="transition">Go Home</A>
+                </Link>
+            </span>
         </div>
+    );
+}
+
+const CourseDiv = styled.div`
+    width: max-content;
+    max-width: 90%;
+    float: left;
+    min-height: 82px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+    flex-basis: calc(50% - 20px);
+
+    @media (max-width: 768px) {
+        flex-basis: 100%;
+    }
+`;
+
+const H3 = styled(H2)`
+    margin-right: 5px;
+`;
+
+function CourseCard({ course }) {
+    return (
+        <CourseDiv className={'box transition'}>
+            <H3>{course.name}</H3>
+            {course.tags.map((skill, i) => (
+                <SkillTag skill={skill} key={skill + i} />
+            ))}
+        </CourseDiv>
     );
 }

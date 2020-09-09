@@ -9,16 +9,17 @@ const UGA = {
         { name: 'Software Engineering', tags: ['Java'] },
         { name: 'Intro To Scientific Computing', tags: ['MATLAB'] },
         { name: 'Num Sim for Sci and Engineering', tags: ['MATLAB'] },
-        { name: 'Artificial Intelligence', tags: ['Java', 'Masters'] },
+        { name: 'Artificial Intelligence', tags: ['Java'] },
         { name: 'Data Science I', tags: ['Python'] },
-        { name: 'Data Mining', tags: ['Python', 'scikit-learn', 'Masters'] },
+        { name: 'Data Mining', tags: ['Python', 'scikit-learn'] },
         { name: 'Computing, Ethics, and Society', tags: [] },
         { name: 'Operating Systems', tags: ['UNIX', 'C'] },
-        { name: 'Human-Computer Interaction', tags: ['Masters'] },
+        { name: 'Human-Computer Interaction', tags: [] },
         { name: 'Systems Programming', tags: ['UNIX', 'C++'] },
         { name: 'Introduction to Theory of Computing', tags: [] },
     ],
-    link: '/education?s=UGA'
+    link: '/education?s=UGA',
+    projects: ['eCinemaBooking'],
 };
 
 const KSU = {
@@ -38,11 +39,12 @@ const KSU = {
         { name: 'Calculus I', tags: [] },
         { name: 'Statistics I', tags: [] },
     ],
-    link: '/education?s=KSU'
+    link: '/education?s=KSU',
+    projects: null,
 };
 
 const Schools = {
     UGA,
-    KSU
-}
-export { UGA, KSU, Schools }
+    KSU,
+};
+export { UGA, KSU, Schools };

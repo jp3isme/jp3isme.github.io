@@ -7,9 +7,10 @@ const S = styled.span`
     background-color: ${(props) => props.theme.skillTag};
     border-radius: 0.375rem;
     padding: 1.5px 5px;
-    margin: 0 0;
+    margin: 2.5px 5px 2.5px 0px;
     font-size: 0.85rem;
     line-height: 1.75;
+    display: inline-flex;
     /*transition: 0.3s;
 
     &:hover {
@@ -19,5 +20,5 @@ const S = styled.span`
 `;
 
 export default function SkillTag(props) {
-    return <S className="transition">{props.skill}</S>;
+    return <S className="transition">&middot; {props.skill}</S>;
 }

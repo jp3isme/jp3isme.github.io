@@ -52,6 +52,9 @@ const GlobalStyleStyle = createGlobalStyle`
         font-size: 1rem;
         line-height: 1.5;
         margin: 1.5rem 10px 0 10px;
+        border: 1px solid ${(props) => props.theme.foregroundBorder};
+        background-color: ${(props) => props.theme.foreground};
+        padding: 1.5rem;
     }
 
     .transition {
