@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import EduCard from './EduCard';
-import EduCard2 from './EduCard2';
-import { UGA, KSU } from '../Consts/education_consts'
+import EduCard from '../Cards/EduCard';
+import EduCard2 from '../Cards/EduCard2';
+import { UGA, KSU } from '../../Consts/education_consts';
 
 const Div = styled.div`
     padding: 0;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProjectCard from './ProjectCard';
-import { Projects as Projs } from '../Consts/project_consts';
+import ProjectCard from '../Cards/ProjectCard';
+import { Projects as Projs } from '../../Consts/project_consts';
 const Div = styled.div`
     padding: 0;
     margin: 0;

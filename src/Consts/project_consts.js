@@ -24,7 +24,7 @@ const AncestryMap = {
     description:
         "A genealogical tool utilizing GEDCOMs for visualizing ancestors' birth locations by generation (desktop app)",
     skills: ['React', 'Node.js', 'Electron.js', 'JavaScript', 'CSS'],
-    link: ' ',
+    link: null,
     linkText: 'View Details',
     target: '',
 };
@@ -35,7 +35,7 @@ const eCinemaBooking = {
     description:
         'An online movie-ticket booking service developed as a course project',
     skills: ['Java', 'JBoss / WildFly', 'FreeMarker', 'MySQL', 'HTML', 'CSS'],
-    link: ' ',
+    link: null,
     linkText: 'View Details',
     target: '',
 };

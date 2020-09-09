@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Schools } from '../Consts/education_consts';
 import { Projects as Projs } from '../Consts/project_consts';
 import SkillTag from '../Components/SkillTag';
-import ProjectCard from '../Components/ProjectCard';
+import ProjectCard from '../Components/Cards/ProjectCard';
 
 const Div = styled.div`
     flex-basis: 50%;
@@ -131,6 +131,7 @@ export default function EduPage(props) {
     query = query.get('s');
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         setData(Schools[query]);
         console.log(Schools);
         console.log(query);
@@ -186,13 +187,17 @@ export default function EduPage(props) {
                 </>
             )}
             <span style={{ width: '100%', display: 'inline-block' }}>
-                <Link to={'/'}>
+                <Link to={'/'} onClick={scrollUp}>
                     <A className="transition">Go Home</A>
                 </Link>
             </span>
         </div>
     );
 }
+
+const scrollUp = () => {
+    window.scrollTo(0, 0);
+};
 
 const CourseDiv = styled.div`
     width: max-content;

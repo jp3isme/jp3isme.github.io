@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Tag from './Tag';
-import JokeTag from './JokeTag';
+import Tag from '../Tag';
+import JokeTag from '../JokeTag';
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};

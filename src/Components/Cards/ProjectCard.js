@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SkillTag from './SkillTag';
+import SkillTag from '../SkillTag';
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};

@@ -2,20 +2,16 @@ import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from './theme/globalStyle';
 import { lightTheme, darkTheme } from './theme/Themes';
-import Header from './Components/Header';
-import Bio from './Components/Bio';
-import Links from './Components/Links';
-import Education from './Components/Education';
+import Header from './Components/Sections/Header';
+import Bio from './Components/Sections/Bio';
+import Links from './Components/Sections/Links';
+import Education from './Components/Sections/Education';
 import EduPage from './Pages/EduPage';
-import Projects from './Components/Projects';
-import Footer from './Components/Footer';
+import Projects from './Components/Sections/Projects';
+import Footer from './Components/Sections/Footer';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-  } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Body = styled.div`
     background: ${(props) => props.theme.background};
@@ -70,15 +66,15 @@ const contacts = {
 // Google Analytics setup
 //
 //
-   
-const __TrackingId = "UA-84583479-1";
+
+const __TrackingId = 'UA-84583479-1';
 const __Options = {
     debug: true,
     gaOptions: {
         userId: 123,
-        siteSpeedSampleRate: 100
-    }
-} 
+        siteSpeedSampleRate: 100,
+    },
+};
 ReactGA.initialize(__TrackingId, __Options);
 ReactGA.ga('set', 'checkProtocolTask', null);
 
@@ -101,6 +97,7 @@ function App() {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         ReactGA.set({ page: history.location.pathname }); // Update the user's current page
         ReactGA.pageview(history.location.pathname); // Record a pageview for the given page
     }, [time]);
@@ -108,45 +105,54 @@ function App() {
     return (
         <div className="App">
             <Router>
-            <ThemeProvider theme={theme}>
-                <GlobalStyle />
-                <Body className="transition">
-                    <Header
-                        className="transition"
-                        img={process.env.PUBLIC_URL + `./me_white.png`}
-                        text={'j-mhs.com'}
-                        bg={'rgb(156,190,228)'}
-                        toggleTheme={toggleTheme}
-                    />
-                    
-                    <Switch>
-                        <Route path="/about">
-                            <Div className='container'>
-                                <Bio 
-                                    img={process.env.PUBLIC_URL + `./me_white.png`}
-                                    bg={''}
-                                />
-                            </Div>
-                        </Route>
-                        <Route path="/" exact={true}>
-                            <Div className="container">
-                                <Bio
-                                    img={process.env.PUBLIC_URL + `./me_white.png`}
-                                    bg={''}
-                                />
-                                <Links socials={socials} contacts={contacts} />
-                            </Div>
-                            <Education />
-                            <Projects />
-                        </Route>
-                        <Route path="/education">
-                            <EduPage />
-                        </Route>
-                    </Switch>
-                    
-                    <Footer text={'© 2020 John-Michael H. Smith'} />
-                </Body>
-            </ThemeProvider>
+                <ThemeProvider theme={theme}>
+                    <GlobalStyle />
+                    <Body className="transition">
+                        <Header
+                            className="transition"
+                            img={process.env.PUBLIC_URL + `./me_white.png`}
+                            text={'j-mhs.com'}
+                            bg={'rgb(156,190,228)'}
+                            toggleTheme={toggleTheme}
+                        />
+
+                        <Switch>
+                            <Route path="/about">
+                                <Div className="container">
+                                    <Bio
+                                        img={
+                                            process.env.PUBLIC_URL +
+                                            `./me_white.png`
+                                        }
+                                        bg={''}
+                                    />
+                                </Div>
+                            </Route>
+                            <Route path="/" exact={true}>
+                                <Div className="container">
+                                    <Bio
+                                        img={
+                                            process.env.PUBLIC_URL +
+                                            `./me_white.png`
+                                        }
+                                        bg={''}
+                                    />
+                                    <Links
+                                        socials={socials}
+                                        contacts={contacts}
+                                    />
+                                </Div>
+                                <Education />
+                                <Projects />
+                            </Route>
+                            <Route path="/education">
+                                <EduPage />
+                            </Route>
+                        </Switch>
+
+                        <Footer text={'© 2020 John-Michael H. Smith'} />
+                    </Body>
+                </ThemeProvider>
             </Router>
         </div>
     );
