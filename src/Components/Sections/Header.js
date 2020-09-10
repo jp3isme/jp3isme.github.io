@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -69,7 +69,7 @@ export default function Header(props) {
     return (
         <Div className="transition">
             <Flex1 className="container">
-                <Link to="/" style={{textDecoration: 'none'}}>
+                <Link to="/" style={{ textDecoration: 'none' }}>
                     <Flex2>
                         <div
                             style={{
