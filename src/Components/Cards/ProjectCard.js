@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SkillTag from '../SkillTag';
+import { Link } from 'react-router-dom';
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -74,6 +75,11 @@ const A = styled.a`
     }
 `;
 
+const Git = styled(A)`
+    font-size: 1.5rem;
+    margin: 15px 0px 0 5px;
+`;
+
 export default function ProjectCard(props) {
     return (
         <Div className={'box transition'}>
@@ -92,13 +98,26 @@ export default function ProjectCard(props) {
                     ))}
                 </P2>
                 {props.data.link ? (
-                    <A
-                        className="transition"
-                        href={props.data.link}
-                        target={props.data.target}
-                    >
-                        {props.data.linkText}
-                    </A>
+                    props.data.external ? (
+                        <A
+                            className="transition"
+                            href={props.data.link}
+                            target="_blank"
+                        >
+                            {props.data.linkText}
+                        </A>
+                    ) : (
+                        <Link to={props.data.link}>
+                            <A className="transition">{props.data.linkText}</A>
+                        </Link>
+                    )
+                ) : null}
+                {props.data.github ? (
+                    <Git
+                        className="transition icon-github"
+                        href={props.data.github}
+                        target="_blank"
+                    ></Git>
                 ) : null}
             </Description>
         </Div>

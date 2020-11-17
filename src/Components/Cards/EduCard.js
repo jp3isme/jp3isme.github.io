@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -103,12 +103,10 @@ export default function EduCard(props) {
                     {props.data.date}
                     {props.data.date == null ? null : <br />}
                     {props.data.gpa}
-                    {props.data.gpb == null ? null : <br />}
+                    {props.data.gpa == null ? null : <br />}
                 </P>
                 <Link to={props.data.link}>
-                    <A className="transition">
-                        View Coursework
-                    </A>
+                    <A className="transition">View Coursework</A>
                 </Link>
             </Description>
         </Div>

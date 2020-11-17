@@ -12,9 +12,15 @@ const myMDb = {
         'CSS',
         'Heroku',
     ],
-    link: 'https://mymdbapp.herokuapp.com',
-    linkText: 'Visit myMDb',
-    target: '_blank',
+    link: '/projects?p=myMDb',
+    outlink: 'https://mymdbapp.herokuapp.com',
+    linkText: 'View Details',
+    outLinkText: 'Visit myMDb',
+    github: null,
+    target: '',
+    outTarget: '_blank',
+    external: false,
+    gallery: null,
 };
 
 const AncestryMap = {
@@ -24,9 +30,39 @@ const AncestryMap = {
     description:
         "A genealogical tool utilizing GEDCOMs for visualizing ancestors' birth locations by generation (desktop app)",
     skills: ['React', 'Node.js', 'Electron.js', 'JavaScript', 'CSS'],
-    link: null,
+    link: '/projects?p=AncestryMap',
+    outlink: null,
     linkText: 'View Details',
+    outLinkText: 'View Details',
+    github: null,
     target: '',
+    external: false,
+    gallery: [
+        {
+            img: process.env.PUBLIC_URL + `./projects/tiny/AM_screen1.png`,
+            description: '',
+        },
+        {
+            img: process.env.PUBLIC_URL + `./projects/tiny/AM_screen2.png`,
+            description: '',
+        },
+        {
+            img: process.env.PUBLIC_URL + `./projects/tiny/AM_screen3.png`,
+            description: '',
+        },
+        {
+            img: process.env.PUBLIC_URL + `./projects/tiny/AM_screen4.png`,
+            description: '',
+        },
+        {
+            img: process.env.PUBLIC_URL + `./projects/tiny/AM_screen5.png`,
+            description: '',
+        },
+        {
+            img: process.env.PUBLIC_URL + `./projects/tiny/AM_screen6.png`,
+            description: '',
+        },
+    ],
 };
 
 const eCinemaBooking = {
@@ -35,9 +71,19 @@ const eCinemaBooking = {
     description:
         'An online movie-ticket booking service developed as a course project',
     skills: ['Java', 'JBoss / WildFly', 'FreeMarker', 'MySQL', 'HTML', 'CSS'],
-    link: null,
+    link: '/projects?p=eCinemaBooking',
+    outlink: null,
     linkText: 'View Details',
+    outLinkText: null,
+    github: null,
+    external: false,
     target: '',
+    gallery: [
+        {
+            img: ``,
+            description: '',
+        },
+    ],
 };
 
 const Spoticli = {
@@ -46,9 +92,14 @@ const Spoticli = {
     description:
         'An open-source command line interface (CLI) for controlling Spotify. Project by Jacob Chambers',
     skills: ['Python'],
-    link: 'https://github.com/wjacobc/spoticli',
-    linkText: 'View on GitHub',
+    link: '/projects?p=Spoticli',
+    outlink: 'https://github.com/wjacobc/spoticli',
+    github: 'https://github.com/wjacobc/spoticli',
+    linkText: 'View Details',
+    outLinkText: 'View on Github',
+    external: false,
     target: '_blank',
+    gallery: null,
 };
 
 const ranked_choice_voting = {
@@ -57,9 +108,14 @@ const ranked_choice_voting = {
     description:
         'A python script to tally ranked-choice voting with Google Forms',
     skills: ['Python'],
-    link: 'https://github.com/jp3isme/ranked-choice-voting',
-    linkText: 'View on GitHub',
+    link: '/projects?p=ranked_choice_voting',
+    outLink: 'https://github.com/jp3isme/ranked-choice-voting',
+    github: 'https://github.com/jp3isme/ranked-choice-voting',
+    linkText: 'View Details',
+    outLinkText: 'View on Github',
+    external: false,
     target: '_blank',
+    gallery: null,
 };
 
 const Projects = {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import GlobalStyle from './theme/globalStyle';
+import { GlobalStyle, GlobalTransition } from './theme/globalStyle';
 import { lightTheme, darkTheme } from './theme/Themes';
 import Header from './Components/Sections/Header';
 import Bio from './Components/Sections/Bio';
@@ -8,10 +8,11 @@ import Links from './Components/Sections/Links';
 import Education from './Components/Sections/Education';
 import EduPage from './Pages/EduPage';
 import Projects from './Components/Sections/Projects';
+import ProjectPage from './Pages/ProjectPage';
 import Footer from './Components/Sections/Footer';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Body = styled.div`
     background: ${(props) => props.theme.background};
@@ -33,6 +34,10 @@ const Div = styled.div`
 
 const socials = [
     {
+        text: 'Resume',
+        link: process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`,
+    },
+    {
         text: 'LinkedIn',
         link: 'https://www.linkedin.com/in/john-michael-smith',
     },
@@ -51,10 +56,6 @@ const socials = [
     {
         text: 'GoodReads',
         link: 'https://www.goodreads.com/user/show/64860063-john-michael-smith',
-    },
-    {
-        text: 'Resume',
-        link: process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`,
     },
 ];
 
@@ -80,21 +81,33 @@ ReactGA.ga('set', 'checkProtocolTask', null);
 
 const history = createBrowserHistory();
 
-/* Initialize google analytics page view tracking
-history.listen(location => {
-  ReactGA.set({ page: location.pathname }); // Update the user's current page
-  ReactGA.pageview(location.pathname); // Record a pageview for the given page
-}); */
-
 function App() {
     const time = new Date().getHours();
     const [theme, setTheme] = useState(
         time > 7 && time < 21 ? lightTheme : darkTheme
     );
+    const [clicks, setClicks] = useState(0);
+    const [global, setGlobal] = useState(0);
 
     let toggleTheme = () => {
         setTheme(theme === lightTheme ? darkTheme : lightTheme);
+        rainbowEffect();
     };
+
+    let rainbowEffect = async () => {
+        if (clicks >= 5) {
+            setGlobal(1);
+            await sleep(5000);
+            setGlobal(0);
+            setClicks(0);
+        } else {
+            //setClicks(clicks + 1);
+        }
+    };
+
+    function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -106,8 +119,8 @@ function App() {
         <div className="App">
             <Router>
                 <ThemeProvider theme={theme}>
-                    <GlobalStyle />
-                    <Body className="transition">
+                    {global === 0 ? <GlobalStyle /> : <GlobalTransition />}
+                    <Body className="transition" id="body">
                         <Header
                             className="transition"
                             img={process.env.PUBLIC_URL + `./me_white.png`}
@@ -145,12 +158,18 @@ function App() {
                                 <Education />
                                 <Projects />
                             </Route>
-                            <Route path="/education">
-                                <EduPage />
-                            </Route>
+                            <Route path="/education" component={EduPage} />
+                            <Route path="/projects" component={ProjectPage} />
                         </Switch>
 
-                        <Footer text={'© 2020 John-Michael H. Smith'} />
+                        <Footer
+                            text={'© 2020 John-Michael H. Smith'}
+                            email={'jp3isme@gmail.com'}
+                            resume={
+                                process.env.PUBLIC_URL +
+                                `./John-Michael_Smith_Resume_S2020.pdf`
+                            }
+                        />
                     </Body>
                 </ThemeProvider>
             </Router>
