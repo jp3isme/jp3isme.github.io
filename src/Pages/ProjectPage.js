@@ -17,7 +17,7 @@ const Div = styled.div`
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
     flex-basis: calc(50% - 20px);
-
+    overflow: show;
     @media (max-width: 768px) {
         flex-basis: 100%;
     }
@@ -34,6 +34,7 @@ const Img = styled.img`
 
 const ImgDiv = styled.div`
     float: left;
+    padding-right: 1.5rem;
     @media (min-width: 768px) and (max-width: 992px) {
         display: flex;
         justify-content: center;
@@ -51,7 +52,7 @@ const ImgDiv = styled.div`
 `;
 
 const Description = styled.div`
-    padding: 0 0 0 1.5rem;
+    padding: 0 0 0 0;
     max-width: 75%;
     flex-basis: 75%;
     @media (min-width: 768px) and (max-width: 992px) {
@@ -108,7 +109,7 @@ const P2 = styled.p`
 
 const A = styled.a`
     padding: 0.6rem 0.75rem;
-    margin: 1.5rem 0 0 10px;
+    margin: 1.5rem 0 -5px 0px;
     font-size: 1rem;
     display: block;
     float: left;
