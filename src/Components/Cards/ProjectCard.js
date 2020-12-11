@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SkillTag from '../SkillTag';
-import { Link } from 'react-router-dom';
+import Button from '../Button.js';
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -56,11 +56,11 @@ const P2 = styled.p`
     font-size: 1rem;
 `;
 
-const A = styled.a`
+const Git = styled.a`
     text-decoration: none;
     padding: 0.6rem 0.75rem;
-    margin: 15px 0 0 0;
-    font-size: 1rem;
+    margin: 15px 0px 0 5px;
+    font-size: 1.5rem;
     display: block;
     float: left;
     width: auto;
@@ -73,11 +73,6 @@ const A = styled.a`
         background-color: ${(props) => props.theme.buttonHover};
         cursor: pointer;
     }
-`;
-
-const Git = styled(A)`
-    font-size: 1.5rem;
-    margin: 15px 0px 0 5px;
 `;
 
 export default function ProjectCard(props) {
@@ -98,19 +93,13 @@ export default function ProjectCard(props) {
                     ))}
                 </P2>
                 {props.data.link ? (
-                    props.data.external ? (
-                        <A
-                            className="transition"
-                            href={props.data.link}
-                            target="_blank"
-                        >
-                            {props.data.linkText}
-                        </A>
-                    ) : (
-                        <Link to={props.data.link}>
-                            <A className="transition">{props.data.linkText}</A>
-                        </Link>
-                    )
+                    <Button
+                        to={props.data.link}
+                        target={props.data.target}
+                        newMargin={'15px 0 0 0'}
+                    >
+                        {props.data.linkText}
+                    </Button>
                 ) : null}
                 {props.data.github ? (
                     <Git

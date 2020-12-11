@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-/*import { Link } from 'react-router-dom'*/
+import { useLocation } from 'react-router-dom';
+import Button from '../../Components/Button.js';
 
 const Div = styled.div`
     background-color: ${(props) => props.theme.foreground};
@@ -63,27 +64,6 @@ const P = styled.p`
     }
 `;
 
-/*
-const A = styled.p`
-    text-decoration: none;
-    padding: 0.6rem 0.75rem;
-    margin: 0 0 0 0;
-    font-size: 1rem;
-    display: block;
-    float: left;
-    width: auto;
-    color: ${(props) => props.theme.buttonText};
-    background-color: ${(props) => props.theme.button};
-    border: 1px solid ${(props) => props.theme.foregroundBorder};
-    border-radius: 0.35rem;
-    transition: 0.2s;
-
-    &:hover {
-        background-color: ${(props) => props.theme.buttonHover};
-        cursor: pointer;
-    }
-`;*/
-
 const Br = styled.div`
     content: ' ';
     display: block;
@@ -91,10 +71,15 @@ const Br = styled.div`
 `;
 
 export default function Bio(props) {
+    let location = useLocation();
+
     return (
         <Div className={'box transition'}>
             <ImgDiv>
-                <Img src={props.img} alt="Logo" />
+                <Img
+                    src={props.img || process.env.PUBLIC_URL + `./me_white.png`}
+                    alt="Logo"
+                />
             </ImgDiv>
             <TextDiv>
                 <P>
@@ -112,11 +97,11 @@ export default function Bio(props) {
                     movies, music, and genealogical research—as well as
                     automating tasks with python
                 </P>
-                {/* 
-                <Link to="/about">
-                    <A href="">More About Me</A>
-                </Link>
-                */}
+                {location.pathname === '/about' ? null : (
+                    <Button to={'/about'} newMargin={'1.5rem 0 0 0'}>
+                        More About Me
+                    </Button>
+                )}
             </TextDiv>
         </Div>
     );

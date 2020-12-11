@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import EduCard from '../Cards/EduCard';
-import EduCard2 from '../Cards/EduCard2';
+import EduCard from '../../Components/Cards/EduCard';
+import EduCard2 from '../../Components/Cards/EduCard2';
 import { UGA, KSU } from '../../Consts/education_consts';
 
 const Div = styled.div`

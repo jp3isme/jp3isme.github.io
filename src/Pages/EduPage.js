@@ -5,6 +5,7 @@ import { Schools } from '../Consts/education_consts';
 import { Projects as Projs } from '../Consts/project_consts';
 import SkillTag from '../Components/SkillTag';
 import ProjectCard from '../Components/Cards/ProjectCard';
+import Button from '../Components/Button.js';
 
 const Div = styled.div`
     flex-basis: 50%;
@@ -93,24 +94,6 @@ const P = styled.p`
     font-size: 1rem;
 `;
 
-const A = styled.p`
-    padding: 0.6rem 0.75rem;
-    margin: 1.5rem 0 0 10px;
-    font-size: 1rem;
-    display: block;
-    float: left;
-    width: auto;
-    color: ${(props) => props.theme.buttonText};
-    background-color: ${(props) => props.theme.button};
-    border: 1px solid ${(props) => props.theme.foregroundBorder};
-    border-radius: 0.375rem;
-
-    &:hover {
-        background-color: ${(props) => props.theme.buttonHover};
-        cursor: pointer;
-    }
-`;
-
 const Ul = styled.ul`
     padding: 0;
     margin: 0;
@@ -187,9 +170,9 @@ export default function EduPage(props) {
                 </>
             )}
             <span style={{ width: '100%', display: 'inline-block' }}>
-                <Link to={'/'} onClick={scrollUp}>
-                    <A className="transition">Go Home</A>
-                </Link>
+                <Button to={'/'} onClick={scrollUp}>
+                    Go Home
+                </Button>
             </span>
         </div>
     );

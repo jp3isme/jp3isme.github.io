@@ -5,6 +5,7 @@ import { Schools } from '../Consts/education_consts';
 import { Projects as Projs } from '../Consts/project_consts';
 import SkillTag from '../Components/SkillTag';
 import ProjectCard from '../Components/Cards/ProjectCard';
+import Button from '../Components/Button.js';
 
 const Div = styled.div`
     flex-basis: 50%;
@@ -171,88 +172,113 @@ export default function ProjectPage(props) {
                 </Description>
                 {data.outlink === null ? null : (
                     <span style={{ width: '100%', display: 'inline-block' }}>
-                        <A
+                        <Button
                             className="transition"
-                            href={data.outlink}
+                            to={data.outlink}
                             target="_blank"
                         >
                             {data.outLinkText}
-                        </A>
+                        </Button>
                     </span>
                 )}
             </Div>
 
-            <H1>Gallery</H1>
-            <Div className={'box transition'}>
-                {data.img === null ? null : (
-                    <ImgDiv>
-                        <Img src={data.img} alt="Project Image" />
-                    </ImgDiv>
-                )}
-                <Description>
-                    <H2>{data.name != null ? data.name : null}</H2>
-                    <P>
-                        {data.description}
-                        {data.description == null ? null : <br />}
-                    </P>
-                    <P2>
-                        {data.skills !== undefined
-                            ? data.skills.map((skill, i) => (
-                                  <SkillTag skill={skill} key={skill + i} />
-                              ))
-                            : null}
-                    </P2>
-                </Description>
-                {data.outlink === null ? null : (
-                    <span style={{ width: '100%', display: 'inline-block' }}>
-                        <A
-                            className="transition"
-                            href={data.outlink}
-                            target="_blank"
-                        >
-                            {data.outLinkText}
-                        </A>
-                    </span>
-                )}
-            </Div>
+            {data.gallery === null ? null : (
+                <>
+                    <H1>Gallery</H1>
+                    <Div className={'box transition'}>
+                        {data.img === null ? null : (
+                            <ImgDiv>
+                                <Img src={data.img} alt="Project Image" />
+                            </ImgDiv>
+                        )}
+                        <Description>
+                            <H2>{data.name != null ? data.name : null}</H2>
+                            <P>
+                                {data.description}
+                                {data.description == null ? null : <br />}
+                            </P>
+                            <P2>
+                                {data.skills !== undefined
+                                    ? data.skills.map((skill, i) => (
+                                          <SkillTag
+                                              skill={skill}
+                                              key={skill + i}
+                                          />
+                                      ))
+                                    : null}
+                            </P2>
+                        </Description>
+                        {data.outlink === null ? null : (
+                            <span
+                                style={{
+                                    width: '100%',
+                                    display: 'inline-block',
+                                }}
+                            >
+                                <Button
+                                    className="transition"
+                                    to={data.outlink}
+                                    target="_blank"
+                                >
+                                    {data.outLinkText}
+                                </Button>
+                            </span>
+                        )}
+                    </Div>
+                </>
+            )}
 
-            <H1>Documents</H1>
-            <Div className={'box transition'}>
-                {data.img === null ? null : (
-                    <ImgDiv>
-                        <Img src={data.img} alt="Project Image" />
-                    </ImgDiv>
-                )}
-                <Description>
-                    <H2>{data.name != null ? data.name : null}</H2>
-                    <P>
-                        {data.description}
-                        {data.description == null ? null : <br />}
-                    </P>
-                    <P2>
-                        {data.skills !== undefined
-                            ? data.skills.map((skill, i) => (
-                                  <SkillTag skill={skill} key={skill + i} />
-                              ))
-                            : null}
-                    </P2>
-                </Description>
-                {data.outlink === null ? null : (
-                    <span style={{ width: '100%', display: 'inline-block' }}>
-                        <A
-                            className="transition"
-                            href={data.outlink}
-                            target="_blank"
-                        >
-                            {data.outLinkText}
-                        </A>
-                    </span>
-                )}
-            </Div>
+            {data.documents === null ? null : (
+                <>
+                    <H1>Documents</H1>
+                    <Div className={'box transition'}>
+                        {data.img === null ? null : (
+                            <ImgDiv>
+                                <Img src={data.img} alt="Project Image" />
+                            </ImgDiv>
+                        )}
+                        <Description>
+                            <H2>{data.name != null ? data.name : null}</H2>
+                            <P>
+                                {data.description}
+                                {data.description == null ? null : <br />}
+                            </P>
+                            <P2>
+                                {data.skills !== undefined
+                                    ? data.skills.map((skill, i) => (
+                                          <SkillTag
+                                              skill={skill}
+                                              key={skill + i}
+                                          />
+                                      ))
+                                    : null}
+                            </P2>
+                        </Description>
+                        {data.outlink === null ? null : (
+                            <span
+                                style={{
+                                    width: '100%',
+                                    display: 'inline-block',
+                                }}
+                            >
+                                <Button
+                                    className="transition"
+                                    to={data.outlink}
+                                    target="_blank"
+                                >
+                                    {data.outLinkText}
+                                </Button>
+                            </span>
+                        )}
+                    </Div>
+                </>
+            )}
+
             <span style={{ width: '100%', display: 'inline-block' }}>
-                <Link to={'/'} onClick={scrollUp}>
-                    <A className="transition">Go Home</A>
-                </Link>
+                <Button to={'/'} onClick={scrollUp}>
+                    Go Home
+                </Button>
             </span>
         </div>
     );
@@ -261,36 +287,3 @@ export default function ProjectPage(props) {
 const scrollUp = () => {
     window.scrollTo(0, 0);
 };
-
-const CourseDiv = styled.div`
-    width: max-content;
-    max-width: 90%;
-    float: left;
-    min-height: 82px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box; /* Firefox, other Gecko */
-    box-sizing: border-box;
-    flex-basis: calc(50% - 20px);
-
-    @media (max-width: 768px) {
-        flex-basis: 100%;
-    }
-`;
-
-const H3 = styled(H2)`
-    margin-right: 5px;
-`;
-
-function CourseCard({ course }) {
-    return (
-        <CourseDiv className={'box transition'}>
-            <H3>{course.name}</H3>
-            {course.tags.map((skill, i) => (
-                <SkillTag skill={skill} key={skill + i} />
-            ))}
-        </CourseDiv>
-    );
-}

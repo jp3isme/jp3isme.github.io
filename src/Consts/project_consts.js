@@ -21,6 +21,7 @@ const myMDb = {
     outTarget: '_blank',
     external: false,
     gallery: null,
+    documents: null,
 };
 
 const AncestryMap = {
@@ -63,6 +64,7 @@ const AncestryMap = {
             description: '',
         },
     ],
+    documents: null,
 };
 
 const eCinemaBooking = {
@@ -98,8 +100,9 @@ const Spoticli = {
     linkText: 'View Details',
     outLinkText: 'View on Github',
     external: false,
-    target: '_blank',
+    target: '_self',
     gallery: null,
+    documents: null,
 };
 
 const ranked_choice_voting = {
@@ -114,8 +117,9 @@ const ranked_choice_voting = {
     linkText: 'View Details',
     outLinkText: 'View on Github',
     external: false,
-    target: '_blank',
+    target: '_self',
     gallery: null,
+    documents: null,
 };
 
 const Projects = {

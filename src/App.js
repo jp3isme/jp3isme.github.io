@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyle, GlobalTransition } from './theme/globalStyle';
+import { GlobalStyle } from './theme/globalStyle';
 import { lightTheme, darkTheme } from './theme/Themes';
 import Header from './Components/Sections/Header';
-import Bio from './Components/Sections/Bio';
-import Links from './Components/Sections/Links';
-import Education from './Components/Sections/Education';
+import Bio from './Pages/HomePageComponents/Bio';
+import Links from './Pages/HomePageComponents/Links';
+import Education from './Pages/HomePageComponents/Education';
 import EduPage from './Pages/EduPage';
-import Projects from './Components/Sections/Projects';
+import Projects from './Pages/HomePageComponents/Projects';
 import ProjectPage from './Pages/ProjectPage';
 import Footer from './Components/Sections/Footer';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import AboutPage from './Pages/AboutPage';
 
 const Body = styled.div`
     background: ${(props) => props.theme.background};
@@ -22,47 +24,6 @@ const Body = styled.div`
     height: 100%;
     color: ${(props) => props.theme.textPrimary};
 `;
-
-const Div = styled.div`
-    padding: 0;
-    margin: 0;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-`;
-
-const socials = [
-    {
-        text: 'Resume',
-        link: process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`,
-    },
-    {
-        text: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/john-michael-smith',
-    },
-    {
-        text: 'GitHub',
-        link: 'https://github.com/jp3isme',
-    },
-    {
-        text: 'Instagram',
-        link: 'https://www.instagram.com/Jp3isme',
-    },
-    {
-        text: 'Twitter',
-        link: 'https://twitter.com/Jp3isme',
-    },
-    {
-        text: 'GoodReads',
-        link: 'https://www.goodreads.com/user/show/64860063-john-michael-smith',
-    },
-];
-
-const contacts = {
-    email: 'jp3isme@gmail.com',
-    phone: '(678) 943-5352',
-};
 
 // Google Analytics setup
 //
@@ -86,28 +47,10 @@ function App() {
     const [theme, setTheme] = useState(
         time > 7 && time < 21 ? lightTheme : darkTheme
     );
-    const [clicks, setClicks] = useState(0);
-    const [global, setGlobal] = useState(0);
 
     let toggleTheme = () => {
         setTheme(theme === lightTheme ? darkTheme : lightTheme);
-        rainbowEffect();
     };
-
-    let rainbowEffect = async () => {
-        if (clicks >= 5) {
-            setGlobal(1);
-            await sleep(5000);
-            setGlobal(0);
-            setClicks(0);
-        } else {
-            //setClicks(clicks + 1);
-        }
-    };
-
-    function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-    }
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -119,7 +62,7 @@ function App() {
         <div className="App">
             <Router>
                 <ThemeProvider theme={theme}>
-                    {global === 0 ? <GlobalStyle /> : <GlobalTransition />}
+                    <GlobalStyle />
                     <Body className="transition" id="body">
                         <Header
                             className="transition"
@@ -130,34 +73,8 @@ function App() {
                         />
 
                         <Switch>
-                            <Route path="/about">
-                                <Div className="container">
-                                    <Bio
-                                        img={
-                                            process.env.PUBLIC_URL +
-                                            `./me_white.png`
-                                        }
-                                        bg={''}
-                                    />
-                                </Div>
-                            </Route>
-                            <Route path="/" exact={true}>
-                                <Div className="container">
-                                    <Bio
-                                        img={
-                                            process.env.PUBLIC_URL +
-                                            `./me_white.png`
-                                        }
-                                        bg={''}
-                                    />
-                                    <Links
-                                        socials={socials}
-                                        contacts={contacts}
-                                    />
-                                </Div>
-                                <Education />
-                                <Projects />
-                            </Route>
+                            <Route path="/about" component={AboutPage} />
+                            <Route path="/" exact={true} component={HomePage} />
                             <Route path="/education" component={EduPage} />
                             <Route path="/projects" component={ProjectPage} />
                         </Switch>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from '../Button.js';
 import { Link } from 'react-router-dom';
 
 const Div = styled.div`
@@ -67,24 +68,6 @@ const P = styled.p`
     font-size: 1rem;
 `;
 
-const A = styled.p`
-    padding: 0.6rem 0.75rem;
-    margin: 10px 0 0 0;
-    font-size: 1rem;
-    display: block;
-    float: left;
-    width: auto;
-    color: ${(props) => props.theme.buttonText};
-    background-color: ${(props) => props.theme.button};
-    border: 1px solid ${(props) => props.theme.foregroundBorder};
-    border-radius: 0.375rem;
-
-    &:hover {
-        background-color: ${(props) => props.theme.buttonHover};
-        cursor: pointer;
-    }
-`;
-
 export default function EduCard(props) {
     return (
         <Div className={'box transition'}>
@@ -105,9 +88,9 @@ export default function EduCard(props) {
                     {props.data.gpa}
                     {props.data.gpa == null ? null : <br />}
                 </P>
-                <Link to={props.data.link}>
-                    <A className="transition">View Coursework</A>
-                </Link>
+                <Button to={props.data.link} newMargin={'10px 0 0 0'}>
+                    View Coursework
+                </Button>
             </Description>
         </Div>
     );
