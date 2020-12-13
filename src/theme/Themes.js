@@ -1,6 +1,7 @@
 export const lightTheme = {
+    h1weight: 600,
     themeToggle: 'rgb(75,75,75)',
-    background: '#ffffff',
+    background: '#f6f8fa',
     foreground: '#ffffff',
     foregroundBorder: '#e1e4e8',
     textPrimary: 'rgb(8,8,8)',
@@ -20,6 +21,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
+    h1weight: 500,
     themeToggle: 'rgb(242,242,242)',
     background: 'rgb(21,19,32)',
     foreground: 'rgb(34,33,45)',
@@ -34,6 +36,28 @@ export const darkTheme = {
     //buttonBorder: 'rgb(148,128,255)',
     buttonHover: '#ff80bf',
     buttonText: 'black',
+    buttonTextHover: 'rgb(34,33,45)',
+    skillTag: 'rgb(35, 46, 44)',
+    textSkillTag: 'rgb(119, 203, 185)',
+    horizontalRuleColor: '',
+};
+
+export const darkTheme2 = {
+    h1weight: 500,
+    themeToggle: 'rgb(242,242,242)',
+    background: '#0d1117',
+    foreground: '#161b22',
+    foregroundBorder: '#21262d',
+    textPrimary: 'rgb(242,242,242)',
+    textHighlight: '#8082ff',
+    textHighlightShadow: 'rgba(148,128,255,0.1)',
+    textSecondary: 'rgb(153,153,153)',
+    secondary: '#8082ff',
+    mutedSecondary: '#262a40',
+    button: '#8082ff',
+    //buttonBorder: 'rgb(148,128,255)',
+    buttonHover: '#ff80bf',
+    buttonText: '#131520',
     buttonTextHover: 'rgb(34,33,45)',
     skillTag: 'rgb(35, 46, 44)',
     textSkillTag: 'rgb(119, 203, 185)',

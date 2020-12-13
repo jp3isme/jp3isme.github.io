@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import SkillTag from '../SkillTag';
 import Button from '../Button.js';
 
 const Div = styled.div`
+    order: ${(props) => props.order};
     background-color: ${(props) => props.theme.foreground};
     padding: 1.5rem;
     min-width: 200px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
-    flex-basis: calc(33% - 20px);
+    max-width: calc(33% - 20px);
     border: 1px solid ${(props) => props.theme.foregroundBorder};
 
     @media (max-width: 991px) {
-        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
     }
     @media (max-width: 576px) {
-        flex-basis: calc(100%);
+        max-width: calc(100%);
     }
 `;
 
@@ -76,8 +77,9 @@ const Git = styled.a`
 `;
 
 export default function ProjectCard(props) {
+    useEffect(() => {}, [props]);
     return (
-        <Div className={'box transition'}>
+        <Div className={'box transition'} order={props.order}>
             {props.data.img == null ? null : (
                 <Img
                     src={props.data.img}

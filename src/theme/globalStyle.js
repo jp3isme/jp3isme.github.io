@@ -51,6 +51,10 @@ const GlobalStyleStyle = createGlobalStyle`
         padding-botton: 1.5rem;
     }
 
+    h1 {
+        font-weight: ${(props) => props.theme.h1weight};
+    }
+
     .box {
         border-radius: 0.5rem;
         font-size: 1rem;

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './theme/globalStyle';
-import { lightTheme, darkTheme } from './theme/Themes';
+import {
+    lightTheme as lightTheme,
+    darkTheme2 as darkTheme,
+} from './theme/Themes';
 import Header from './Components/Sections/Header';
-import Bio from './Pages/HomePageComponents/Bio';
-import Links from './Pages/HomePageComponents/Links';
-import Education from './Pages/HomePageComponents/Education';
 import EduPage from './Pages/EduPage';
-import Projects from './Pages/HomePageComponents/Projects';
 import ProjectPage from './Pages/ProjectPage';
 import Footer from './Components/Sections/Footer';
 import ReactGA from 'react-ga';
@@ -67,7 +66,7 @@ function App() {
                         <Header
                             className="transition"
                             img={process.env.PUBLIC_URL + `./me_white.png`}
-                            text={'j-mhs.com'}
+                            text={'John-Michael H. Smith'}
                             bg={'rgb(156,190,228)'}
                             toggleTheme={toggleTheme}
                         />

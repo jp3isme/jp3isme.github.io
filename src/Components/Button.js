@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const A = styled.a`
     padding: 0.6rem 0.75rem;
-    margin: ${(props) => props.newMargin || '1.5rem 0 0 10px'};
+    margin: ${(props) => props.newmargin || '1.5rem 0 0 10px'};
     font-size: 1rem;
     display: block;
     float: left;
@@ -23,7 +23,7 @@ const A = styled.a`
 
 const Lin = styled(Link)`
     padding: 0.6rem 0.75rem;
-    margin: ${(props) => props.newMargin || '1.5rem 0 0 10px'};
+    margin: ${(props) => props.newmargin || '1.5rem 0 0 10px'};
     font-size: 1rem;
     display: block;
     float: left;
@@ -41,16 +41,14 @@ const Lin = styled(Link)`
 `;
 
 export default function Button(props) {
-    console.log(props.newMargin);
-
     return (
         <>
             {props.target === '_blank' ? (
-                <A href={props.to} target="_blank" newMargin={props.newMargin}>
+                <A href={props.to} target="_blank" newmargin={props.newMargin}>
                     {props.children}
                 </A>
             ) : (
-                <Lin to={props.to} newMargin={props.newMargin}>
+                <Lin to={props.to} newmargin={props.newMargin}>
                     {props.children}
                 </Lin>
             )}
