@@ -57,7 +57,7 @@ export const darkTheme2 = {
     button: '#8082ff',
     //buttonBorder: 'rgb(148,128,255)',
     buttonHover: '#ff80bf',
-    buttonText: '#131520',
+    buttonText: '#0f111a',
     buttonTextHover: 'rgb(34,33,45)',
     skillTag: 'rgb(35, 46, 44)',
     textSkillTag: 'rgb(119, 203, 185)',

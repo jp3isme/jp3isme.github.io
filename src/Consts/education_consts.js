@@ -1,5 +1,5 @@
 const UGA = {
-    img: process.env.PUBLIC_URL + `./uga_crest.png`,
+    img: process.env.PUBLIC_URL + `./uga_crest_3.svg`,
     name: 'University of Georgia (Honors)',
     degree: 'Computer Science, B.S.',
     cert: 'Certificate in Applied Data Science',

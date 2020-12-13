@@ -6,6 +6,7 @@ const A = styled.a`
     padding: 0.6rem 0.75rem;
     margin: ${(props) => props.newmargin || '1.5rem 0 0 10px'};
     font-size: 1rem;
+    font-weight: 500;
     display: block;
     float: left;
     width: auto;
@@ -25,6 +26,7 @@ const Lin = styled(Link)`
     padding: 0.6rem 0.75rem;
     margin: ${(props) => props.newmargin || '1.5rem 0 0 10px'};
     font-size: 1rem;
+    font-weight: 500;
     display: block;
     float: left;
     width: auto;

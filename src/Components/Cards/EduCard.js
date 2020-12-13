@@ -28,6 +28,9 @@ const Img = styled.img`
     background-color: ${(props) => props.bg};
     /*border: 4px solid ${(props) => props.theme.secondary};*/
     padding: 0;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimizeQuality;
+    background-color: ${(props) => props.theme.background};
 `;
 
 const ImgDiv = styled.div`
