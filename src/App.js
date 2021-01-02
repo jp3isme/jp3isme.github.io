@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from './theme/globalStyle';
+import { GlobalStyle } from '../gatsby-site/src/components/theme/globalStyle';
 import {
     lightTheme as lightTheme,
     darkTheme2 as darkTheme,
-} from './theme/Themes';
+} from '../gatsby-site/src/components/theme/Themes';
 import Header from './Components/Sections/Header';
 import EduPage from './Pages/EduPage';
 import ProjectPage from './Pages/ProjectPage';
@@ -13,8 +13,8 @@ import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
-import AboutPage from './Pages/AboutPage';
-import ScrollToTop from './hooks/ScrollToTop';
+import AboutPage from '../gatsby-site/src/pages/AboutPage';
+import ScrollToTop from '../gatsby-site/src/components/hooks/ScrollToTop';
 
 const Body = styled.div`
     background: ${(props) => props.theme.background};
@@ -53,7 +53,6 @@ function App() {
     };
 
     useEffect(() => {
-        window.scrollTo(0, 0);
         ReactGA.set({ page: history.location.pathname }); // Update the user's current page
         ReactGA.pageview(history.location.pathname); // Record a pageview for the given page
     }, [time]);
