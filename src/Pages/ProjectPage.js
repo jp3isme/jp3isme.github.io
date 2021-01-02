@@ -277,14 +277,8 @@ export default function ProjectPage(props) {
             )}
 
             <span style={{ width: '100%', display: 'inline-block' }}>
-                <Button to={'/'} onClick={scrollUp}>
-                    Go Home
-                </Button>
+                <Button to={'/'}>Go Home</Button>
             </span>
         </div>
     );
 }
-
-const scrollUp = () => {
-    window.scrollTo(0, 0);
-};

@@ -21,7 +21,7 @@ const Div = styled.div`
     }
 `;
 const ImgDiv = styled.div`
-    background-color: ${(props) => props.bg};
+    background: ${(props) => props.bg};
     border-radius: 200px;
     margin: 0 0 1.5rem 0;
     height: 140px;

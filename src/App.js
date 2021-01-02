@@ -14,6 +14,7 @@ import { createBrowserHistory } from 'history';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
+import ScrollToTop from './hooks/ScrollToTop';
 
 const Body = styled.div`
     background: ${(props) => props.theme.background};
@@ -60,6 +61,7 @@ function App() {
     return (
         <div className="App">
             <Router>
+                <ScrollToTop />
                 <ThemeProvider theme={theme}>
                     <GlobalStyle />
                     <Body className="transition" id="body">
@@ -67,7 +69,7 @@ function App() {
                             className="transition"
                             img={process.env.PUBLIC_URL + `./me_white.png`}
                             text={'John-Michael H. Smith'}
-                            bg={'rgb(156,190,228)'}
+                            bg={'white'}
                             toggleTheme={toggleTheme}
                         />
 

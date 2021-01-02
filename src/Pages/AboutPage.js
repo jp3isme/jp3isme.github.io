@@ -6,9 +6,7 @@ export default function AboutPage() {
     return (
         <div className="container">
             <Bio />
-            <Button to="/" onClick={window.scrollTo(0, 0)}>
-                Go Home
-            </Button>
+            <Button to="/">Go Home</Button>
         </div>
     );
 }
