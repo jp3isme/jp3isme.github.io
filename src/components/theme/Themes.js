@@ -18,6 +18,7 @@ export const lightTheme = {
   skillTag: "clear",
   textSkillTag: "#5e9516",
   horizontalRuleColor: "rgb(225,225,225)",
+  boxShadow: '0px 1px 5px -5px #000000',
 }
 
 export const darkTheme = {
@@ -62,4 +63,5 @@ export const darkTheme2 = {
   skillTag: "rgb(35, 46, 44)",
   textSkillTag: "rgb(119, 203, 185)",
   horizontalRuleColor: "",
+  boxShadow: 'none',
 }

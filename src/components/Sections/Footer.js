@@ -19,6 +19,7 @@ const Socials = styled.div`
     margin: 10px;
     padding: 0;
     font-size: 0.85rem;
+    overflow: visible;
 `;
 
 const P = styled.p`
@@ -38,8 +39,8 @@ export default function Footer(props) {
                     <Tag
                         text={'Resume'}
                         link={
-                            process.env.PUBLIC_URL +
-                            `./John-Michael_Smith_Resume_S2020.pdf`
+                            // process.env.PUBLIC_URL +
+                            `/John-Michael_Smith_Resume_S2020.pdf`
                         }
                     />
                     <span>&#32;</span>

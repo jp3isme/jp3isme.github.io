@@ -6,8 +6,9 @@ import SkillTag from "../components/SkillTag"
 import ProjectCard from "../components/Cards/ProjectCard"
 import Button from "../components/Button.js"
 import Image from "../components/Image"
-import uga_crest from "../images/uga_crest_1.png"
+import uga_crest from "../images/uga_crest_0.svg"
 import Layout from "../components/layout"
+import SEO from '../components/seo'
 
 const Div = styled.div`
   flex-basis: 50%;
@@ -29,7 +30,10 @@ const Img = styled.img`
   width: auto;
   min-width: 132px;
   border-radius: 200px;
-  background-color: ${props => props.bg};
+  background-color: rgb(102,67,90);
+  background-color: rgb(186,12,47);
+  background-color: ${props => props.theme.background};
+  //stroke: rgb(186,12,47);
   /*border: 4px solid ${props => props.theme.secondary};*/
   padding: 5px;
 `
@@ -119,10 +123,13 @@ export default function EduPage(props) {
   useEffect(() => {
     setData(Schools[query])
     let extension = Schools[query].img.split(".")[1]
-    if (extension === ".svg") setUseUGA(true)
+    console.log(extension)
+    if (extension === "svg") setUseUGA(true)
+    else if (useUGA == true) setUseUGA(false)
   }, [data])
   return data === undefined ? null : (
     <Layout>
+      <SEO title={data.name}/>
       <div className="container">
         <Div className={"box transition"}>
           {data.img === null ? null : (
@@ -131,7 +138,7 @@ export default function EduPage(props) {
                 <Img src={uga_crest} alt="UGA Crest" />
               ) : (
                 <Image
-                  src={data.img}
+                  filename={data.img}
                   alt="School Crest"
                   style={{
                     height: "132px",

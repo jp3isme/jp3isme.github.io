@@ -23,6 +23,15 @@ const GlobalStyleStyle = createGlobalStyle`
         //transition: 0.2s;
     }
 
+    ::selection {
+        background: #fff2a8; /* WebKit/Blink Browsers */
+        color: black;
+      }
+      ::-moz-selection {
+        background: #fff2a8; /* Gecko Browsers */
+        color: black
+    }
+
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
@@ -63,6 +72,7 @@ const GlobalStyleStyle = createGlobalStyle`
         border: 1px solid ${props => props.theme.foregroundBorder};
         background-color: ${props => props.theme.foreground};
         padding: 1.5rem;
+        box-shadow: ${props => props.theme.boxShadow}
     }
 
     .transition {
