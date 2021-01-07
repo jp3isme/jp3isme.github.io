@@ -19,7 +19,7 @@ const Div = styled.div`
 const socials = [
   {
     text: "Resume",
-    link: process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`,
+    link: `/John-Michael_Smith_Resume_S2020.pdf`,
   },
   {
     text: "LinkedIn",

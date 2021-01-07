@@ -26,6 +26,7 @@ const Body = styled.div`
   width: 100vw;
   height: 100%;
   color: ${props => props.theme.textPrimary};
+  transition: 0;
 `
 
 const Layout = ({ children }) => {

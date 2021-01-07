@@ -8,7 +8,7 @@ module.exports = {
     received a certificate in Applied Data Science.`,
     author: `@jp3isme`,
     url: "https://j-mhs.com",
-    image: "/images/me_white.PNG",
+    image: "src/images/me_white.PNG",
     twitterUsername: "@jp3isme",
   },
   plugins: [
@@ -31,7 +31,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/me_icon_white.PNG`, // This path is relative to the root of the site.
+        border_radius: "0.75rem",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

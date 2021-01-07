@@ -20,7 +20,7 @@ const GlobalStyleStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-weight: 400;
-        transition: 0.2s;
+        //transition: 0.2s;
     }
 
     code {
