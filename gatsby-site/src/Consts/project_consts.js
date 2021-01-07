@@ -1,5 +1,7 @@
 const myMDb = {
-  img: process.env.PUBLIC_URL + `./projects/tiny/myMDB_capture_2.png`,
+  // img: process.env.PUBLIC_URL + `./projects/tiny/myMDB_capture_2.png`,
+  // img: `/projects/tiny/myMDB_capture_2.png`,
+  img: "myMDB_capture_2.png",
   name: "myMDb",
   description:
     "An IMDb-like web app for viewing trending TV shows, movies, and people (actors, directors, etc) with data sourced from themoviedb.org API. Users can create an account and save their favorites",
@@ -25,7 +27,8 @@ const myMDb = {
 }
 
 const AncestryMap = {
-  img: process.env.PUBLIC_URL + `./projects/tiny/AncestryMap_Dark_capture.png`,
+  // img: process.env.PUBLIC_URL + `./projects/tiny/AncestryMap_Dark_capture.png`,
+  img: `AncestryMap_Dark_capture.png`,
   name: "AncestryMap",
   description:
     "A genealogical tool utilizing GEDCOMs for visualizing ancestors' birth locations by generation (desktop app)",
@@ -88,7 +91,8 @@ const eCinemaBooking = {
 }
 
 const Spoticli = {
-  img: process.env.PUBLIC_URL + `./projects/tiny/spoticli_capture.png`,
+  // img: process.env.PUBLIC_URL + `./projects/tiny/spoticli_capture.png`,
+  img: `spoticli_capture.png`,
   name: "Spoticli (contributor)",
   description:
     "An open-source command line interface (CLI) for controlling Spotify. Project by Jacob Chambers",

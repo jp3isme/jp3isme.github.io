@@ -4,7 +4,7 @@ import ProjectCard from "../Cards/ProjectCard"
 import { Projects as Projs } from "../../Consts/project_consts"
 const Div = styled.div`
   padding: 0;
-  margin: 0;
+  //margin: 0;
 `
 
 const FlexDiv = styled.div`
@@ -70,6 +70,7 @@ export default function Projects() {
         }
         if (orders != newOrders) setOrders(newOrders)
       }
+      console.log("event listener fired")
     }
     // Add event listener
     window.addEventListener("resize", handleResize)

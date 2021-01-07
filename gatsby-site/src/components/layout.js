@@ -11,12 +11,22 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./Sections/Header"
 import Footer from "./Sections/Footer"
-import { ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import { GlobalStyle } from "./theme/globalStyle"
 import {
   lightTheme as lightTheme,
   darkTheme2 as darkTheme,
 } from "../components/theme/Themes"
+import "../../public/font.css"
+
+const Body = styled.div`
+  background: ${props => props.theme.background};
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100%;
+  color: ${props => props.theme.textPrimary};
+`
 
 const Layout = ({ children }) => {
   const time = new Date().getHours()
@@ -44,21 +54,23 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Header
-          className="transition"
-          img={process.env.PUBLIC_URL + `./me_white.png`}
-          text={"John-Michael H. Smith"}
-          bg={"white"}
-          toggleTheme={toggleTheme}
-        />
-        <main>{children}</main>
-        <Footer
-          text={"© 2020 John-Michael H. Smith"}
-          email={"jp3isme@gmail.com"}
-          resume={
-            process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`
-          }
-        />
+        <Body>
+          <Header
+            className="transition"
+            img={process.env.PUBLIC_URL + `./me_white.png`}
+            text={"John-Michael H. Smith"}
+            bg={"white"}
+            toggleTheme={toggleTheme}
+          />
+          <main>{children}</main>
+          <Footer
+            text={"© 2020 John-Michael H. Smith"}
+            email={"jp3isme@gmail.com"}
+            resume={
+              process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`
+            }
+          />
+        </Body>
       </ThemeProvider>
     </>
   )

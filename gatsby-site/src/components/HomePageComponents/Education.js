@@ -6,7 +6,7 @@ import { UGA, KSU } from "../../Consts/education_consts"
 
 const Div = styled.div`
   padding: 0;
-  margin: 0;
+  //margin: 0;
 `
 
 const FlexDiv = styled.div`

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../Button.js"
 import { Link } from "gatsby"
-import Image from "../Image"
+import uga_crest from "../../images/uga_crest_1.svg"
 
 const Div = styled.div`
   background-color: ${props => props.theme.foreground};
@@ -22,14 +22,14 @@ const Div = styled.div`
   }
 `
 
-const Img = styled.div`
+const Img = styled.img`
   height: 132px;
   min-width: 132px;
   width: auto;
   border-radius: 200px;
   background-color: ${props => props.bg};
   /*border: 4px solid ${props => props.theme.secondary};*/
-  padding: 0;
+  padding: 5px;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: optimizeQuality;
   background-color: ${props => props.theme.background};
@@ -78,9 +78,8 @@ export default function EduCard(props) {
     <Div className={"box transition"}>
       {props.data.img == null ? null : (
         <ImgDiv>
-          <Img>
-            <Image filename={props.data.img} />
-          </Img>
+          {/* <Image filename={props.data.img} /> */}
+          <Img src={uga_crest} viewBox="0 0 612 612" />
         </ImgDiv>
       )}
       <Description>
