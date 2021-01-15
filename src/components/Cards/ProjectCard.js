@@ -95,6 +95,7 @@ export default function ProjectCard(props) {
       <Description>
         <H1>{props.data.name != null ? props.data.name : null}</H1>
         <P>{props.data.description}</P>
+        
         <P2>
           {props.data.skills.map((skill, i) => (
             <SkillTag skill={skill} key={skill + i} />

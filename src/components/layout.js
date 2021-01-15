@@ -5,18 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./Sections/Header"
 import Footer from "./Sections/Footer"
-import styled, { ThemeProvider } from "styled-components"
-import { GlobalStyle } from "./theme/globalStyle"
-import {
-  lightTheme as lightTheme,
-  darkTheme2 as darkTheme,
-} from "../components/theme/Themes"
+import styled from "styled-components"
+import Context from '../store/context'
+import { GlobalStyle } from "../components/theme/globalStyle"
+import { ThemeProvider } from "styled-components"
 import "../../public/font.css"
 
 const Body = styled.div`
@@ -30,16 +27,10 @@ const Body = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const time = new Date().getHours()
-  const [theme, setTheme] = useState(
-    time > 7 && time < 21 ? lightTheme : darkTheme
-  )
-
-  let toggleTheme = () => {
-    setTheme(theme === lightTheme ? darkTheme : lightTheme)
-  }
-
-  useEffect(() => {}, [theme])
+  const {state, dispatch} = useContext(Context)
+  useEffect(() => {
+    
+  }, [])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -53,7 +44,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={state.theme}>
         <GlobalStyle />
         <Body>
           <Header
@@ -61,7 +52,7 @@ const Layout = ({ children }) => {
             img={process.env.PUBLIC_URL + `./me_white.png`}
             text={"John-Michael H. Smith"}
             bg={"white"}
-            toggleTheme={toggleTheme}
+            toggleTheme={() => dispatch({type: 'TOGGLE_DARK_MODE'})}
           />
           <main>{children}</main>
           <Footer
@@ -70,7 +61,7 @@ const Layout = ({ children }) => {
             resume={
               process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`
             }
-          />
+            />
         </Body>
       </ThemeProvider>
     </>

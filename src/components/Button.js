@@ -15,6 +15,7 @@ const A = styled.a`
   border: 1px solid ${props => props.theme.foregroundBorder};
   border-radius: 0.375rem;
   text-decoration: none;
+  box-shadow: ${props => props.theme.boxShadow};
 
   &:hover {
     background-color: ${props => props.theme.buttonHover};
@@ -35,6 +36,8 @@ const Lin = styled(Link)`
   border: 1px solid ${props => props.theme.foregroundBorder};
   border-radius: 0.375rem;
   text-decoration: none;
+  box-shadow: ${props => props.theme.boxShadow};
+
 
   &:hover {
     background-color: ${props => props.theme.buttonHover};

@@ -8,18 +8,18 @@ import SEO from "../components/seo"
 import Image from "../components/Image"
 
 const Div = styled.div`
-  flex-basis: 50%;
-  display: -webkit-flex;
-  display: flex;
-  display: inherit;
-  flex-wrap: wrap;
+  //flex-basis: 50%;
+  //display: -webkit-flex;
+  //display: flex;
+  //display: inherit;
+  //flex-wrap: wrap;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box;
-  flex-basis: calc(50% - 20px);
+  //flex-basis: calc(50% - 20px);
   overflow: show;
   @media (max-width: 768px) {
-    flex-basis: 100%;
+    //flex-basis: 100%;
   }
 `
 
@@ -27,14 +27,14 @@ const ImgDiv = styled.div`
   float: left;
   padding-right: 1.5rem;
   @media (min-width: 768px) and (max-width: 992px) {
-    display: flex;
+    //display: flex;
     justify-content: center;
     flex-basis: 100%;
     margin: 0 auto 1.5rem auto;
     float: none;
   }
   @media (max-width: 525px) {
-    display: flex;
+    //display: flex;
     justify-content: center;
     flex-basis: 100%;
     margin: 0 auto 1.5rem auto;
@@ -44,8 +44,8 @@ const ImgDiv = styled.div`
 
 const Description = styled.div`
   padding: 0 0 0 0;
-  max-width: 75%;
-  flex-basis: 75%;
+  //max-width: 75%;
+  //flex-basis: 75%;
   @media (min-width: 768px) and (max-width: 992px) {
     padding: 0;
   }
@@ -85,14 +85,15 @@ const H2 = styled.h1`
 `
 
 const P = styled.p`
-  padding: 5px 0;
+  position: relative;
+  top: 5px;
   margin: 0;
   color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 
 const P2 = styled.p`
-  padding: 5px 0 0 0;
+  padding: 10px 0;
   margin: 0;
   color: ${props => props.theme.textSecondary};
   font-size: 1rem;
@@ -134,10 +135,7 @@ export default function ProjectPage(props) {
   useEffect(() => {
     // window.scrollTo(0, 0)
     setData(Projs[query])
-    console.log(Projs)
-    console.log(query)
-    console.log(Projs[query])
-    console.log(data)
+
   }, [data, query])
   return data === undefined ? null : (
     <Layout>
@@ -162,7 +160,7 @@ export default function ProjectPage(props) {
               />
             </ImgDiv>
           )}
-          <Description>
+          {/* <Description> */}
             <H2>{data.name != null ? data.name : null}</H2>
             <P>
               {data.description}
@@ -175,7 +173,9 @@ export default function ProjectPage(props) {
                   ))
                 : null}
             </P2>
-          </Description>
+            { data.longer && 
+            <><br/><P>{data.longer}</P></>}
+          {/* </Description> */}
           {data.outlink === null ? null : (
             <span style={{ width: "100%", display: "inline-block" }}>
               <Button className="transition" to={data.outlink} target="_blank">

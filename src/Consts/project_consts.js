@@ -1,3 +1,27 @@
+const MyPortfolio = {
+  img: "myMDB_capture_2.png",
+  name: "My Portfolio",
+  description:
+    "The site you're currently on is my personal portfolio. Built with react, I utilized Gatsby for better SEO",
+  skills: [
+    "Gatsby",
+    "React",
+    "GraphQL",
+    "Node.js",
+    "JavaScript",
+    "CSS",
+  ],
+  link: "/projects?p=MyPortfolio",
+  outlink: null,
+  linkText: "View Details",
+  outLinkText: null,
+  github: 'https://github.com/jp3isme/jp3isme.github.io',
+  external: false,
+  target: "",
+  gallery: null,
+  documents: null,
+}
+
 const myMDb = {
   // img: process.env.PUBLIC_URL + `./projects/tiny/myMDB_capture_2.png`,
   // img: `/projects/tiny/myMDB_capture_2.png`,
@@ -5,6 +29,7 @@ const myMDb = {
   name: "myMDb",
   description:
     "An IMDb-like web app for viewing trending TV shows, movies, and people (actors, directors, etc) with data sourced from themoviedb.org API. Users can create an account and save their favorites",
+  longer: "* Note: While this site does use industry standard encryption for storage, please use a unique password if you decide to register and try it out. This is just a fun project, and the hosting platform (Heroku) charges for SSL/TLS. Your connection will not be secure (in other words, your password—in theory—could be intercepted; don't use a password you use anywhere else). Heroku is also responsible for the initial load-time since free projects are offloaded from the server after 30 minutes", 
   skills: [
     "React",
     "Node.js",
@@ -126,6 +151,7 @@ const ranked_choice_voting = {
 }
 
 const Projects = {
+  MyPortfolio,
   myMDb,
   AncestryMap,
   eCinemaBooking,

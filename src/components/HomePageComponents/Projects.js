@@ -70,7 +70,6 @@ export default function Projects() {
         }
         if (orders != newOrders) setOrders(newOrders)
       }
-      console.log("event listener fired")
     }
     // Add event listener
     window.addEventListener("resize", handleResize)
@@ -89,6 +88,7 @@ export default function Projects() {
         <ProjectCard order={orders.third} data={Projs.AncestryMap} />
         <ProjectCard order={orders.fourth} data={Projs.ranked_choice_voting} />
         <ProjectCard order={orders.fifth} data={Projs.Spoticli} />
+        <ProjectCard order={orders.fifth} data={Projs.MyPortfolio} />
       </FlexDiv>
     </Div>
   )
