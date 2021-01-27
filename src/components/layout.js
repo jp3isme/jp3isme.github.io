@@ -11,10 +11,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Sections/Header"
 import Footer from "./Sections/Footer"
 import styled from "styled-components"
-import Context from '../store/context'
+import Context from "../store/context"
 import { GlobalStyle } from "../components/theme/globalStyle"
 import { ThemeProvider } from "styled-components"
-import "../../public/font.css"
+import "../../public/fonts/style.css"
 
 const Body = styled.div`
   background: ${props => props.theme.background};
@@ -27,10 +27,8 @@ const Body = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const {state, dispatch} = useContext(Context)
-  useEffect(() => {
-    
-  }, [])
+  const { state, dispatch } = useContext(Context)
+  useEffect(() => {}, [])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -52,7 +50,7 @@ const Layout = ({ children }) => {
             img={process.env.PUBLIC_URL + `./me_white.png`}
             text={"John-Michael H. Smith"}
             bg={"white"}
-            toggleTheme={() => dispatch({type: 'TOGGLE_DARK_MODE'})}
+            toggleTheme={() => dispatch({ type: "TOGGLE_DARK_MODE" })}
           />
           <main>{children}</main>
           <Footer
@@ -61,7 +59,7 @@ const Layout = ({ children }) => {
             resume={
               process.env.PUBLIC_URL + `./John-Michael_Smith_Resume_S2020.pdf`
             }
-            />
+          />
         </Body>
       </ThemeProvider>
     </>
