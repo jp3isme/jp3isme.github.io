@@ -4,12 +4,12 @@ import Button from "../components/Button"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default function AboutPage() {
+export default function AboutPage(props) {
   return (
     <Layout>
       <SEO title="About Me" />
       <div className="container">
-        <Bio />
+        <Bio location={props.location} />
         <Button to="/">Go Home</Button>
       </div>
     </Layout>
