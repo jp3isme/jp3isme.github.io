@@ -8,7 +8,7 @@ import Button from "../components/Button.js"
 import Image from "../components/Image"
 import uga_crest from "../images/uga_crest_0.svg"
 import Layout from "../components/layout"
-import SEO from '../components/seo'
+import SEO from "../components/seo"
 
 const Div = styled.div`
   flex-basis: 50%;
@@ -30,8 +30,8 @@ const Img = styled.img`
   width: auto;
   min-width: 132px;
   border-radius: 200px;
-  background-color: rgb(102,67,90);
-  background-color: rgb(186,12,47);
+  background-color: rgb(102, 67, 90);
+  background-color: rgb(186, 12, 47);
   background-color: ${props => props.theme.background};
   //stroke: rgb(186,12,47);
   /*border: 4px solid ${props => props.theme.secondary};*/
@@ -117,8 +117,8 @@ const FlexDiv = styled.div`
 export default function EduPage(props) {
   const [data, setData] = useState({})
   const [useUGA, setUseUGA] = useState(false)
-  let params = new URLSearchParams(document.location.search.substring(1))
-  let query = params.get("s")
+  //let params = new URLSearchParams(document.location.search.substring(1))
+  let query = props.location.search.split("=")[1]
 
   useEffect(() => {
     setData(Schools[query])
@@ -129,7 +129,7 @@ export default function EduPage(props) {
   }, [data])
   return data === undefined ? null : (
     <Layout>
-      <SEO title={data.name}/>
+      <SEO title={data.name} />
       <div className="container">
         <Div className={"box transition"}>
           {data.img === null ? null : (

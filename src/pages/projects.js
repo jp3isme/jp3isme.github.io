@@ -127,8 +127,9 @@ const FlexDiv = styled.div`
 
 export default function ProjectPage(props) {
   const [data, setData] = useState({})
-  let params = new URLSearchParams(document.location.search.substring(1))
-  let query = params.get("p")
+  //let params = new URLSearchParams(document.location.search.substring(1))
+  //let query = URLSearchParams.get("p")
+  let query = props.location.search.split("=")[1]
 
   useEffect(() => {
     // window.scrollTo(0, 0)
