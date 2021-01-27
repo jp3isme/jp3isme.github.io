@@ -58,7 +58,7 @@ const filmSchedules = {
   link: "/projects?p=filmSchedules",
   outlink: "https://filmschedules.j-mhs.com",
   linkText: "View Details",
-  outLinkText: "View FilmSchedules",
+  outLinkText: "Visit FilmSchedules",
   github: "https://github.com/jp3isme/filmSchedules",
   target: "",
   outTarget: "_blank",
