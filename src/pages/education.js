@@ -6,7 +6,7 @@ import SkillTag from "../components/SkillTag"
 import ProjectCard from "../components/Cards/ProjectCard"
 import Button from "../components/Button.js"
 import Image from "../components/Image"
-import uga_crest from "../images/uga_crest_0.svg"
+import uga_crest from "../images/uga_crest_01.svg"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 

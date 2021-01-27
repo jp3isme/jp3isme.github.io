@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../Button.js"
 import { Link } from "gatsby"
-import uga_crest from "../../images/uga_crest_1.svg"
+import uga_crest from "../../images/uga_crest_0.svg"
 
 const Div = styled.div`
   background-color: ${props => props.theme.foreground};
