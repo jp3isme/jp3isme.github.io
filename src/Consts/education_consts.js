@@ -1,7 +1,7 @@
 const UGA = {
   img: `uga_crest_3.svg`,
-  name: "University of Georgia (Honors)",
-  degree: "Computer Science, B.S.",
+  name: "University of Georgia",
+  degree: "Computer Science, B.S. (Honors)",
   cert: "Certificate in Applied Data Science",
   date: "Fall 2017 - Spring 2019",
   gpa: "GPA: 3.72, Cum Laude",
@@ -17,6 +17,7 @@ const UGA = {
     { name: "Human-Computer Interaction", tags: [] },
     { name: "Systems Programming", tags: ["UNIX", "C++"] },
     { name: "Introduction to Theory of Computing", tags: [] },
+    { name: "Symbolic Logic (Honors)", tags: [] },
   ],
   link: "/education?s=UGA",
   projects: ["eCinemaBooking"],

@@ -84,8 +84,9 @@ export default function Projects() {
       <H1>Projects</H1>
       <FlexDiv>
         <ProjectCard order={orders.first} data={Projs.myMDb} />
-        <ProjectCard order={orders.second} data={Projs.eCinemaBooking} />
+        <ProjectCard order={orders.second} data={Projs.CinemaEBooking} />
         <ProjectCard order={orders.third} data={Projs.AncestryMap} />
+        <ProjectCard order={orders.third} data={Projs.filmSchedules} />
         <ProjectCard order={orders.fourth} data={Projs.ranked_choice_voting} />
         <ProjectCard order={orders.fifth} data={Projs.Spoticli} />
         <ProjectCard order={orders.fifth} data={Projs.MyPortfolio} />

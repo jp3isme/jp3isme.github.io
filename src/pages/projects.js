@@ -6,6 +6,7 @@ import Button from "../Components/Button.js"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/Image"
+import MediaCard from "../components/Cards/MediaCard"
 
 const Div = styled.div`
   //flex-basis: 50%;
@@ -98,24 +99,13 @@ const P2 = styled.p`
   color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
-
-const A = styled.a`
-  padding: 0.6rem 0.75rem;
-  margin: 1.5rem 0 -5px 0px;
+const P3 = styled.p`
+  position: relative;
+  width: 100%;
+  top: 10px;
+  margin: 0;
+  color: ${props => props.theme.textSecondary};
   font-size: 1rem;
-  display: block;
-  float: left;
-  width: auto;
-  color: ${props => props.theme.buttonText};
-  background-color: ${props => props.theme.button};
-  border: 1px solid ${props => props.theme.foregroundBorder};
-  border-radius: 0.375rem;
-  text-decoration: none;
-
-  &:hover {
-    background-color: ${props => props.theme.buttonHover};
-    cursor: pointer;
-  }
 `
 
 const FlexDiv = styled.div`
@@ -123,8 +113,16 @@ const FlexDiv = styled.div`
   margin: 0;
   display: -webkit-flex;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  max-height: 1000px;
+  @media (max-width: 992px) {
+    max-height: 1300px;
+  }
+  @media (max-width: 576px) {
+    max-height: none;
+  }
 `
 
 export default function ProjectPage(props) {
@@ -135,8 +133,8 @@ export default function ProjectPage(props) {
   useEffect(() => {
     // window.scrollTo(0, 0)
     setData(Projs[query])
-
   }, [data, query])
+
   return data === undefined ? null : (
     <Layout>
       <SEO title={data.name} />
@@ -161,20 +159,23 @@ export default function ProjectPage(props) {
             </ImgDiv>
           )}
           {/* <Description> */}
-            <H2>{data.name != null ? data.name : null}</H2>
-            <P>
-              {data.description}
-              {data.description == null ? null : <br />}
-            </P>
-            <P2>
-              {data.skills !== undefined
-                ? data.skills.map((skill, i) => (
-                    <SkillTag skill={skill} key={skill + i} />
-                  ))
-                : null}
-            </P2>
-            { data.longer && 
-            <><br/><P>{data.longer}</P></>}
+          <H2>{data.name != null ? data.name : null}</H2>
+          <P>
+            {data.description}
+            {data.description == null ? null : <br />}
+          </P>
+          <P2>
+            {data.skills !== undefined
+              ? data.skills.map((skill, i) => (
+                  <SkillTag skill={skill} key={skill + i} />
+                ))
+              : null}
+          </P2>
+          {data.longer && (
+            <>
+              <P3>{data.longer}</P3>
+            </>
+          )}
           {/* </Description> */}
           {data.outlink === null ? null : (
             <span style={{ width: "100%", display: "inline-block" }}>
@@ -185,113 +186,28 @@ export default function ProjectPage(props) {
           )}
         </Div>
 
-        {data.gallery === null ? null : (
+        {data.gallery === null ? null : data.gallery === undefined ? null : (
           <>
             <H1>Gallery</H1>
-            <Div className={"box transition"}>
-              {data.img === null ? null : (
-                <ImgDiv>
-                  {/* <Img src={data.img} alt="Project Image" /> */}
-                  <Image
-                    filename={data.img}
-                    alt="Project Image"
-                    style={{
-                      height: "132px",
-                      width: "223px",
-                      borderRadius: "0.5rem 0.5rem",
-                      backgroundColor: `${props => props.bg}`,
-                      /*border: `4px solid ${props => props.theme.secondary}`,*/
-                      padding: 0,
-                    }}
-                  />
-                </ImgDiv>
-              )}
-              <Description>
-                <H2>{data.name != null ? data.name : null}</H2>
-                <P>
-                  {data.description}
-                  {data.description == null ? null : <br />}
-                </P>
-                <P2>
-                  {data.skills !== undefined
-                    ? data.skills.map((skill, i) => (
-                        <SkillTag skill={skill} key={skill + i} />
-                      ))
-                    : null}
-                </P2>
-              </Description>
-              {data.outlink === null ? null : (
-                <span
-                  style={{
-                    width: "100%",
-                    display: "inline-block",
-                  }}
-                >
-                  <Button
-                    className="transition"
-                    to={data.outlink}
-                    target="_blank"
-                  >
-                    {data.outLinkText}
-                  </Button>
-                </span>
-              )}
-            </Div>
+
+            <FlexDiv>
+              {data.gallery.map(entry => (
+                <MediaCard data={entry} />
+              ))}
+            </FlexDiv>
           </>
         )}
 
-        {data.documents === null ? null : (
+        {data.documents === null ? null : data.documents ===
+          undefined ? null : (
           <>
             <H1>Documents</H1>
-            <Div className={"box transition"}>
-              {data.img === null ? null : (
-                <ImgDiv>
-                  {/* <Img src={data.img} alt="Project Image" /> */}
-                  <Image
-                    filename={data.img}
-                    alt="Project Image"
-                    style={{
-                      height: "132px",
-                      width: "223px",
-                      borderRadius: "0.5rem 0.5rem",
-                      backgroundColor: `${props => props.bg}`,
-                      /*border: `4px solid ${props => props.theme.secondary}`,*/
-                      padding: 0,
-                    }}
-                  />
-                </ImgDiv>
-              )}
-              <Description>
-                <H2>{data.name != null ? data.name : null}</H2>
-                <P>
-                  {data.description}
-                  {data.description == null ? null : <br />}
-                </P>
-                <P2>
-                  {data.skills !== undefined
-                    ? data.skills.map((skill, i) => (
-                        <SkillTag skill={skill} key={skill + i} />
-                      ))
-                    : null}
-                </P2>
-              </Description>
-              {data.outlink === null ? null : (
-                <span
-                  style={{
-                    width: "100%",
-                    display: "inline-block",
-                  }}
-                >
-                  <Button
-                    className="transition"
-                    to={data.outlink}
-                    target="_blank"
-                  >
-                    {data.outLinkText}
-                  </Button>
-                </span>
-              )}
-            </Div>
+
+            <FlexDiv>
+              {data.documents.map(entry => (
+                <MediaCard data={entry} />
+              ))}
+            </FlexDiv>
           </>
         )}
 

@@ -12,7 +12,7 @@ const Image = props => (
               relativePath
               name
               childImageSharp {
-                sizes(maxWidth: 600) {
+                sizes(maxWidth: 1200) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -30,7 +30,12 @@ const Image = props => (
       }
 
       const imageSizes = image.node.childImageSharp.sizes
-      return <Img alt={props.alt} fluid={imageSizes} style={props.style} />
+      const original = image.node.childImageSharp.originalImg
+      return props.original ? (
+        <Img alt={props.alt} fluid={original} style={props.style} />
+      ) : (
+        <Img alt={props.alt} fluid={imageSizes} style={props.style} />
+      )
     }}
   />
 )
