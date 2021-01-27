@@ -20,7 +20,7 @@ const UGA = {
     { name: "Symbolic Logic (Honors)", tags: [] },
   ],
   link: "/education?s=UGA",
-  projects: ["eCinemaBooking"],
+  projects: ["CinemaEBooking"],
 }
 
 const KSU = {
