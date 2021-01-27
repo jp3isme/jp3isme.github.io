@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Button from "../Button.js"
 import Image from "../Image"
@@ -71,6 +71,16 @@ const Br = styled.div`
 `
 
 export default function Bio(props) {
+  const [page, setPage] = useState(false)
+
+  useEffect(() => {
+    let query = props.location.pathname.split("/")
+    if (
+      query[query.length - 1] === "about" ||
+      query[query.length - 2] === "about"
+    )
+      setPage(true)
+  }, [page])
   return (
     <Div className={"box transition"}>
       <ImgDiv>
@@ -93,9 +103,11 @@ export default function Bio(props) {
           genealogical research—as well as automating tasks with python
         </P>
 
-        <Button to={"/about"} newMargin={"1.5rem 0 0 0"}>
-          More About Me
-        </Button>
+        {!page && (
+          <Button to={"/about"} newMargin={"1.5rem 0 0 0"}>
+            More About Me
+          </Button>
+        )}
       </TextDiv>
     </Div>
   )
