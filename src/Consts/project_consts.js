@@ -7,6 +7,7 @@ const MyPortfolio = {
   skills: ["Gatsby", "React", "GraphQL", "Node.js", "JavaScript", "CSS"],
   link: "/projects?p=MyPortfolio",
   outlink: "https://github.com/jp3isme/jp3isme.github.io",
+  outlink: null,
   linkText: "View Details",
   outLinkText: "View on Github",
   github: "https://github.com/jp3isme/jp3isme.github.io",
@@ -49,8 +50,10 @@ const myMDb = {
 const filmSchedules = {
   img: null,
   name: "FilmSchedules",
-  description: "",
-  longer: "",
+  description:
+    "A timeline visualizer for upcoming tv shows and movies from popular studios",
+  longer:
+    'Working but not complete. In progress: feature to allow toggling the view of categories on/off under "info" and saving to local browser storage',
   skills: ["Next.js", "React", "Node.js", "JavaScript", "CSS", "Vercel"],
   link: "/projects?p=filmSchedules",
   outlink: "https://filmschedules.j-mhs.com",
@@ -152,8 +155,89 @@ const CinemaEBooking = {
   target: "",
   gallery: [
     {
-      img: ``,
-      description: "",
+      img: `CEB_screen1.png`,
+      title: null,
+      buttonText: "View Image",
+      description: "A screen-capture of the logged-out homescreen",
+    },
+    {
+      img: `CEB_screen2.png`,
+      title: null,
+      buttonText: "View Image",
+      description:
+        "A screen-capture of the 'Coming Soon' page, which displayed upcoming movies",
+    },
+    {
+      img: `CEB_screen3.png`,
+      title: null,
+      buttonText: "View Image",
+      description:
+        "A screen-capture of the 'Now Playing' page, which displayed movies that were currently showing at out mock-theater",
+    },
+    {
+      img: `CEB_screen4.png`,
+      title: null,
+      buttonText: "View Image",
+      description:
+        "A screen-capture showing the details page for a particular movie",
+    },
+    {
+      img: `CEB_screen5.png`,
+      title: null,
+      buttonText: "View Image",
+      description:
+        "A screen-capture of the search results page for 'Pet Sematary'",
+    },
+    {
+      img: `CEB_screen6.png`,
+      title: null,
+      buttonText: "View Image",
+      description: "A screen-capture of the user-registration page",
+    },
+    {
+      img: `CEB_screen7.png`,
+      title: null,
+      buttonText: "View Image",
+      description:
+        "A screen-capture of the confirmation code step of user-registration",
+    },
+    {
+      img: `CEB_screen8.png`,
+      title: null,
+      buttonText: "View Image",
+      description:
+        "A screen-capture of the logged-in homescreen displaying a custom greeting",
+    },
+    {
+      img: `CEB_screen9.png`,
+      title: null,
+      buttonText: "View Image",
+      description: "A screen-capture displaying the 'login' screen",
+    },
+    {
+      img: `CEB_screen10.png`,
+      title: null,
+      description: "A screen-capture displaying the 'logout' success screen",
+      buttonText: "View Image",
+    },
+    {
+      img: `CEB_screen11.png`,
+      title: null,
+      buttonText: "View Image",
+      description: "A screen-capture displaying the 'manage account' screen",
+    },
+    {
+      img: `CEB_screen12.png`,
+      title: null,
+      buttonText: "View Image",
+      description: "A screen-capture of the 'forgot password' screen",
+    },
+    {
+      img: `CEB_screen13.png`,
+      title: null,
+      buttonText: "View Image",
+      description:
+        "A screen-capture displaying the admin-privileges of adding and updating movie information",
     },
   ],
   documents: [
@@ -163,7 +247,8 @@ const CinemaEBooking = {
       link:
         "https://drive.google.com/file/d/1NQ1PgP26m3otIVns9eju2-vUWVzUb7ik/view?usp=sharing",
       buttonText: "View Document",
-      description: "A copy of the course project overview",
+      description:
+        "A copy of the project overview given at the beginning of the assignment",
     },
     {
       title: `Deliverable 11: Final Report`,
@@ -171,7 +256,7 @@ const CinemaEBooking = {
       link:
         "https://docs.google.com/document/d/1OcS2JzQ9YJLi63J20yU7HTutQeD8urAfCO1DKUmWkLg/edit?usp=sharing",
       buttonText: "View Document",
-      description: "A copy of the final deliverable for the project",
+      description: "A copy of the final deliverable created for the project",
     },
   ],
 }
@@ -185,6 +270,7 @@ const Spoticli = {
   skills: ["Python"],
   link: "/projects?p=Spoticli",
   outlink: "https://github.com/wjacobc/spoticli",
+  outlink: null,
   github: "https://github.com/wjacobc/spoticli",
   linkText: "View Details",
   outLinkText: "View on Github",
@@ -198,10 +284,10 @@ const ranked_choice_voting = {
   img: null,
   name: "Ranked-choice-voting",
   description:
-    "A python script to tally ranked-choice voting with Google Forms",
+    "A command-line python script to tally ranked-choice voting with Google Forms",
   skills: ["Python"],
   link: "/projects?p=ranked_choice_voting",
-  outLink: "https://github.com/jp3isme/ranked-choice-voting",
+  outLink: null,
   github: "https://github.com/jp3isme/ranked-choice-voting",
   linkText: "View Details",
   outLinkText: "View on Github",
