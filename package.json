@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jp3isme.github.io",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "John-Michael Smith <jp3isme@gmail.com>",
   "dependencies": {
     "analytics": "^0.6.4",
     "gatsby": "^2.26.1",
