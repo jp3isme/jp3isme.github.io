@@ -17,7 +17,7 @@ const FlexDiv = styled.div`
   align-items: flex-start;
   max-height: 1100px;
   @media (max-width: 992px) {
-    max-height: 1400px;
+    max-height: 1500px;
   }
   @media (max-width: 576px) {
     max-height: none;
@@ -32,11 +32,13 @@ const H1 = styled.h1`
 
 export default function Projects() {
   const [orders, setOrders] = useState({
-    first: -5,
-    second: -4,
-    third: -3,
-    fourth: -2,
-    fifth: -1,
+    first: -7,
+    second: -6,
+    third: -5,
+    fourth: -4,
+    fifth: -3,
+    sixth: -2,
+    seventh: -1,
   })
 
   useEffect(() => {
@@ -74,7 +76,7 @@ export default function Projects() {
           sixth: -4,
           seventh: -6,
         }
-        if (orders != newOrders) setOrders(newOrders)
+        //if (orders != newOrders) setOrders(newOrders)
       }
     }
     // Add event listener
@@ -89,13 +91,20 @@ export default function Projects() {
     <Div className="container">
       <H1>Projects</H1>
       <FlexDiv>
-        <ProjectCard order={orders.first} data={Projs.myMDb} />
+        {/* <ProjectCard order={orders.first} data={Projs.myMDb} />
         <ProjectCard order={orders.second} data={Projs.CinemaEBooking} />
         <ProjectCard order={orders.third} data={Projs.AncestryMap} />
         <ProjectCard order={orders.fourth} data={Projs.ranked_choice_voting} />
         <ProjectCard order={orders.fifth} data={Projs.Spoticli} />
         <ProjectCard order={orders.sixth} data={Projs.MyPortfolio} />
-        <ProjectCard order={orders.seventh} data={Projs.filmSchedules} />
+        <ProjectCard order={orders.seventh} data={Projs.filmSchedules} /> */}
+        <ProjectCard data={Projs.myMDb} /> {/**1 */}
+        <ProjectCard data={Projs.AncestryMap} /> {/**3 */}
+        <ProjectCard data={Projs.filmSchedules} /> {/**7 */}
+        <ProjectCard data={Projs.MyPortfolio} /> {/**6 */}
+        <ProjectCard data={Projs.ranked_choice_voting} /> {/**4 */}
+        <ProjectCard data={Projs.CinemaEBooking} /> {/**2 */}
+        <ProjectCard data={Projs.Spoticli} /> {/**5 */}
       </FlexDiv>
     </Div>
   )
