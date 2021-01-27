@@ -19,7 +19,7 @@ const Div = styled.div`
 const socials = [
   {
     text: "Resume",
-    link: `/John-Michael_Smith_Resume_S2020.pdf`,
+    link: `/documents/John-Michael_Smith_Resume.pdf`,
   },
   {
     text: "LinkedIn",
@@ -48,12 +48,12 @@ const contacts = {
   phone: "(678) 943-5352",
 }
 
-export default function HomePage() {
+export default function HomePage(props) {
   return (
     <Layout>
       <SEO title="Home" />
       <Div className="container">
-        <Bio bg={""} />
+        <Bio bg={""} location={props.location} />
         <Links socials={socials} contacts={contacts} />
       </Div>
       <Education />
