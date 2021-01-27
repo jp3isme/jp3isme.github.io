@@ -116,12 +116,30 @@ const FlexDiv = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-  max-height: 1000px;
   @media (max-width: 992px) {
     max-height: 1300px;
   }
   @media (max-width: 576px) {
     max-height: none;
+  }
+`
+
+const Git = styled.a`
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  margin: 1.5rem 0px 0 0px;
+  font-size: 1.5rem;
+  display: block;
+  float: left;
+  width: auto;
+  color: ${props => props.theme.buttonText};
+  background-color: ${props => props.theme.button};
+  border: 1px solid ${props => props.theme.foregroundBorder};
+  border-radius: 0.35rem;
+
+  &:hover {
+    background-color: ${props => props.theme.buttonHover};
+    cursor: pointer;
   }
 `
 
@@ -178,13 +196,33 @@ export default function ProjectPage(props) {
             </>
           )}
           {/* </Description> */}
-          {data.outlink === null ? null : (
-            <span style={{ width: "100%", display: "inline-block" }}>
-              <Button className="transition" to={data.outlink} target="_blank">
+          <span
+            style={{
+              width: "100%",
+              display: "inline-block",
+              marginBottom: "-6px",
+            }}
+          >
+            {data.outlink === null ? null : data.outlink ===
+              undefined ? null : (
+              <Button
+                className="transition"
+                to={data.outlink}
+                target="_blank"
+                newMargin={"1.5rem 5px 0 0px"}
+              >
+                {console.log(data.outlink)}
                 {data.outLinkText}
               </Button>
-            </span>
-          )}
+            )}
+            {data.github ? (
+              <Git
+                className="transition icon-github"
+                href={data.github}
+                target="_blank"
+              ></Git>
+            ) : null}
+          </span>
         </Div>
 
         {data.gallery === null ? null : data.gallery === undefined ? null : (
