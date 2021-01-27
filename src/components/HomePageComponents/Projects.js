@@ -15,9 +15,9 @@ const FlexDiv = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  max-height: 1000px;
+  max-height: 1100px;
   @media (max-width: 992px) {
-    max-height: 1300px;
+    max-height: 1400px;
   }
   @media (max-width: 576px) {
     max-height: none;
@@ -44,29 +44,35 @@ export default function Projects() {
     function handleResize() {
       if (window.innerWidth > 992) {
         let newOrders = {
-          first: -5,
-          second: -4,
-          third: -3,
+          first: -6,
+          second: -1,
+          third: -5,
           fourth: -2,
           fifth: -1,
+          sixth: -3,
+          seventh: -4,
         }
         if (orders != newOrders) setOrders(newOrders)
       } else if (window.innerWidth <= 992 && window.innerWidth > 576) {
         let newOrders = {
-          first: -5,
-          second: -1,
-          third: -3,
-          fourth: -2,
-          fifth: -4,
+          first: -7,
+          second: -2,
+          third: -4,
+          fourth: -3,
+          fifth: -5,
+          sixth: -6,
+          seventh: -1,
         }
         if (orders != newOrders) setOrders(newOrders)
       } else {
         let newOrders = {
-          first: -5,
-          second: -1,
-          third: -4,
-          fourth: -2,
-          fifth: -3,
+          first: -7,
+          second: -2,
+          third: -5,
+          fourth: -3,
+          fifth: -5,
+          sixth: -4,
+          seventh: -6,
         }
         if (orders != newOrders) setOrders(newOrders)
       }
@@ -86,10 +92,10 @@ export default function Projects() {
         <ProjectCard order={orders.first} data={Projs.myMDb} />
         <ProjectCard order={orders.second} data={Projs.CinemaEBooking} />
         <ProjectCard order={orders.third} data={Projs.AncestryMap} />
-        <ProjectCard order={orders.third} data={Projs.filmSchedules} />
         <ProjectCard order={orders.fourth} data={Projs.ranked_choice_voting} />
         <ProjectCard order={orders.fifth} data={Projs.Spoticli} />
-        <ProjectCard order={orders.fifth} data={Projs.MyPortfolio} />
+        <ProjectCard order={orders.sixth} data={Projs.MyPortfolio} />
+        <ProjectCard order={orders.seventh} data={Projs.filmSchedules} />
       </FlexDiv>
     </Div>
   )
