@@ -1,3 +1,5 @@
+require("dotenv").config()
+const { GOOGLE_TAG } = process.env
 module.exports = {
   siteMetadata: {
     title: `John-Michael H. Smith | Software Engineer`,
@@ -16,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: `${process.env.GOOGLE_TAG}`,
-        head: true,
+        trackingId: GOOGLE_TAG,
+        head: false,
         anonymize: true,
       },
     },
