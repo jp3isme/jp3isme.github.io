@@ -85,6 +85,11 @@ const GlobalStyleStyle = createGlobalStyle`
         color: ${props => props.theme.textSecondary};
     }
 
+    .footer {
+        box-shadow: 0 100vh 0 100vh ${props => props.theme.foreground};
+        border-top: 1px solid ${props => props.theme.foregroundBorder};
+    }
+
     .transition {
         transition: 0.2s;
     }

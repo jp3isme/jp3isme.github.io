@@ -22,7 +22,6 @@ const Div = styled.div`
   @media (max-width: 576px) {
     padding-bottom: 0.9rem;
   }
-  border-bottom: none;
 `
 
 const Socials = styled.div`
@@ -43,7 +42,7 @@ const P = styled.p`
 
 export default function Footer(props) {
   return (
-    <Div className="transition box_colors">
+    <Div className="transition footer">
       <div className="container">
         <Socials>
           <Tag
