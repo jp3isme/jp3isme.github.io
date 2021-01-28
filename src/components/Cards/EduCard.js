@@ -43,7 +43,7 @@ const Img = styled.span`
 const ImgDiv = styled.div`
   border-radius: 200px;
   height: 131px;
-  width: 131px;
+  max-width: 131px;
   padding: 5px;
   @media (min-width: 768px) and (max-width: 992px) {
     display: flex;
