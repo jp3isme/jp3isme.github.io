@@ -10,7 +10,9 @@ export default function AboutPage(props) {
       <SEO title="About Me" />
       <div className="container">
         <Bio location={props.location} />
-        <Button to="/">Go Home</Button>
+        <span style={{ width: "100%", display: "inline-block" }}>
+          <Button to={"/"}>Go Home</Button>
+        </span>
       </div>
     </Layout>
   )
