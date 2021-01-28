@@ -44,6 +44,7 @@ const Img = styled.div`
   height: 132px;
   width: 132px;
   border-radius: 200px;
+  overflow: hidden;
   background-color: ${props => props.bg};
   border: 4px solid ${props => props.theme.secondary};
   margin: 0 1.5rem 0 0;

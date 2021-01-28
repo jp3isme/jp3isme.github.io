@@ -13,6 +13,7 @@ const Div = styled.div`
   display: flex;
   align-items: center;
   // border-bottom: 1px solid ${props => props.theme.foregroundBorder};
+  overflow: hidden;
 `
 
 const Flex1 = styled.div`
@@ -40,6 +41,7 @@ const Img = styled.div`
   height: 35px;
   width: 35px;
   border-radius: 20px;
+  overflow: hidden;
   background-color: ${props => props.bg};
   margin: 0;
   padding: 0;

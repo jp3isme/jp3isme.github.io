@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyleStyle = createGlobalStyle`
 
     * {
-        overflow: hidden;
+        overflow: visible;
     }
 
     html, body {
@@ -24,7 +24,8 @@ const GlobalStyleStyle = createGlobalStyle`
     }
 
     .body {
-        background-color: ${props => props.theme.background}
+        background-color: ${props => props.theme.background};
+        overflow: hidden;
     }
 
     ::selection {

@@ -13,6 +13,7 @@ const Div = styled.div`
   align-items: center;
   // box-shadow: 0 100vh 0 100vh ${props => props.theme.foreground};
   // border-top: 1px solid ${props => props.theme.foregroundBorder};
+  overflow: hidden;
 
   padding-bottom: 0.5rem;
   @media (max-width: 992px) {

@@ -20,7 +20,7 @@ const Body = styled.div`
   //background: ${props => props.theme.background};
   padding: 0;
   margin: 0;
-  width: 100vw;
+  // width: 100vw;
   height: 100%;
   //color: ${props => props.theme.textPrimary};
   transition: 0;
