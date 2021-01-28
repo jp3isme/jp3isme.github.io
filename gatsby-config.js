@@ -41,6 +41,29 @@ module.exports = {
         border_radius: "0.75rem",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-L3Z3PVQLGK",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: false,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // Defers execution of google analytics script after page load
+        defer: false,
+        // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "auto",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
