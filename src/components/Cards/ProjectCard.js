@@ -6,14 +6,14 @@ import Image from "../Image"
 
 const Div = styled.div`
   order: ${props => props.order};
-  background-color: ${props => props.theme.foreground};
+  // background-color: ${props => props.theme.foreground};
   padding: 1.5rem;
   min-width: 200px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box;
   max-width: calc(33% - 20px);
-  border: 1px solid ${props => props.theme.foregroundBorder};
+  // border: 1px solid ${props => props.theme.foregroundBorder};
 
   @media (max-width: 991px) {
     max-width: calc(50% - 20px);
@@ -38,14 +38,14 @@ const H1 = styled.h1`
 const P = styled.p`
   padding: 5px 0;
   margin: 0;
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 
 const P2 = styled.p`
   padding: 5px 0 0 0;
   margin: 0;
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 
@@ -57,13 +57,13 @@ const Git = styled.a`
   display: block;
   float: left;
   width: auto;
-  color: ${props => props.theme.buttonText};
-  background-color: ${props => props.theme.button};
-  border: 1px solid ${props => props.theme.foregroundBorder};
+  // color: ${props => props.theme.buttonText};
+  // background-color: ${props => props.theme.button};
+  // border: 1px solid ${props => props.theme.foregroundBorder};
   border-radius: 0.35rem;
 
   &:hover {
-    background-color: ${props => props.theme.buttonHover};
+    // background-color: ${props => props.theme.buttonHover};
     cursor: pointer;
   }
 `
@@ -112,7 +112,7 @@ export default function ProjectCard(props) {
         ) : null}
         {props.data.github ? (
           <Git
-            className="transition icon-github"
+            className="transition icon-github button"
             href={props.data.github}
             target="_blank"
           ></Git>

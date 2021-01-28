@@ -23,6 +23,10 @@ const GlobalStyleStyle = createGlobalStyle`
         //transition: 0.2s;
     }
 
+    .body {
+        background-color: ${props => props.theme.background}
+    }
+
     ::selection {
         background: #fff2a8; /* WebKit/Blink Browsers */
         color: black;
@@ -61,7 +65,8 @@ const GlobalStyleStyle = createGlobalStyle`
     }
 
     h1 {
-        font-weight: ${props => props.theme.h1weight};
+        font-weight: ${props => props.theme.h1weight};    
+        color: ${props => props.theme.textPrimary};
     }
 
     .box {
@@ -69,14 +74,57 @@ const GlobalStyleStyle = createGlobalStyle`
         font-size: 1rem;
         line-height: 1.5;
         margin: 1.5rem 10px 0 10px;
+        padding: 1.5rem;
+    }
+    
+    .box, .box_colors {
         border: 1px solid ${props => props.theme.foregroundBorder};
         background-color: ${props => props.theme.foreground};
-        padding: 1.5rem;
-        box-shadow: ${props => props.theme.boxShadow}
+        box-shadow: ${props => props.theme.boxShadow};
+        color: ${props => props.theme.textSecondary};
     }
 
     .transition {
         transition: 0.2s;
+    }
+
+    .primaryText {
+        color: ${props => props.theme.textPrimary}
+    }
+
+    .tag {
+        color: ${props => props.theme.textHighlight};
+        background-color: ${props => props.theme.mutedSecondary};
+
+        &:hover {
+            color: ${props => props.theme.buttonTextHover};
+            background-color: ${props => props.theme.buttonHover};
+        }
+    }
+
+    .skilltag {
+        color: ${props => props.theme.textSkillTag};
+        background-color: ${props => props.theme.skillTag};
+    }
+
+    .button {
+        color: ${props => props.theme.buttonText};
+        background-color: ${props => props.theme.button};
+        border: 1px solid ${props => props.theme.foregroundBorder};
+        box-shadow: ${props => props.theme.boxShadow};
+      
+        &:hover {
+          background-color: ${props => props.theme.buttonHover};
+          
+        }
+    }
+
+    .edu_crest {
+        filter: ${props => props.theme.edu_crest}
+    }
+
+    .img {
+        background-color: ${props => props.theme.background}
     }
 `
 

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import uga_crest from "../../images/uga_crest_0.svg"
 
 const Div = styled.div`
-  background-color: ${props => props.theme.foreground};
+  // background-color: ${props => props.theme.foreground};
   padding: 1.5rem;
   flex-basis: 50%;
   display: -webkit-flex;
@@ -15,27 +15,36 @@ const Div = styled.div`
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box;
   flex-basis: calc(50% - 20px);
-  border: 1px solid ${props => props.theme.foregroundBorder};
+  // border: 1px solid ${props => props.theme.foregroundBorder};
 
   @media (max-width: 768px) {
     flex-basis: 100%;
   }
 `
 
-const Img = styled.img`
+const Img = styled.span`
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(/documents/uga_crest_1.svg);
   height: 132px;
   min-width: 132px;
   width: auto;
   border-radius: 200px;
-  background-color: ${props => props.bg};
+  // background-color: ${props => props.bg};
   /*border: 4px solid ${props => props.theme.secondary};*/
-  padding: 5px;
+  // padding: 5px;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: optimizeQuality;
-  background-color: ${props => props.theme.background};
+  // background-color: ${props => props.theme.background};
 `
 
 const ImgDiv = styled.div`
+  border-radius: 200px;
+  height: 131px;
+  width: 131px;
+  padding: 5px;
   @media (min-width: 768px) and (max-width: 992px) {
     display: flex;
     justify-content: center;
@@ -69,7 +78,7 @@ const H1 = styled.h1`
 const P = styled.p`
   padding: 5px 0;
   margin: 0;
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 
@@ -77,9 +86,9 @@ export default function EduCard(props) {
   return (
     <Div className={"box transition"}>
       {props.data.img == null ? null : (
-        <ImgDiv>
+        <ImgDiv className={"img"}>
           {/* <Image filename={props.data.img} /> */}
-          <Img src={uga_crest} viewBox="0 0 612 612" />
+          <Img src={uga_crest} viewBox="0 0 612 612" className={"edu_crest"} />
         </ImgDiv>
       )}
       <Description>

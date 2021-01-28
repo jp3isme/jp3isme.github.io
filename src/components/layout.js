@@ -17,12 +17,12 @@ import { ThemeProvider } from "styled-components"
 import "../../public/fonts/style.css"
 
 const Body = styled.div`
-  background: ${props => props.theme.background};
+  //background: ${props => props.theme.background};
   padding: 0;
   margin: 0;
   width: 100vw;
   height: 100%;
-  color: ${props => props.theme.textPrimary};
+  //color: ${props => props.theme.textPrimary};
   transition: 0;
 `
 
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={state.theme}>
         <GlobalStyle />
-        <Body>
+        <Body className={"body"}>
           <Header
             className="transition"
             img={process.env.PUBLIC_URL + `./me_white.png`}

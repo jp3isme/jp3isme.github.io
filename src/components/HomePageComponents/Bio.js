@@ -4,7 +4,7 @@ import Button from "../Button.js"
 import Image from "../Image"
 
 const Div = styled.div`
-  background-color: ${props => props.theme.foreground};
+  // background-color: ${props => props.theme.foreground};
   padding: 1.5rem;
   display: -webkit-flex;
   display: flex;
@@ -14,7 +14,7 @@ const Div = styled.div`
   box-sizing: border-box;
   align-items: flex-start;
   flex-basis: calc(78% - 20px);
-  border: 1px solid ${props => props.theme.foregroundBorder};
+  // border: 1px solid ${props => props.theme.foregroundBorder};
 
   @media (max-width: 991px) {
     flex-basis: 100%;
@@ -51,6 +51,7 @@ const Img = styled.div`
 `
 
 const P = styled.p`
+  // color: ${props => props.theme.textPrimary};
   padding: 0;
   margin: 0 0 1.2rem 0;
   font-size: 1rem;
@@ -88,7 +89,7 @@ export default function Bio(props) {
           <Image filename={"me_white.PNG"} />
         </Img>
       </ImgDiv>
-      <TextDiv>
+      <TextDiv className={"primaryText"}>
         <P>
           Hi, I'm John-Michael Smith, a Software Engineer currently living in
           Metro-Atlanta. I studied Computer Science at the University of Georgia

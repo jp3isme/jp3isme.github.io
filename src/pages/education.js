@@ -96,7 +96,7 @@ const H2 = styled.h1`
 const P = styled.p`
   padding: 5px 0;
   margin: 0;
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 

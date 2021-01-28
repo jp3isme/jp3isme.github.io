@@ -18,7 +18,9 @@ export const lightTheme = {
   skillTag: "clear",
   textSkillTag: "#5e9516",
   horizontalRuleColor: "rgb(225,225,225)",
-  boxShadow: '0px 1px 7px -1px #e1e4e8',
+  boxShadow: "0px 1px 7px -1px #e1e4e8",
+  edu_crest:
+    "invert(0%) sepia(0%) saturate(23%) hue-rotate(60deg) brightness(101%) contrast(105%);",
 }
 
 export const darkTheme = {
@@ -63,5 +65,7 @@ export const darkTheme2 = {
   skillTag: "rgb(35, 46, 44)",
   textSkillTag: "rgb(119, 203, 185)",
   horizontalRuleColor: "",
-  boxShadow: 'none',
+  boxShadow: "none",
+  edu_crest:
+    "invert(64%) sepia(30%) saturate(0%) hue-rotate(284deg) brightness(90%) contrast(82%)",
 }

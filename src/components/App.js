@@ -17,12 +17,12 @@ import AboutPage from "../gatsby-site/src/pages/AboutPage"
 import ScrollToTop from "./hooks/ScrollToTop"
 
 const Body = styled.div`
-  background: ${props => props.theme.background};
+  // background: ${props => props.theme.background};
   padding: 0;
   margin: 0;
   width: 100vw;
   height: 100%;
-  color: ${props => props.theme.textPrimary};
+  // color: ${props => props.theme.textPrimary};
 `
 
 // Google Analytics setup
@@ -63,7 +63,7 @@ function App() {
         <ScrollToTop />
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Body className="transition" id="body">
+          <Body className="transition body">
             <Header
               className="transition"
               img={process.env.PUBLIC_URL + `./me_white.png`}

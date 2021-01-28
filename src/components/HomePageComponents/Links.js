@@ -4,14 +4,14 @@ import Tag from "../Tag"
 import JokeTag from "../JokeTag"
 
 const Div = styled.div`
-  background-color: ${props => props.theme.foreground};
+  // background-color: ${props => props.theme.foreground};
   padding: 1.5rem;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box;
   flex-basis: calc(22% - 20px);
   min-width: 191px;
-  border: 1px solid ${props => props.theme.foregroundBorder};
+  // border: 1px solid ${props => props.theme.foregroundBorder};
 
   @media (max-width: 991px) {
     flex-basis: 35%;

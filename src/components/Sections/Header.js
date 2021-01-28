@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Image from "../Image"
 
 const Div = styled.div`
-  background-color: ${props => props.theme.foreground};
+  // background-color: ${props => props.theme.foreground};
   height: 61px;
   width: 100%;
   padding: 0;
@@ -12,7 +12,7 @@ const Div = styled.div`
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid ${props => props.theme.foregroundBorder};
+  // border-bottom: 1px solid ${props => props.theme.foregroundBorder};
 `
 
 const Flex1 = styled.div`
@@ -52,7 +52,7 @@ const ThemeSpan = styled.span`
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   overflow: visible;
-  color: ${props => props.theme.themeToggle};
+  //color: ${props => props.theme.themeToggle};
 
   &:hover {
     cursor: pointer;
@@ -68,7 +68,7 @@ const ThemeSpan = styled.span`
 
 export default function Header(props) {
   return (
-    <Div className="transition">
+    <Div className="transition box_colors">
       <Flex1 className="container">
         <Link to="/" style={{ textDecoration: "none" }}>
           <Flex2>
@@ -85,7 +85,7 @@ export default function Header(props) {
               </Img>
             </div>
 
-            <Span>{props.text}</Span>
+            <Span className="textPrimary">{props.text}</Span>
           </Flex2>
         </Link>
         <ThemeSpan

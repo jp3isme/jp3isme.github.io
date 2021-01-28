@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Tag from "../Tag"
 
 const Div = styled.div`
-  background-color: ${props => props.theme.foreground};
+  // background-color: ${props => props.theme.foreground};
   height: auto;
   /*width: 100%;*/
   padding: 0.25rem 10px 0.5rem 10px;
@@ -11,8 +11,16 @@ const Div = styled.div`
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  box-shadow: 0 100vh 0 100vh ${props => props.theme.foreground};
-  border-top: 1px solid ${props => props.theme.foregroundBorder};
+  // box-shadow: 0 100vh 0 100vh ${props => props.theme.foreground};
+  // border-top: 1px solid ${props => props.theme.foregroundBorder};
+
+  padding-bottom: 0.5rem;
+  @media (max-width: 992px) {
+    max-height: 0.9rem;
+  }
+  @media (max-width: 576px) {
+    max-height: 0.9rem;
+  }
 `
 
 const Socials = styled.div`
@@ -23,7 +31,7 @@ const Socials = styled.div`
 `
 
 const P = styled.p`
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 0.85rem;
   padding: 0;
   margin: 10px;
@@ -33,7 +41,7 @@ const P = styled.p`
 
 export default function Footer(props) {
   return (
-    <Div className="transition">
+    <Div className="transition box_colors">
       <div className="container">
         <Socials>
           <Tag

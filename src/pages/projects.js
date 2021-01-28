@@ -89,14 +89,14 @@ const P = styled.p`
   position: relative;
   top: 5px;
   margin: 0;
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 
 const P2 = styled.p`
   padding: 10px 0;
   margin: 0;
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 const P3 = styled.p`
@@ -104,7 +104,7 @@ const P3 = styled.p`
   width: 100%;
   top: 10px;
   margin: 0;
-  color: ${props => props.theme.textSecondary};
+  // color: ${props => props.theme.textSecondary};
   font-size: 1rem;
 `
 
@@ -230,8 +230,8 @@ export default function ProjectPage(props) {
             <H1>Gallery</H1>
 
             <FlexDiv>
-              {data.gallery.map(entry => (
-                <MediaCard data={entry} />
+              {data.gallery.map((entry, i) => (
+                <MediaCard data={entry} key={i + entry.img} />
               ))}
             </FlexDiv>
           </>
@@ -243,8 +243,8 @@ export default function ProjectPage(props) {
             <H1>Documents</H1>
 
             <FlexDiv>
-              {data.documents.map(entry => (
-                <MediaCard data={entry} />
+              {data.documents.map((entry, i) => (
+                <MediaCard data={entry} key={i + entry.title} />
               ))}
             </FlexDiv>
           </>
