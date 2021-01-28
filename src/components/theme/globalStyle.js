@@ -84,8 +84,10 @@ const GlobalStyleStyle = createGlobalStyle`
         box-shadow: ${props => props.theme.boxShadow};
         color: ${props => props.theme.textSecondary};
     }
-
+    
     .footer {
+        color: ${props => props.theme.textSecondary};
+        background-color: ${props => props.theme.foreground};
         box-shadow: 0 100vh 0 100vh ${props => props.theme.foreground};
         border-top: 1px solid ${props => props.theme.foregroundBorder};
     }
