@@ -16,10 +16,10 @@ const Div = styled.div`
 
   padding-bottom: 0.5rem;
   @media (max-width: 992px) {
-    max-height: 0.9rem;
+    padding-bottom: 0.9rem;
   }
   @media (max-width: 576px) {
-    max-height: 0.9rem;
+    padding-bottom: 0.9rem;
   }
 `
 
