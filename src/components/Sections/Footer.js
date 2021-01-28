@@ -22,6 +22,7 @@ const Div = styled.div`
   @media (max-width: 576px) {
     padding-bottom: 0.9rem;
   }
+  border-bottom: none;
 `
 
 const Socials = styled.div`
