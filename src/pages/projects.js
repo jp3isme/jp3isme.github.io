@@ -132,13 +132,13 @@ const Git = styled.a`
   display: block;
   float: left;
   width: auto;
-  color: ${props => props.theme.buttonText};
-  background-color: ${props => props.theme.button};
-  border: 1px solid ${props => props.theme.foregroundBorder};
+  // color: ${props => props.theme.buttonText};
+  // background-color: ${props => props.theme.button};
+  // border: 1px solid ${props => props.theme.foregroundBorder};
   border-radius: 0.35rem;
 
   &:hover {
-    background-color: ${props => props.theme.buttonHover};
+    // background-color: ${props => props.theme.buttonHover};
     cursor: pointer;
   }
 `
@@ -217,7 +217,7 @@ export default function ProjectPage(props) {
             )}
             {data.github ? (
               <Git
-                className="transition icon-github"
+                className="transition icon-github button"
                 href={data.github}
                 target="_blank"
               ></Git>
