@@ -134,6 +134,10 @@ const GlobalStyleStyle = createGlobalStyle`
     .img {
         background-color: ${props => props.theme.background}
     }
+
+    .imgBorder {
+        border: 4px solid ${props => props.theme.secondary};
+    }
 `
 
 export function GlobalStyle(props) {

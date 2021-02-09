@@ -46,7 +46,7 @@ const Img = styled.div`
   border-radius: 200px;
   overflow: hidden;
   background-color: ${props => props.bg};
-  border: 4px solid ${props => props.theme.secondary};
+  /* border: 4px solid ${props => props.theme.secondary}; */
   margin: 0 1.5rem 0 0;
   padding: 0;
 `
@@ -86,7 +86,7 @@ export default function Bio(props) {
   return (
     <Div className={"box transition"}>
       <ImgDiv>
-        <Img>
+        <Img className="imgBorder">
           <Image filename={"me_white.PNG"} />
         </Img>
       </ImgDiv>

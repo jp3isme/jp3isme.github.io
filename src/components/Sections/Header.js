@@ -30,7 +30,7 @@ const Flex2 = styled.div`
 `
 
 const Span = styled.span`
-  color: ${props => props.theme.textPrimary};
+  /* color: ${props => props.theme.textPrimary}; */
   font-size: 1.1rem;
   padding: 0;
   margin: 0;
@@ -87,7 +87,7 @@ export default function Header(props) {
               </Img>
             </div>
 
-            <Span className="textPrimary">{props.text}</Span>
+            <Span className="primaryText">{props.text}</Span>
           </Flex2>
         </Link>
         <ThemeSpan
