@@ -3,7 +3,7 @@ const MyPortfolio = {
   img: null,
   name: "My Portfolio",
   description:
-    "The site you're currently on is my personal portfolio. Built with react, I utilized Gatsby for better SEO",
+    "The site you're currently on is my personal portfolio. Built with react, I utilized Gatsby for server-side rendering, better performance, and improved SEO",
   skills: ["Gatsby", "React", "GraphQL", "Node.js", "JavaScript", "CSS"],
   link: "/projects?p=MyPortfolio",
   outlink: "https://github.com/jp3isme/jp3isme.github.io",
