@@ -21,10 +21,9 @@ export default function JokeTag(props) {
   const toggleHover = () => setHovered(!hovered)
   return (
     <S
-      className="transition"
+      className="transition tag"
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
-      className="tag"
     >
       {hovered ? props.punchline : props.setup}
     </S>
