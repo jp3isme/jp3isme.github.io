@@ -145,12 +145,9 @@ const Git = styled.a`
 
 export default function ProjectPage(props) {
   const [data, setData] = useState({})
-  //let params = new URLSearchParams(document.location.search.substring(1))
-  //let query = URLSearchParams.get("p")
   let query = props.location.search.split("=")[1]
 
   useEffect(() => {
-    // window.scrollTo(0, 0)
     setData(Projs[query])
   }, [data, query])
 
@@ -171,13 +168,11 @@ export default function ProjectPage(props) {
                   width: "223px",
                   borderRadius: "0.5rem 0.5rem",
                   backgroundColor: `${props => props.bg}`,
-                  /*border: `4px solid ${props => props.theme.secondary}`,*/
                   padding: 0,
                 }}
               />
             </ImgDiv>
           )}
-          {/* <Description> */}
           <H2>{data.name != null ? data.name : null}</H2>
           <P>
             {data.description}
@@ -195,7 +190,6 @@ export default function ProjectPage(props) {
               <P3>{data.longer}</P3>
             </>
           )}
-          {/* </Description> */}
           <span
             style={{
               width: "100%",
