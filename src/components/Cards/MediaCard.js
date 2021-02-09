@@ -52,7 +52,9 @@ export default function MeidaCard(props) {
       className={"box transition"}
       order={props.order}
       href={
-        props.data.public_path
+        props.data.link
+          ? props.data.link
+          : props.data.public_path
           ? "../documents/" + props.data.public_path
           : props.data.link
           ? props.data.link
