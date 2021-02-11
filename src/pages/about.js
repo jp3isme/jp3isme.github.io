@@ -22,6 +22,12 @@ const FlexDiv = styled.div`
   }
 `
 
+const H1 = styled.h1`
+  padding: 0;
+  margin: 1.8rem 0 -0.7rem 10px;
+  font-size: 1.3rem;
+`
+
 export default function AboutPage(props) {
   const goodreads = {
     img: `goodreadsbooks1.png`,
@@ -52,6 +58,7 @@ export default function AboutPage(props) {
       <SEO title="About Me" />
       <div className="container">
         <Bio location={props.location} />
+        <H1>Hobbies</H1>
         <FlexDiv>
           <MediaCard data={goodreads} key={"goodreads"} />
           <MediaCard data={spotify} key={"spotify"} />
