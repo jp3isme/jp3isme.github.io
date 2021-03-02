@@ -97,7 +97,7 @@ const GlobalStyleStyle = createGlobalStyle`
     }
 
     .primaryText {
-        color: ${props => props.theme.textPrimary}
+        color: ${props => props.theme.textPrimary};
     }
 
     .tag {
@@ -128,11 +128,11 @@ const GlobalStyleStyle = createGlobalStyle`
     }
 
     .edu_crest {
-        filter: ${props => props.theme.edu_crest}
+        filter: ${props => props.theme.edu_crest};
     }
 
     .img {
-        background-color: ${props => props.theme.background}
+        background-color: ${props => props.theme.background};
     }
 
     .imgBorder {
