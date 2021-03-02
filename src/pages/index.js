@@ -47,6 +47,7 @@ const contacts = {
   email: "jp3isme@gmail.com",
   phone: "(678) 943-5352",
 }
+console.log(process.env.GATSBY_GOOGLE_TAG)
 
 export default function HomePage(props) {
   return (
