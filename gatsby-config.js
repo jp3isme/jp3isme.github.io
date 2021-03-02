@@ -1,5 +1,6 @@
 require("dotenv").config()
-const { GATSBY_GOOGLE_TAG } = process.env
+let { GATSBY_GOOGLE_TAG } = process.env
+GATSBY_GOOGLE_TAG = "G-LLMY7SGK6B"
 module.exports = {
   siteMetadata: {
     title: `John-Michael H. Smith | Software Engineer`,
