@@ -5,10 +5,10 @@ import {
   lightTheme as lightTheme,
   darkTheme2 as darkTheme,
 } from "./theme/Themes"
-import Header from "./Components/Sections/Header"
+import Header from "./components/Sections/Header"
 import EduPage from "./Pages/EduPage"
 import ProjectPage from "./Pages/ProjectPage"
-import Footer from "./Components/Sections/Footer"
+import Footer from "./components/Sections/Footer"
 import ReactGA from "react-ga"
 import { createBrowserHistory } from "history"
 import { HashRouter as Router, Switch, Route } from "react-router-dom"
